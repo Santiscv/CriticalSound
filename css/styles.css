@@ -1,0 +1,261 @@
+/*Eliminamos los margenes y paddings que agrega el navegador por defecto*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.logotipo{
+    /* background-color: black;  */
+    width: 170px;
+    position: relative;
+    right: 250px;
+    top: 9px;
+}
+nav{
+    display: flex;
+    align-items:baseline;
+    justify-content: space-between;
+}
+.buscador{
+    width: 330px;
+    position: relative;
+    bottom: 70px;
+    display: flex;
+    flex-direction: row;
+}
+input{
+    text-align: center;
+    height: 30px;
+    border-radius: 20px;
+    width: 230px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border-color: #380ba7;
+    border-style: solid;
+}
+.search-button{
+    height: 33px;
+    width: 100px;
+    border-radius: 20px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border-color: #380ba7;
+    border-style: solid;
+}
+li{
+    display: inline-block;
+}
+.imgs{
+    left:290px;
+    width: 30px;
+    position: relative;
+    bottom: 60px;
+    padding: 0 8px;
+}
+header {
+    background: black;
+    width: auto;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-style:solid; 
+    border-color: #5e1fff;
+    border-width: 2px;
+}
+h3{
+    color: #5e1fff;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+    font-size: 22px;    
+    position: relative;
+    left: 20px;
+    top: 10px;
+}
+
+button{
+    background-color: #5e1fff;
+    color: white;
+}
+
+button:hover{
+    background-color: #d4d0ff;
+    cursor: pointer;
+}
+
+.imgs:hover{
+    background-color:#e8e6ff;
+    cursor: pointer;
+}
+
+/* -----Aside----- */
+aside{
+    height: 600px ;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: left;
+}
+
+.profile-container{
+    position: relative;
+    top: 50px;
+    left: 20px;
+    border-style: dotted;
+    height: 200px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #5e1fff;
+    border-width: 2px ;
+    background-color: #e8e6ff;
+}
+
+.profile-icono{
+    position: relative;
+    left: 130px;
+    top:30px;
+    width: 100px;
+}
+
+.friends-container{
+    position: relative;
+    top: 95px;
+    left: 20px;
+    border-style: dotted;
+    height: 200px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #5e1fff;
+    border-width: 2px ;
+    background-color: #e8e6ff;
+}
+.friends-icono{
+    position: relative;
+    left: 130px;
+    top:30px;
+    width: 100px;
+}
+.communities-container{
+    position: relative;
+    top: 150px;
+    left: 20px;
+    border-style: dotted;
+    height: 200px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #5e1fff;
+    border-width: 2px ;
+    background-color: #e8e6ff;
+}
+/* ------Main----- */
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.watchlist-container{
+    border-style: solid;
+    width: 750px;
+    height: 200px;
+    position: absolute;
+    bottom: 300px;
+    left: 500px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #5e1fff;
+    border-width: 2px ;
+    background-color: #e8e6ff;
+}
+
+.plus-icono-img{
+    width: 100px;
+    position: relative;
+    left:325px;
+    top: 20px;
+}
+
+.button-watchlist:hover{
+    cursor: pointer;
+}
+
+.button-watchlist{
+    border-color: #380ba7;
+    border-style: solid;
+    width: 100px;
+    border-radius: 20px;
+    height: 33px;
+    position: relative;
+    left: 220px;
+    top: 55px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ratings-container{
+    width: 750px;
+    height: 200px;
+    position: relative;
+    bottom: 300px;
+    left: 230px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #5e1fff;
+    border-width: 2px ;
+    background-color: #e8e6ff;
+}
+
+.star-ratings-img{
+    width: 100px;
+    position: relative;
+    left:325px;
+    top: 20px;
+
+}
+
+.rating-button{
+    border-color: #380ba7;
+    border-style: solid;
+    width: 100px;
+    border-radius: 20px;
+    height: 33px;
+    position: relative;
+    left: 220px;
+    top: 55px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* -----footer------ */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: black;
+    border-top-style: solid ;
+    border-color: #380ba7;
+    border-width: 2px;
+    height: 50px;
+}
+
+p{
+    color: #5e1fff;;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.github-icono{
+    width: 25px;
+    position: relative;
+    right: 20px;
+}
