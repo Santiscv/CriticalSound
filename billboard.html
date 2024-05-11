@@ -1,89 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Billboard</title>
-   </head>
-   <body>
-       <header>
-           <nav>
-               <img src="images/logotipo-de-pagina.png" alt="Logotipo">
-               <input type="text" placeholder="Search for any song, album..">
-               <button type="submit">Search</button>
-               <ul>
-                   <li><img src="images/lapiz-edit(icono).png" alt="edit"></li>
-                   <li><img src="images/messages(icono).png" alt="messages"></li>
-                   <li><img src="images/notification(icono).png" alt="notifications"></li>
-                   <li><img src="images/profile(icono).png" alt="perfil"></li>
-               </ul>
-           </nav>
-       </header>
-      
-       <aside>
-           <div class="container">
-           <h2>Genre</h2>
-           <ul>
-               <li>
-                   <button>new reales</button>
-                   <button>Pop</button>
-                   <button>Rock</button>
-                   <button>Jazz</button>
-                   <button>Country</button>
-                   <button>Classic</button>
-                   <button>Metal</button>
-                   <button>HipHop</button>
-                   <button>Cuarteto</button>
-                   <button>Reggue</button>
-                   <button>Regueton</button>
-               </li>
-           </ul>   
-           </div>
-       </aside>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/billboard.css">
+    <title>Billboard</title>
 
+    <!-- font title-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
-       <section class="Billboard">
-           <h2>Billboard</h2>
-           <article class="billboard-liked">
-               <h3>Most liked</h3>
-               <figure>
-                    <img src="images/songs(imagen).jpg" alt="reference image of the muscia">
-                    <img src="images/songs(imagen).jpg" alt="reference image of the muscia">
-                    <img src="images/songs(imagen).jpg" alt="reference image of the muscia">
-               </figure>  
-               <figcaption>
-                   <ul>
-                       <li>
-                           <a href="#">link cancion</a>
-                           <a href="#">link cancion</a>
-                           <a href="#">link cancion</a>
-                       </li>
-                   </ul>
-               </figcaption>
-           </article>
-           <article class="billboard-criticized">
-               <h3>The most criticized</h3>
-               <figure>
-                    <img src="images/songs(imagen).jpg" alt="reference image of the muscia">
-                    <img src="images/songs(imagen).jpg" alt="reference image of the muscia">
-                    <img src="images/songs(imagen).jpg" alt="reference image of the muscia">
-               </figure>
-               <figcaption>
-                   <ul>
-                       <li>
-                           <a href="#">link cancion</a>
-                           <a href="#">link cancion</a>
-                           <a href="#">link cancion</a>
-                       </li>
-                   </ul>
-               </figcaption>
-           </article>
-       </section>
+    <!-- font body-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
 
+<body>
+    <header>
+        <nav>
+            <img class= "logotipo" src="images/logotipo-de-pagina.png" alt="Logotipo">
+            <div class="buscador">
+                <input type="text" placeholder="Search for any song, album..">
+                <button class="search-button" type="submit">Search</button>
+            </div>
+            <ul>
+                <li>
+                    <a href="new-post.html">
+                        <img class="imgs" src="images/edit(purple).png" alt="edit" >
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="imgs" src="images/message(purple).png" alt="messages">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="imgs" src="images/notification(purple).png" alt="notifications">
+                    </a>
+                </li>
+                <li>
+                    <a href="perfil_usuario.html">
+                        <img class="imgs" src="images/profile(purple).png" alt="perfil">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container">
+        <aside class="genre"> 
 
-       <footer>
-           <p> All rights reserved </p>
-           <img src="images/github(icono).png" alt="github">
-        </footer>
-   </body>
+            <ul>
+                <li>
+                    <button class="button-genre">new reales</button>
+                    <button class="button-genre">Pop</button>
+                    <button class="button-genre">Rock</button>
+                    <button class="button-genre">Jazz</button>
+                    <button class="button-genre">Country</button>
+                    <button class="button-genre">Classic</button>
+                    <button class="button-genre">Metal</button>
+                    <button class="button-genre">Hip Hop</button>
+                    <button class="button-genre">Cuarteto</button>
+                    <button class="button-genre">Reggue</button>
+                    <button class="button-genre">Regueton</button>
+                </li>
+            </ul>
+        </aside>
+
+        <section class="results-billboard">
+            <article class="billboard-liked">
+                <h2>Most liked</h2>
+                <figure>
+                    <img class="billboard-image" src="images/songs.jpg" alt="reference image of the music">
+                    <img class="billboard-image" src="images/songs.jpg" alt="reference image of the music">
+                    <img class="billboard-image" src="images/songs.jpg" alt="reference image of the music">
+                    <img class="billboard-image" src="images/songs.jpg" alt="reference image of the music">
+                    <img class="billboard-image" src="images/songs.jpg" alt="reference image of the music">
+                    <img class="billboard-image" src="images/songs.jpg" alt="reference image of the music">
+                    <img class="billboard-image" src="images/songs.jpg" alt="reference image of the music">
+                    <img class="billboard-image" src="images/songs.jpg" alt="reference image of the music">
+                    <img class="billboard-image" src="images/songs.jpg" alt="reference image of the music">
+                    <img class="billboard-image" src="images/songs.jpg" alt="reference image of the music">
+                </figure>
+
+            </article>
+            <article class="billboard-criticized">
+                <h2>Most criticized</h2>
+                <figure>
+                    <img class="billboard-image" src="images/songs.jpg" alt="reference image of the music">
+                    <img class="billboard-image" src="images/songs.jpg" alt="reference image of the music">
+                    <img class="billboard-image" src="images/songs.jpg" alt="reference image of the music">
+                    <img class="billboard-image" src="images/songs.jpg" alt="reference image of the music">
+                    <img class="billboard-image" src="images/songs.jpg" alt="reference image of the music">
+                    <img class="billboard-image" src="images/songs.jpg" alt="reference image of the music">
+                    <img class="billboard-image" src="images/songs.jpg" alt="reference image of the music">
+                    <img class="billboard-image" src="images/songs.jpg" alt="reference image of the music">
+                    <img class="billboard-image" src="images/songs.jpg" alt="reference image of the music">
+                    <img class="billboard-image" src="images/songs.jpg" alt="reference image of the music">
+                </figure>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <a href="#" class="footer-link"><img src="images/sobre(purple).png" alt="">Contact us</a>
+            <a href="https://github.com/Santiscv/CriticalSound.git" target="_blank" class="footer-link"><img src="images/github(purple).png" alt="">Repository</a>
+        </div>
+        <div class="reserved">
+            <p>© 2024 Critical Sound All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
 </html>
