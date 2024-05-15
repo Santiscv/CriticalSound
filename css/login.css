@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+.register-container {
+    width:300px;
+    height: 500px;
+    background-color: #e8e6ff;
+    border: 2px solid #5e1fff;
+    border-radius: 10px;
+   /* padding: 30px;
+    margin-right: 10px;
+    margin-left: 80px;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    gap: 4px;
+    position: relative;
+    left:1000px; /* se va a romper al usar media query (usar display) */
+}
+.source-register {
+   /* border: 1px solid blue;*/
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    position: relative;
+    bottom: 70px;
+    
+}
+.button-pass {
+    width:80px;
+    border-radius: 10px;
+    background-color: #380ba7;
+    color: white;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+.name {
+    text-align: left;
+    border-radius: 5px;
+    border-color: #380ba7;
+    border-style: solid;
+
+}
+
+.password{
+    text-align: left;
+    border-radius: 5px;
+    border-color: #380ba7;
+    border-style: solid;
+
+}
+.logotype{
+    position: relative;
+    bottom:80px;
+    height: 200px;
+    /*border:1px solid black;*/
+    
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: black;
+    border-top-style: solid ;
+    border-color: #380ba7;
+    border-width: 2px;
+    height: 50px;
+}
+
+p{
+    color: #5e1fff;;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.github-icono{
+    width: 25px;
+    position: relative;
+    right: 20px;
+}
+label {
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.billboard-liked{
+    position:absolute;
+    top:20px;
+    background-color: #e8e6ff;
+    border: 2px solid #380ba7;
+    border-radius: 10px;
+    padding: 10px;
+    width: 800px;
+    height: 220px; /* Allows the height to be automatically adjusted to maintain proportion. */
+    margin: 10px; 
+    overflow-x: auto; /* allows horizontal scrolling */
+    overflow-y: hidden;
+    white-space: nowrap; /* Prevents elements from being wrapped to a new line */
+    margin-bottom: 10px;
+    left:130px;
+}
+
+.billboard-criticized{
+    position: absolute;
+    top: 220px;
+    background-color: #e8e6ff;
+    border: 2px solid #380ba7;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 10px;
+    width: 800px;
+    height: 220px; 
+    margin-top: 15px; 
+    overflow-x: auto; 
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin-top: 60px;
+    left:130px;
+}
+
+.billboard-image {
+    width: 185px; 
+    height: auto;
+    margin: 100 px;
+    padding: 10px 25px;
+}
