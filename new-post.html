@@ -6,10 +6,23 @@
     <title>New Post Section</title>
 </head>
 <body>
-    <h5>CriticalSound</h5>
-    <h1>New Post</h1>
-    <button id="home">Home</button>
-    <hr>
+    <header>
+        <nav>
+            <img class= "logotipo" src="images/logotipo-de-pagina.png" alt="Logotipo">
+            <div class="buscador">
+                <input type="text" placeholder="Search for any song, album..">
+                <button class="search-button" type="submit">Search</button>
+            </div>
+            <ul>
+                <li><img class="imgs" src="images/edit(purple).png"edit"></li>
+                <li><img class="imgs" src="images/message(purple).png" alt="messages"></li>
+                <li><img class="imgs" src="images/notification(purple).png" alt="notifications"></li>
+                <li><img class="imgs" src="images/profile(purple).png" alt="perfil"></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
     <form>
         <input id="title" name="titulo" placeholder="title"/>
         <div id="post-type">
@@ -24,7 +37,7 @@
             </ul>
         </div>
 
-        <div id="publicacion">
+        <div class="publicacion">
         <textarea id="post" name="publicacion" cols="50" rows="10" placeholder="enter your text here"></textarea>
         </div>
         <div>
@@ -32,5 +45,10 @@
             <button id="share">Share</button>
         </div>
     </form>
+    <footer class="footer"> 
+        <p> All rights reserved </p>
+        <img src="images/github(icono).png" alt="github">
+
+    </footer>
 </body>
 </html>
