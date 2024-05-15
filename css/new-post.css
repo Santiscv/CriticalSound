@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: black;
+    width: auto;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-style:solid; 
+    border-color: #5e1fff;
+    border-width: 2px;
+}
+
+footer {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background-color: black;
+    color: #f3f1ff;
+    padding: 10px 20px;
+    position: relative;
+}
