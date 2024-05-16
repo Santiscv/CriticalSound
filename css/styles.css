@@ -235,27 +235,52 @@ main{
 }
 
 /* -----footer------ */
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+footer {
+    display: grid;
+    grid-template-rows: auto 1fr;
     background-color: black;
-    border-top-style: solid ;
-    border-color: #380ba7;
-    border-width: 2px;
-    height: 50px;
-}
-
-p{
-    color: #5e1fff;;
-    font-family: "Kanit", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.github-icono{
-    width: 25px;
+    color: #f3f1ff;
+    font-family: "Bebas Neue", sans-serif;
+    padding: 10px 20px;
     position: relative;
-    right: 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 20px; 
+    border-bottom: 1px solid #666666; 
+    padding: 10px;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #f3f1ff;
+    display: flex;
+    align-items: center;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-link img {
+    width: 25px;
+    height: 25px;
+    border-radius: 30%;
+    margin-right: 10px;
+}
+
+.footer-link:first-child {
+    justify-self: start;
+}
+
+.footer-link:last-child {
+    justify-self: end;
+}
+
+.reserved {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding-top: 8px;
 }
