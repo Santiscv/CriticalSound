@@ -24,3 +24,11 @@ footer {
     padding: 10px 20px;
     position: relative;
 }
+.post-format{
+    display:flex;
+    flex-direction: row;
+    gap: 30px;
+    border: 1px solid red;
+    width: 500px;
+    list-style:none ;
+}
