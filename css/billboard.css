@@ -7,7 +7,8 @@
     font-style: normal;
 }
 
-h1 , h2{  
+h1,
+h2 {
     text-align: center;
     margin-top: 1px;
 }
@@ -107,11 +108,11 @@ button:hover {
 }
 
 /* -----Main container----- */
-.container{
+.container {
     display: flex;
-    text-decoration: none;
     padding: 20px;
     justify-content: space-around;
+    width: 1300px;
 }
 
 
@@ -122,30 +123,41 @@ button:hover {
     margin: 30px;
     padding: 10px;
     background-color: #e8e6ff;
-    position: relative;
     bottom: 5px;
+    width: 150px;
+    float: left;
 }
 
-.button-genre{
-    text-decoration: none;
+
+.button-genre {
+    list-style: none;
     margin: 10px 5px 0 0;
     font-size: 20px;
     border: 10px;
     border-radius: 5px;
-    display: block;
-    width: 130px;
     padding: 10px;
     background-color: #380ba7;
+    width: 150px;
+    float: left;
 }
+
+
+.button-genre {
+    display: flex;
+    justify-content: center;
+}
+
 
 /* -----Section results billboard----- */
 
+
 .billboard-image {
-    width: 200px; 
+    width: 200px;
     height: auto;
     margin: 100 px;
     padding: 10px 25px;
 }
+
 
 .billboard-image:hover{
     cursor: pointer;
@@ -153,39 +165,31 @@ button:hover {
     border-radius: 10px;
 }
 
-.link{
-    color: black;
-    text-decoration: none;
-    margin-inline: 90px;
-}
-
-.billboard-liked{
-    background-color: #e8e6ff;
-    border: 2px solid #380ba7;
-    border-radius: 10px;
-    margin: 15px ;
-    padding: 10px;
-    width: 1050px;
-    height: auto; /* Allows the height to be automatically adjusted to maintain proportion. */
-    margin: 10px; 
-    overflow-x: auto; /* allows horizontal scrolling */
-    overflow-y: hidden;
-    white-space: nowrap; /* Prevents elements from being wrapped to a new line */
-    margin-bottom: 25px;
-}
-
-.billboard-criticized{
+.billboard-liked,
+.billboard-criticized {
     background-color: #e8e6ff;
     border: 2px solid #380ba7;
     border-radius: 10px;
     margin: 15px;
     padding: 10px;
-    width: 1050px;
-    height: auto; 
-    margin: 10px; 
-    overflow-x: auto; 
+    width: 940px;
+    height: 230px;
+    /* Allows the height to be automatically adjusted to maintain proportion. */
+    margin: 10px;
+    float: left;
+}
+
+
+.billboard-liked,
+.billboard-criticized {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    /* allows horizontal scrolling */
     overflow-y: hidden;
     white-space: nowrap;
+    /* Prevents elements from being wrapped to a new line */
+    margin-bottom: 25px;
 }
 
 /* -----footer------ */
@@ -201,8 +205,8 @@ footer {
 .footer-content {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    gap: 20px; 
-    border-bottom: 1px solid #666666; 
+    gap: 20px;
+    border-bottom: 1px solid #666666;
     padding: 10px;
 }
 
@@ -236,4 +240,35 @@ footer {
     grid-column: 1 / -1;
     text-align: center;
     padding-top: 8px;
+}
+
+@media screen and (max-width:1139px) {
+    .container {
+        width: 100%;
+    }
+
+    .genre {
+        width: 20%;
+    }
+
+    .button-genre {
+        width: 19%;
+    }
+
+    .billboard-liked,
+    .billboard-criticized {
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width:1000px) {
+    .genre {
+        width: 100%;
+    }
+
+    .billboard-liked,
+    .billboard-criticized {
+        width: 100%;
+    }
 }
