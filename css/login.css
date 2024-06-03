@@ -1,7 +1,7 @@
 *{
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
+margin: 0;
+padding:0;
+box-sizing: border-box;
 }
 .register-container {
     width:300px;
@@ -32,7 +32,8 @@
     
 }
 .button-pass {
-    width:80px;
+    margin-top: 50px;
+    width:145px;
     border-radius: 10px;
     background-color: #380ba7;
     color: white;
@@ -41,6 +42,19 @@
     font-style: normal;
 
 }
+
+.button-register{
+    width: 60px;
+    background-color: #380ba7;
+    color: white;
+    border-radius: 10px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+
 .name {
     text-align: left;
     border-radius: 5px;
@@ -56,6 +70,7 @@
     border-style: solid;
 
 }
+
 .logotype{
     position: relative;
     bottom:80px;
@@ -63,30 +78,13 @@
     /*border:1px solid black;*/
     
 }
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    background-color: black;
-    border-top-style: solid ;
-    border-color: #380ba7;
-    border-width: 2px;
-    height: 50px;
+
+hr{
+    width: 80%;
+    color: black;
+    margin-bottom: 50px;
 }
 
-p{
-    color: #5e1fff;;
-    font-family: "Kanit", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.github-icono{
-    width: 25px;
-    position: relative;
-    right: 20px;
-}
 label {
     font-family: "Kanit", sans-serif;
     font-weight: 400;
