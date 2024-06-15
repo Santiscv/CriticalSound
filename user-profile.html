@@ -1,68 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi perfil</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
     <!-- enlace de fuente para titulos -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
     <!-- buscador -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
         <nav>
-            <img class= "logotipo" src="images/logotipo-de-pagina.png" alt="Logotipo">
+            <a href="homepage.html"><img class= "logotipo" src="images/logotipo-de-pagina.png" alt="Logotipo"></a>
             <div class="buscador">
                 <input type="text" placeholder="Search for any song, album..">
                 <button class="search-button" type="submit">Search</button>
             </div>
             <ul>
-                <li><img class="imgs" src="images/edit(purple).png"edit"></li>
-                <li><img class="imgs" src="images/message(purple).png" alt="messages"></li>
-                <li><img class="imgs" src="images/notification(purple).png" alt="notifications"></li>
-                <li><img class="imgs" src="images/profile(purple).png" alt="perfil"></li>
+                <li>
+                    <a href="new-post.html">
+                        <img class="imgs" src="images/edit(purple).png" alt="edit" >
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="imgs" src="images/message(purple).png" alt="messages">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="imgs" src="images/notification(purple).png" alt="notifications">
+                    </a>
+                </li>
+                <li>
+                    <a href="user-profile.html">
+                        <img class="imgs" src="images/profile(purple).png" alt="perfil">
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
-    <aside>
-        <div class="profile-container">
-            <h3>| Profile</h3>
-            <img class="profile-icono" src="images/profile(icono).png" alt="profile">
-        </div>
-        <div class="friends-container">
-            <h3>| Friends</h3>
-            <img class="friends-icono" src="images/friends(icono).png" alt="friends">
-        </div>
-        <div class="communities-container">
-            <h3>| Communities</h3>
-            <img class="friends-icono" src="images/friends(icono).png" alt="communities">
-        </div>
-    </aside>
-    <main>
-        
-            <div class="watchlist-container">
-                <h3>| Watchlist</h3>
-                <img class="plus-icono-img" src="images/plus(icono.).png" alt="plus">
-                <button class="button-watchlist" type="submit">Browse</button>
-            </div>
-            <div class="ratings-container">
-                <h3>| Music ratings</h3>
-                <img class="star-ratings-img" src="images/stars(icono).png" alt="star ratings">
-                <button class="rating-button" type="submit">New rating</button>
-            </div>
-    
+    <main class="main-container">
+      <aside class="information-profile-container">
+        <section class="profile-container">
+          <h3>| Profile</h3>
+          <img
+            class="profile-icono"
+            src="images/profile(icono).png"
+            alt="profile"
+          />
+        </section>
+        <section class="friends-container">
+          <h3>| Friends</h3>
+          <img
+            class="friends-icono"
+            src="images/friends(icono).png"
+            alt="friends"
+          />
+          <img
+            class="friends-icono"
+            src="images/friends(icono).png"
+            alt="friends"
+          />
+          <img
+            class="friends-icono"
+            src="images/friends(icono).png"
+            alt="friends"
+          />
+          <img
+            class="friends-icono"
+            src="images/friends(icono).png"
+            alt="friends"
+          />
+          <img
+            class="friends-icono"
+            src="images/friends(icono).png"
+            alt="friends"
+          />
+        </section>
+        <section class="communities-container">
+          <h3>| Communities</h3>
+          <img
+            class="friends-icono"
+            src="images/friends(icono).png"
+            alt="communities"
+          />
+          <img
+          class="friends-icono"
+          src="images/friends(icono).png"
+          alt="communities"
+        />
+            <img
+            class="friends-icono"
+            src="images/friends(icono).png"
+            alt="communities"
+        />
+        <img
+        class="friends-icono"
+        src="images/friends(icono).png"
+        alt="communities"
+        />
+        <img
+        class="friends-icono"
+        src="images/friends(icono).png"
+        alt="communities"
+        />
+        </section>
+      </aside>
+      <section class="watchlist-container">
+        <h3>| Watchlist</h3>
+        <img class="plus-icono-img" src="images/plus(icono.).png" alt="plus" />
+        <button class="button-watchlist" type="submit">Browse</button>
+      </section>
+      <section class="ratings-container">
+        <h3>| Music ratings</h3>
+        <img
+          class="star-ratings-img"
+          src="images/stars(icono).png"
+          alt="star ratings"
+        />
+        <button class="rating-button" type="submit">New rating</button>
+      </section>
     </main>
-    <footer> 
-        <p> All rights reserved 2024 </p>
-        <img class="github-icono" src="images/github(purple).png"github">
-
+    <footer>
+        <div class="footer-content">
+            <a href="#" class="footer-link"><img src="images/sobre(purple).png" alt="">Contact us</a>
+            <a href="https://github.com/Santiscv/CriticalSound.git" target="_blank" class="footer-link"><img src="images/github(purple).png" alt="">Repository</a>
+        </div>
+        <div class="reserved">
+            <p>© 2024 Critical Sound All rights reserved.</p>
+        </div>
     </footer>
-
-</body>
+  </body>
 </html>

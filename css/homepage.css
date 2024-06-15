@@ -6,12 +6,15 @@
 
 body {
     font-family: 'Kanit', sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
 }
 
 .logotipo{
     width: 170px;
     position: relative;
-    right: 330px;
+    right: 250px;
     top: 9px;
 }
 nav{
@@ -259,6 +262,132 @@ footer {
     grid-column: 1 / -1;
     text-align: center;
     padding-top: 8px;
+}
+
+/* Media Queries */
+
+/* pantallas pequeñas (hasta 320px) */
+@media (max-width: 320px) {
+    header {
+        height: 30px;
+        width: 100%;
+    }
+    header nav {
+        display: none;
+        /* flex-direction: column;
+        align-items: center; */
+    }
+    
+
+    header .buscador {
+        display: none;
+        /* width: 100%;
+        margin-bottom: 10px; */
+    }
+
+    header ul {
+        display: none;
+        /* display: flex;
+        justify-content: space-around;
+        width: 100%; */
+    }
+
+    main {
+        width: 100%;
+        /* margin: 1px; */
+    }
+
+    main .news-feed {
+        margin: auto;
+        width: 100%;
+        padding: 0;
+    }
+
+    footer .footer-content {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .footer-link:last-child {
+        margin-top: -45px;
+    }
+}
+
+/* pantallas pequeñas (hasta 600px) */
+@media (max-width: 600px) {
+    header {
+        height: 30px;
+        width: 100%;
+    }
+    header nav {
+        display: none;
+        /* flex-direction: column;
+        align-items: center; */
+    }
+
+
+    header .buscador {
+        display: none;
+        /* width: 100%;
+        margin-bottom: 10px; */
+    }
+
+    header ul {
+        display: none;
+        /* display: flex;
+        justify-content: space-around;
+        width: 100%; */
+    }
+
+    main {
+        width: 100%;
+        /* margin: 1px; */
+        padding: 5px;
+    }
+
+    main .news-feed {
+        max-width:500px;
+        margin: 0 auto;
+        /* width: 100%; */
+        padding: 0;
+    }
+
+    footer .footer-content {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .footer-link:last-child {
+        margin-top: -45px;
+    }
+}
+
+/* pantallas medianas (601px a 1200px) */
+@media (min-width: 601px) and (max-width: 1200px) {
+    header nav {
+        display: none;
+    }
+
+    main {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    main .news-feed {
+        max-width:500px;
+        margin: 0 auto;
+        /* width: 100%; */
+        padding: 0;
+    }
+
+    .logotipo{
+        width: 20px;
+        position: relative;
+        right: 250px;
+        top: 5px;
+    }
 }
 
 
