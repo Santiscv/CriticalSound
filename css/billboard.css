@@ -1,19 +1,29 @@
-/*We eliminate the margins and paddings that the browser adds by default*/
+/*Eliminamos los margenes y paddings que agrega el navegador por defecto*/
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
 }
 
-h1,
-h2 {
+h1 {
     text-align: center;
-    margin-top: 1px;
 }
+
+body{
+    display: grid;
+    grid-template-columns: 30% auto;
+    grid-template-rows: 0.2fr 2fr  0.2fr 0.2fr;
+    grid-template-areas: 
+        "header header"
+        "genre billboard-liked"
+        "genre billboard-criticized"
+        "footer footer";
+    }
 
 /*----Nav----*/
+.nav{
+    position: fixed;
+}
 
 .logotipo {
     /* background-color: black;  */
@@ -60,9 +70,11 @@ input {
     border-style: solid;
 }
 
+
 li {
-    display: inline-block;
+    display:inline
 }
+
 
 .imgs {
     left: 290px;
@@ -82,25 +94,32 @@ header {
     border-bottom-style: solid;
     border-color: #5e1fff;
     border-width: 2px;
+    grid-area: header;
 }
 
 h3 {
     color: #5e1fff;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 22px;
     position: relative;
     left: 20px;
     top: 10px;
 }
 
+
 button {
     background-color: #5e1fff;
     color: white;
 }
 
+
 button:hover {
     background-color: #d4d0ff;
     cursor: pointer;
 }
+
 
 .imgs:hover {
     background-color: #e8e6ff;
@@ -109,68 +128,89 @@ button:hover {
 
 /* -----Main container----- */
 .container {
-    display: flex;
+    display: grid; /* Cambiado de flex a grid */
+    grid-template-areas: 
+        "genre billboard-liked"
+        "genre billboard-criticized";
+    gap: 10px;
     padding: 20px;
-    justify-content: space-around;
-    width: 1300px;
+    margin-top: 20px;
+    max-width: 1200px;
+    min-height: 750px;
 }
 
 
 /* -----Aside - genre----- */
 .genre {
-    border: 2px solid #380ba7;
+    display: grid;
+    /*border: 2px #380ba7;*/
     border-radius: 10px;
-    margin: 30px;
+    margin:0 40px;
     padding: 10px;
-    background-color: #e8e6ff;
-    bottom: 5px;
+    border: 2px;
+    background: linear-gradient(#7157ce, #9198e5, #8289db);
+    box-shadow: 0 2px 6px;
     width: 150px;
+    height: 600px;
     float: left;
+    grid-area: genre;
 }
 
 
 .button-genre {
-    list-style: none;
     margin: 10px 5px 0 0;
-    font-size: 20px;
+    font-size: 18px;
     border: 10px;
     border-radius: 5px;
     padding: 10px;
-    background-color: #380ba7;
+    background-color: #d0d2e7;
+    color: rgba(0, 0, 0, 0.865);
     width: 150px;
+    height: auto;
     float: left;
 }
 
 
-.button-genre {
-    display: flex;
+.button-genre:hover{
+    display: grid;
+    grid-template-columns: 30%;
     justify-content: center;
+    text-align: center;
+    box-shadow: 0 0 10px 3.5px ;
+    transform: scale(1.05);
 }
 
 
 /* -----Section results billboard----- */
+#billboard-liked{
+    grid-area: billboard-liked;
+}
 
+#billboard-criticized{
+    grid-area: billboard-criticized;
+}
 
 .billboard-image {
     width: 200px;
     height: auto;
-    margin: 100 px;
     padding: 10px 25px;
 }
 
-
-.billboard-image:hover{
+.billboard-image:hover {
     cursor: pointer;
-    background-color: #d4d0ff;
-    border-radius: 10px;
+    /*background-color: #d4d0ff;*/
+    background: linear-gradient(#7157ce, #9198e5, #8289db);
+    /*background: linear-gradient(#7e61e4, #9198e5);;*/
+    box-shadow: 0 0 10px 3.5px ;
+    transform: scale(1.05);
 }
 
 .billboard-liked,
 .billboard-criticized {
     background-color: #e8e6ff;
-    border: 2px solid #380ba7;
+    border: 4px  #380ba7;
+    box-shadow: 0 2px 6px black;
     border-radius: 10px;
-    margin: 15px;
     padding: 10px;
     width: 940px;
     height: 230px;
@@ -182,14 +222,13 @@ button:hover {
 
 .billboard-liked,
 .billboard-criticized {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-rows: auto;
     overflow-x: auto;
     /* allows horizontal scrolling */
     overflow-y: hidden;
     white-space: nowrap;
     /* Prevents elements from being wrapped to a new line */
-    margin-bottom: 25px;
 }
 
 /* -----footer------ */
@@ -200,6 +239,12 @@ footer {
     color: #f3f1ff;
     padding: 10px 20px;
     position: relative;
+    font-weight: 400;
+    font-style: normal;
+    border-top-style: solid;
+    border-color: #5e1fff;
+    border-width: 2px;
+    grid-area: footer;
 }
 
 .footer-content {
@@ -242,33 +287,164 @@ footer {
     padding-top: 8px;
 }
 
-@media screen and (max-width:1139px) {
-    .container {
+/* Media Queries */
+
+/* pantallas pequeñas (hasta 320px) */
+@media (max-width: 320px) {
+    header {
+        height: 30px;
         width: 100%;
     }
+    header nav {
+        display: none;
+        /* flex-direction: column;
+        align-items: center; */
+    }
+    
 
-    .genre {
-        width: 20%;
+    header .buscador {
+        display: none;
+        /* width: 100%;
+        margin-bottom: 10px; */
     }
 
-    .button-genre {
-        width: 19%;
+    header ul {
+        display: none;
+        /* display: flex;
+        justify-content: space-around;
+        width: 100%; */
     }
 
-    .billboard-liked,
-    .billboard-criticized {
-        width: 80%;
+    .container {
+        width: 100%;
+        /* margin: 1px; */
+        grid-template-areas: 
+        "billboard-liked"
+        "billboard-criticized";
+    }
+
+    .container .genre {
+        display: none;
+    }
+
+    .container .billboard-liked{
+        margin: auto;
+        width: 100%;
+        padding: 0;
+    }
+
+    .container .billboard-criticized{
+        margin: auto;
+        width: 100%;
+        padding: 0;
+    }
+
+    footer .footer-content {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .footer-link:last-child {
+        margin-top: -45px;
     }
 }
 
-
-@media screen and (max-width:1000px) {
-    .genre {
+/* pantallas pequeñas (hasta 600px) */
+@media (max-width: 600px) {
+    header {
+        height: 30px;
         width: 100%;
     }
+    header nav {
+        display: none;
+        /*flex-direction: column;
+        align-items: center; */
+    }
 
-    .billboard-liked,
-    .billboard-criticized {
+
+    header .buscador {
+        /*display: none;*/
+        width: 50%;
+        margin-bottom: 10px; 
+    }
+
+    header ul {
+        display: none;
+        /* display: flex;
+        justify-content: space-around;
+        width: 100%; */
+    }
+
+    .container {
         width: 100%;
+        /* margin: 1px; */
+        padding: 5px;
+        grid-template-areas: 
+        "billboard-liked"
+        "billboard-criticized";
+    }
+
+    .container .genre{
+        display: none;
+        /* width: 100%; 
+        max-width:500px;
+        margin: 0 auto;
+        padding: 0;*/
+    }
+
+    .container .billboard-liked {
+        max-width:500px;
+        margin: 0 auto;
+        /* width: 100%; */
+        padding: 0;
+    }
+
+    .container .billboard-criticized {
+        max-width:500px;
+        margin: 0 auto;
+        /* width: 100%; */
+        padding: 0;
+    }
+
+    footer .footer-content {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .footer-link:last-child {
+        margin-top: -45px;
+    }
+}
+
+/* pantallas medianas (601px a 1200px) */
+@media (min-width: 601px) and (max-width: 1200px) {
+    header nav {
+        display: none;
+    }
+
+    .container {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .container .billboard-liked {
+        max-width:530px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .container .billboard-criticized {
+        max-width:530px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .logotipo{
+        width: 20px;
+        position: relative;
+        right: 250px;
+        top: 5px;
     }
 }
