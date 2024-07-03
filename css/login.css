@@ -4,7 +4,16 @@ padding:0;
 box-sizing: border-box;
 }
 
+body{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "liked liked register"
+    "criticized criticized register "
+}
 
+/* contenedor de registro*/
 .register-container {
     width:300px;
     height: 500px;
@@ -18,9 +27,11 @@ box-sizing: border-box;
     justify-content:center;
     gap: 4px;
     position: relative;
+    box-shadow: 0 2px 6px black;
     left:1000px; /* se va a romper al usar media query (usar display) */
-    
+    grid-area: register
 }
+
 
 .source-register {
     /* border: 1px solid blue;*/
@@ -53,6 +64,7 @@ box-sizing: border-box;
     font-family: "Kanit", sans-serif;
     font-weight: 400;
     font-style: normal;
+    
 
 }
 
@@ -78,7 +90,6 @@ box-sizing: border-box;
     bottom:80px;
     height: 200px;
     padding-left: 30px;
-    /*border:1px solid black;*/
     
 }
 
@@ -93,6 +104,19 @@ label {
     font-family: "Kanit", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+/* secciones billboard*/
+.billboard-liked,
+.billboard-criticized {
+    background-color: #e8e6ff;
+    border: 4px  #380ba7;
+    box-shadow: 0 2px 6px black;
+    border-radius: 10px;
+    padding: 10px;
+    width: 940px;
+    height: 230px;
+    margin: 10px;
 }
 .billboard-liked{
     position:absolute;
@@ -109,6 +133,8 @@ label {
     white-space: nowrap; /* Prevents elements from being wrapped to a new line */
     margin-bottom: 10px;
     left:130px;
+    grid-area: liked;
+    
 }
 
 .billboard-criticized{
@@ -127,6 +153,7 @@ label {
     white-space: nowrap;
     margin-top: 60px;
     left:130px;
+    grid-area:criticized;
 }
 
 .billboard-image {
@@ -134,4 +161,31 @@ label {
     height: auto;
     margin: 100 px;
     padding: 10px 25px;
+}
+
+aside{
+    display: grid;
+    grid-column-start: span 2;
+    
+
+}
+
+
+/*MEDIA QUERIES*/
+
+/*break para pantalla chica hasta 600px */
+@media (max-width: 600px) {
+    main{
+        width:50%;
+    }
+    aside{
+        width:50%
+
+}
+}
+
+
+/* break para pantallas grandes*/
+@media (min-width:600px) and (max-width:1200px){
+
 }
