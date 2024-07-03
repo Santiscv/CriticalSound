@@ -1,27 +1,40 @@
 *{
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
+margin: 0;
+padding:0;
+box-sizing: border-box;
 }
+
+body{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "liked liked register"
+    "criticized criticized register "
+}
+
+/* contenedor de registro*/
 .register-container {
     width:300px;
     height: 500px;
     background-color: #e8e6ff;
-    border: 2px solid #5e1fff;
+    border: 2px solid #380ba7;
     border-radius: 10px;
-   /* padding: 30px;
-    margin-right: 10px;
-    margin-left: 80px;*/
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content:center;
     gap: 4px;
     position: relative;
+    box-shadow: 0 2px 6px black;
     left:1000px; /* se va a romper al usar media query (usar display) */
+    grid-area: register
 }
+
+
 .source-register {
-   /* border: 1px solid blue;*/
+    /* border: 1px solid blue;*/
     height: 100px;
     display: flex;
     flex-direction: column;
@@ -32,7 +45,8 @@
     
 }
 .button-pass {
-    width:80px;
+    margin-top: 50px;
+    width:145px;
     border-radius: 10px;
     background-color: #380ba7;
     color: white;
@@ -41,6 +55,20 @@
     font-style: normal;
 
 }
+
+.button-register{
+    width: 60px;
+    background-color: #380ba7;
+    color: white;
+    border-radius: 10px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+
+}
+
+
 .name {
     text-align: left;
     border-radius: 5px;
@@ -56,45 +84,43 @@
     border-style: solid;
 
 }
+
 .logotype{
     position: relative;
     bottom:80px;
     height: 200px;
-    /*border:1px solid black;*/
+    padding-left: 30px;
     
 }
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    background-color: black;
-    border-top-style: solid ;
-    border-color: #380ba7;
-    border-width: 2px;
-    height: 50px;
+
+hr{
+    width: 80%;
+    color: black;
+    margin-bottom: 50px;
+    margin-top: 20px;
 }
 
-p{
-    color: #5e1fff;;
-    font-family: "Kanit", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.github-icono{
-    width: 25px;
-    position: relative;
-    right: 20px;
-}
 label {
     font-family: "Kanit", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
+
+/* secciones billboard*/
+.billboard-liked,
+.billboard-criticized {
+    background-color: #e8e6ff;
+    border: 4px  #380ba7;
+    box-shadow: 0 2px 6px black;
+    border-radius: 10px;
+    padding: 10px;
+    width: 940px;
+    height: 230px;
+    margin: 10px;
+}
 .billboard-liked{
     position:absolute;
-    top:20px;
+    top:90px;
     background-color: #e8e6ff;
     border: 2px solid #380ba7;
     border-radius: 10px;
@@ -107,15 +133,17 @@ label {
     white-space: nowrap; /* Prevents elements from being wrapped to a new line */
     margin-bottom: 10px;
     left:130px;
+    grid-area: liked;
+    
 }
 
 .billboard-criticized{
     position: absolute;
-    top: 220px;
+    top: 320px;
     background-color: #e8e6ff;
     border: 2px solid #380ba7;
     border-radius: 10px;
-    margin: 15px;
+    margin: 10px;
     padding: 10px;
     width: 800px;
     height: 220px; 
@@ -125,6 +153,7 @@ label {
     white-space: nowrap;
     margin-top: 60px;
     left:130px;
+    grid-area:criticized;
 }
 
 .billboard-image {
@@ -132,4 +161,31 @@ label {
     height: auto;
     margin: 100 px;
     padding: 10px 25px;
+}
+
+aside{
+    display: grid;
+    grid-column-start: span 2;
+    
+
+}
+
+
+/*MEDIA QUERIES*/
+
+/*break para pantalla chica hasta 600px */
+@media (max-width: 600px) {
+    main{
+        width:50%;
+    }
+    aside{
+        width:50%
+
+}
+}
+
+
+/* break para pantallas grandes*/
+@media (min-width:600px) and (max-width:1200px){
+
 }
