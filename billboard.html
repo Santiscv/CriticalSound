@@ -21,31 +21,31 @@
 
 <body>
     <header>
-        <nav>
-            <img class= "logotipo" src="images/logotipo-de-pagina.png" alt="Logotipo">
+        <nav class="nav">
+            <a href="homepage.html"><img class= "logotipo" src="images/logotipo-de-pagina.png" alt="Logotipo" title="Homepage"></a>
             <div class="buscador">
                 <input type="text" placeholder="Search for any song, album..">
                 <button class="search-button" type="submit">Search</button>
             </div>
-            <ul>
+            <ul class="navegation">
                 <li>
                     <a href="new-post.html">
-                        <img class="imgs" src="images/edit(purple).png" alt="edit" >
+                        <img class="imgs" src="images/edit(purple).png" alt="edit" title="posteos" >
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img class="imgs" src="images/message(purple).png" alt="messages">
+                        <img class="imgs" src="images/message(purple).png" alt="messages" title="messages">
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img class="imgs" src="images/notification(purple).png" alt="notifications">
+                        <img class="imgs" src="images/notification(purple).png" alt="notifications" title="notifications">
                     </a>
                 </li>
                 <li>
                     <a href="user-profile.html">
-                        <img class="imgs" src="images/profile(purple).png" alt="perfil">
+                        <img class="imgs" src="images/profile(purple).png" alt="perfil" title="perfil">
                     </a>
                 </li>
             </ul>
@@ -72,10 +72,10 @@
             </ul>
         </aside>
 
-        <section>
+        <section id="billboard-liked">
             
-            <h2>Most liked</h2>
-            <article class="billboard-liked">
+            <h1>Most liked</h1>
+            <article  class="billboard-liked">
                 <figure>
                     <img class="billboard-image" src="images/songs.jpg" alt="reference image of the music">
                     <img class="billboard-image" src="images/songs.jpg" alt="reference image of the music">
@@ -90,9 +90,11 @@
                 </figure>
 
             </article>
+        </section>
 
-            <h2>Most criticized</h2>
-            <article class="billboard-criticized">
+        <section id="billboard-criticized">
+            <h1>Most criticized</h1>
+            <article  class="billboard-criticized">
                 <figure>
                     <img class="billboard-image" src="images/songs.jpg" alt="reference image of the music">
                     <img class="billboard-image" src="images/songs.jpg" alt="reference image of the music">
