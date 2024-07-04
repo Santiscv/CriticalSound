@@ -17,7 +17,7 @@ body{
         "genre billboard-liked"
         "genre billboard-criticized"
         "footer footer";
-    }
+}
 
 /*----Nav----*/
 
@@ -260,8 +260,9 @@ footer {
     padding-top: 8px;
 }
 
-/* Media Queries */
+/* Media Queries
 
+<<<<<<< HEAD
 /* Media Query para pantallas menores a 720px */
 @media (max-width: 720px) {
     /* Ocultar Navbar */
@@ -275,6 +276,27 @@ footer {
       position: relative;
       right: 0;
       top: 0;
+=======
+/* pantallas pequeñas (hasta 320px) */
+@media (max-width: 430px) {
+    body{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows:auto;
+        grid-template-areas: 
+            "header"
+            "billboard-liked"
+            "billboard-criticized"
+            "footer";
+        box-sizing: border-box;
+        width: fit-content;
+
+    }
+    header {
+        box-sizing: border-box;
+        height: 30px;
+        width: 100%;
+>>>>>>> 920dfd4 (modified media querie)
     }
   
     /* Ajustar Body grid layout */
@@ -386,6 +408,7 @@ footer {
       grid-template-columns: 1fr;
       gap: 10px;
     }
+<<<<<<< HEAD
   
     .billboard-liked {
       width: 90%;
@@ -393,6 +416,15 @@ footer {
       grid-template-columns: 1fr;
       gap: 10px;
       justify-items: center;
+=======
+
+    .container {
+        width: 100%;
+        padding: 5px;
+        grid-template-areas: 
+        "billboard-liked"
+        "billboard-criticized";
+>>>>>>> 920dfd4 (modified media querie)
     }
   
     .billboard-image {
@@ -418,10 +450,26 @@ footer {
     .footer-link {
       margin: 5px 0;
     }
+<<<<<<< HEAD
   }
   
+=======
+
+    .footer-link:last-child {
+        margin-top: -45px;
+    }
+
+    footer{
+        margin-top: 230px;
+    }
+}
+
+>>>>>>> 920dfd4 (modified media querie)
 /* pantallas pequeñas (hasta 600px) */
 @media (max-width: 600px) {
+    body{
+        width: fit-content;
+    }
     header {
         height: 30px;
         width: 100%;
@@ -450,16 +498,11 @@ footer {
 
     .container .genre{
         display: none;
-        /* width: 100%; 
-        max-width:500px;
-        margin: 0 auto;
-        padding: 0;*/
     }
 
     .container .billboard-liked {
         max-width:500px;
         margin: 0 auto;
-        /* width: 100%; */
         padding: 0;
     }
 
@@ -482,6 +525,9 @@ footer {
 
 /* pantallas medianas (601px a 1200px) */
 @media (min-width: 601px) and (max-width: 1200px) {
+    body{
+        width: fit-content;
+    }
     header nav {
         display: none;
     }
