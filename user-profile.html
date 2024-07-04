@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
       rel="stylesheet"
     />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- buscador -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,36 +25,48 @@
   </head>
   <body>
     <header>
-        <nav>
-            <a href="homepage.html"><img class= "logotipo" src="images/logotipo-de-pagina.png" alt="Logotipo"></a>
-            <div class="buscador">
-                <input type="text" placeholder="Search for any song, album..">
-                <button class="search-button" type="submit">Search</button>
-            </div>
-            <ul>
-                <li>
-                    <a href="new-post.html">
-                        <img class="imgs" src="images/edit(purple).png" alt="edit" >
-                    </a>
-                </li>
-                <li>
-                    <a href="billboard.html">
-                        <img class="imgs" src="images/cartelera(icono).png" alt="billboard">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img class="imgs" src="images/notification(purple).png" alt="notifications">
-                    </a>
-                </li>
-                <li>
-                    <a href="user-profile.html">
-                        <img class="imgs" src="images/profile(purple).png" alt="perfil">
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+      <nav>
+        <a href="homepage.html">
+            <img class= "logotipo" src="images/logotipo-de-pagina.png" alt="Logotipo">
+        </a>
+          <div class="buscador">
+              <input type="text" placeholder="Search for any song, album..">
+              <button class="search-button" type="submit">Search</button>
+          </div>
+          <ul class="image-links">
+              <li>
+                  <a href="new-post.html">
+                      <img class="imgs" src="images/edit(purple).png"edit">
+                  </a>
+              </li>
+              <li>
+                  <a href="billboard.html">
+                      <img class="imgs" src="images/cartelera(icono).png" alt="billboard">
+                  </a>
+              </li>
+              <li>
+                  <a href="#">
+                      <img class="imgs" src="images/notification(purple).png" alt="notifications">
+                  </a>
+              </li>
+              <li>
+                  <a href="user-profile.html">
+                      <img class="imgs" src="images/profile(purple).png" alt="perfil">
+                  </a>
+              </li>
+          </ul>
+          <ul class="text-links">
+              <li><a href="new-post.html">New Post</a></li>
+              <li><a href="billboard.html">Billboard</a></li>
+              <li><a href="#">Notifications</a></li>
+              <li><a href="user-profile.html">Profile</a></li>
+          </ul>
+          <div class="icons">
+              <i class='bx bx-menu' id="menu-icon"></i>
+          </div>
+      </nav>
+  </header>
+  
     <aside class="information-profile-container">
       <section class="profile-container">
           <h3>| Profile</h3>
@@ -169,5 +182,7 @@
             <p>© 2024 Critical Sound All rights reserved.</p>
         </div>
     </footer>
+    <script src="js/burger.js"></script>
+
   </body>
 </html>
