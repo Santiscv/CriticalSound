@@ -119,6 +119,7 @@ aside {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  height: fit-content;
   grid-area: aside;
 }
 
@@ -217,8 +218,6 @@ aside {
   color: #380ba7;
   margin-bottom: 10px;
   align-self: flex-start;
-
-  
 }
 
 .billboard-liked {
@@ -232,6 +231,30 @@ aside {
 
 .billboard-image {
   width: 120px;
+  .watchlist-container,
+  .ratings-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    gap: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+  }
+  .watchlist-container,
+  .ratings-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    gap: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+  }
   height: auto;
   padding: 10px 25px;
   margin: 5px;
@@ -354,4 +377,76 @@ footer {
 .friends-container,
 .communities-container {
   animation: slideIn 0.5s ease-in-out;
+}
+
+@media  (max-width : 480px) {
+  header{
+    display: none;
+  }
+  body {
+    grid-template-areas:
+        "header"
+        "profile" 
+        "main"
+        "footer";
+  }
+  .information-profile-container{
+    grid-area: profile;
+    margin:0 20px;
+    width: 80%;
+  }
+  .main-container {
+    grid-area: main;
+    margin: 0 20px;
+    width: 80%;
+    
+  }
+  .watchlist-container,
+  .ratings-container {
+    width: 75%;
+    padding: auto;
+    }
+  .billboard-liked {
+    width: 150px;
+    }
+  footer {
+    grid-area: footer;
+    width: auto;
+  }
+}
+
+@media  (max-width : 360px) {
+  header{
+    display: none;
+  }
+  body {
+    grid-template-areas:
+        "header"
+        "profile" 
+        "main"
+        "footer";
+  }
+  .information-profile-container{
+    grid-area: profile;
+    margin:0 20px;
+    width: 50%;
+  }
+  .main-container {
+    grid-area: main;
+    margin: 0 20px;
+    width: 50%;
+    
+  }
+  .watchlist-container,
+  .ratings-container {
+    width: 60%;
+    padding: auto;
+    }
+  .billboard-liked {
+    width: 150px;
+    }
+  footer {
+    grid-area: footer;
+    width: 65%;
+  }
 }
