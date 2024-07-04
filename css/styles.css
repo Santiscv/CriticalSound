@@ -231,35 +231,10 @@ aside {
 
 .billboard-image {
   width: 120px;
-  .watchlist-container,
-  .ratings-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px;
-    background-color: #fff;
-    border-radius: 10px;
-    gap: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 1s ease-in-out;
-  }
-  .watchlist-container,
-  .ratings-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px;
-    background-color: #fff;
-    border-radius: 10px;
-    gap: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 1s ease-in-out;
-  }
   height: auto;
   padding: 10px 25px;
   margin: 5px;
   transition: transform 0.3s ease;
-
 }
 
 .billboard-image:hover {
@@ -273,22 +248,37 @@ aside {
 
 .button-watchlist,
 .rating-button {
-  padding: 10px 30px;
-  border-radius: 20px;
-  background-color: #5e1fff;
-  color: #fff;
-  border: solid 1px #380ba7;
   font-family: "Kanit", sans-serif;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  align-self: center; 
+  text-align: center;
+  box-shadow: 0 0 10px 3.5px #5b1df9;
+  color: white;
+  border-radius: 10px;
+  width: 100px;
+  height: 40px;
+  background-color: #380ba7;
+  position: relative;
+  overflow: hidden;
+}
+
+.button-watchlist::before, .rating-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.4s;
+}
+
+.button-watchlist:hover::before, .rating-button:hover::before {
+  left: 100%;
 }
 
 .button-watchlist:hover,
 .rating-button:hover {
   background-color: #380ba7;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 
