@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header>
@@ -17,12 +18,37 @@
                 <input type="text" placeholder="Search for any song, album..">
                 <button class="search-button" type="submit">Search</button>
             </div>
-            <ul>
-                <li><img class="imgs" src="images/edit(purple).png"edit"></li>
-                <li><img class="imgs" src="images/message(purple).png" alt="messages"></li>
-                <li><img class="imgs" src="images/notification(purple).png" alt="notifications"></li>
-                <li><img class="imgs" src="images/profile(purple).png" alt="perfil"></li>
+            <ul class="image-links">
+                <li>
+                    <a href="new-post.html">
+                        <img class="imgs" src="images/edit(purple).png"edit">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="imgs" src="images/message(purple).png" alt="messages">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="imgs" src="images/notification(purple).png" alt="notifications">
+                    </a>
+                </li>
+                <li>
+                    <a href="user-profile.html">
+                        <img class="imgs" src="images/profile(purple).png" alt="perfil">
+                    </a>
+                </li>
             </ul>
+            <ul class="text-links">
+                <li><a href="new-post.html">New Post</a></li>
+                <li><a href="#">Messages</a></li>
+                <li><a href="#">Notifications</a></li>
+                <li><a href="user-profile.html">Profile</a></li>
+            </ul>
+            <div class="icons">
+                <i class='bx bx-menu' id="menu-icon"></i>
+            </div>
         </nav>
     </header>
     
@@ -114,5 +140,7 @@
             <p>© 2024 Critical Sound All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="js/burger.js"></script>
 </body>
 </html>
