@@ -293,43 +293,24 @@ footer {
     padding-top: 8px;
 }
 
-/* ---Media query--- */
-@media (max-width: 500px) {
-    .icons {
-        left: 450px;
+/* Media Queries */
+
+/* Media Query para pantallas menores a 720px */
+@media (max-width: 720px) {
+    /* Ocultar Navbar */
+    nav {
+      display: none;
     }
-    .text-links.active {
-        left: 275px;
+  
+    /* Ajustar logotipo */
+    .logotipo {
+      width: 150px;
+      position: relative;
+      right: 0;
+      top: 0;
     }
 }
 
-<<<<<<< HEAD
-/* pantallas pequeñas (hasta 320px) */
-@media (max-width: 430px) {
-    body {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "header"
-            "billboard-liked"
-            "billboard-criticized"
-            "footer";
-        box-sizing: border-box;
-        width: fit-content;
-    }
-    header {
-        box-sizing: border-box;
-        height: 30px;
-        width: 100%;
-    }
-    header nav {
-        display: none;
-    }
-    
-
-    header .buscador {
-=======
 /* pantallas pequeñas (hasta 700px) */
 @media (max-width: 700px) {
     header {
@@ -351,7 +332,6 @@ footer {
     }
 
     .image-links {
->>>>>>> dc577a4 (change the media queries)
         display: none;
     }
 
@@ -359,25 +339,54 @@ footer {
     .text-links {
         display: none;
     }
-<<<<<<< HEAD
-=======
 
     .icons {
         display: block;
         top: -4px;
         left: left;
     }
-
-    .text-links.active {
-        display: block;
-        position: absolute;
-        border: solid 1px #fff;
-        background-color: hsla(0, 4%, 5%, 0.322);
-        top: 70px;
-        right: 40px;
-        width: 200px;
-        text-align: center;
-        z-index: 1000;
+  
+    .footer-link {
+      margin: 5px 0;
+    }
+  }
+  
+  /* Media Query para pantallas entre 601px y 1200px */
+  @media (min-width: 601px) and (max-width: 1200px) {
+    body {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-areas:
+        "header"
+        "profile"
+        "main"
+        "footer";
+      justify-items: center;
+    }
+  
+    header nav {
+      grid-area: header;
+    }
+  
+    .information-profile-container {
+      grid-area: profile;
+      max-width: 90%;
+      margin-left: 0;
+      margin-bottom: 30px;
+      width: 100%; /* Ajustar el ancho del contenedor */
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  
+    .main-container {
+      max-width: 90%;
+      margin-left: 0;
+      grid-area: main;
+      width: 100%; /* Ajustar el ancho del contenedor */
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
     }
     .text-links.active li {
         margin: 10px 0;
@@ -388,10 +397,30 @@ footer {
         text-decoration: none;
         font-size: 18px;
     }
-    
-    .text-links.active li a:hover {
-        color: #380ba7;
-        text-decoration: underline;
+  
+    .footer-link {
+      margin: 5px 0;
+    }
+  }
+  
+/* pantallas pequeñas (hasta 600px) */
+@media (max-width: 600px) {
+    header {
+        height: 30px;
+        width: 100%;
+    }
+    header nav {
+        display: none;
+    }
+
+
+    header .buscador {
+        width: 50%;
+        margin-bottom: 10px; 
+    }
+
+    header ul {
+        display: none;
     }
 >>>>>>> dc577a4 (change the media queries)
 
@@ -413,24 +442,19 @@ footer {
             "billboard-criticized";
     }
 
-    .container .genre {
-        width: 500px;
-        height: 200px;
-        overflow: auto;
+    .container .genre{
+        display: none;
+        /* width: 100%; 
+        max-width:500px;
+        margin: 0 auto;
+        padding: 0;*/
     }
 
-    .container .genre ul li {
-        padding: 8px;
-        border: none;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-auto-rows: auto;
-    }
-
-    .container .genre .button-genre {
-        width: 80px;
-        padding: 10px 20px;
-        border: none;
+    .container .billboard-liked {
+        max-width:500px;
+        margin: 0 auto;
+        /* width: 100%; */
+        padding: 0;
     }
     
     .container .billboard-liked,
@@ -536,28 +560,9 @@ footer {
     }
 }
 
-/* pantallas medianas (701px a 1150px) */
-@media (min-width: 701px) and (max-width: 1150px) {
-
-    .logotipo{
-        right: 300px;
-        top: 5px;
-    }
-
-    .buscador {
-        display: none;
-    }
-
-    nav .image-links {
-        display: none;
-    }
-
-    .image-links {
-        display: none;
-    }
-
-  /* ---------BURGER---------- */
-    .text-links {
+/* pantallas medianas (601px a 1200px) */
+@media (min-width: 601px) and (max-width: 1200px) {
+    header nav {
         display: none;
     }
 
