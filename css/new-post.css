@@ -3,6 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 0.2fr 2fr 0.2fr;
+    grid-template-areas: 
+        "header"
+        "new-post"
+        "footer";
+}
+
+/*----Nav----*/
+
 .logotipo{
     width: 170px;
     position: relative;
@@ -23,7 +36,7 @@ nav{
 }
 input{
     text-align: center;
-    height: 33px;
+    height: 30px;
     border-radius: 20px;
     width: 230px;
     font-family: "Kanit", sans-serif;
@@ -42,31 +55,61 @@ input{
     border-color: #380ba7;
     border-style: solid;
 }
-li{
-    display: inline-block;
+
+.navegation {
+    display: flex;
+    gap: 15px;
 }
+
+.navegation li{
+    list-style: none;
+}
+
 .imgs{
     left:290px;
     width: 42px;
     position: relative;
     bottom: 60px;
-    padding: 0 8px;
+    padding: 1px 7px;
+    border-radius: 50px;
+    transition: transform 0.5s ease-in-out;
 }
 
 header {
-    background: black;
+    background-image: linear-gradient(to right, #5b1df9,#27252e,#15131a,#050408, black);
     width: auto;
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom-style:solid; 
+    border-bottom-style: solid;
     border-color: #5e1fff;
     border-width: 2px;
+    grid-area: header;
 }
+
+button{
+    background-color: #5e1fff;
+    color: white;
+}
+
+button:hover{
+    background-color: #d4d0ff;
+    cursor: pointer;
+    color: black;
+}
+
+.imgs:hover{
+    box-shadow: 0 0 10px 3.5px #5b1df9;
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+/* ----- Main ----- */
 .new-post{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 90%;
+    grid-template-rows: repeat(4, 1fr);
     border-radius: 10px;
     width: 60vw;
     height: 450px;
@@ -74,29 +117,24 @@ header {
     margin-top: 100px;
     /*box-shadow: 0 2px 6px black;*/
     margin-bottom: 100px;
-    gap:5px
-    
-
-
+    gap:5px;
+    grid-area: new-post;
 }
-/* ----- cuerpo ----- */
-#title{
+
+.title{
+    box-shadow: 0 0 10px 3.5px #5b1df9;
     width: 100%;
     border: 2px solid;
     border-radius: 10px;
     border-color:#380ba7;
     text-align: start;
-    font-size: 15px;
+    font-size: 25px;
 }
-
-
-
 
 
 .post-format{
     display:flex;
     flex-direction: row;
-
     gap: 30px;
     border: 2px solid;
     border-radius: 10px;
@@ -107,12 +145,20 @@ header {
     height: 50px;
     margin-top: 3px;
     justify-content: space-around;
+    box-shadow: 0 0 10px 3.5px #5b1df9;
+}
+
+.post-format img{
+    width: 40px;
+    height: 35px;
+}
+
+.post-format :hover{
+    cursor: pointer;
+    transform: scale(1.10);
 
 }
-.post-format img {
-    width: 40px;
-    height: 40px;
-}
+
 .post textarea{
     width: 100%;
     height: 300px;
@@ -121,25 +167,26 @@ header {
     border-radius: 10px;
     border-color: #380ba7;
     margin-top: 3px;
-   
+    box-shadow: 0 0 10px 3.5px #5b1df9;
 }
-#preview{
-    background-color: #380ba7;
+
+.buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px; 
+}
+
+.preview, .share {
+    text-align: center;
+    align-content: center;
+    box-shadow: 0 0 10px 3.5px #5b1df9;
     color: white;
     border-radius: 4px;
+    width: 70px;
+    height: 30px;
 }
 
-#share{
-    background-color: #380ba7;
-    color: white;
-    border-radius: 4px;
-    
-    
-}
-
-
-
-/* ----- footer -----*/
+/* -----footer------ */
 footer {
     display: grid;
     grid-template-rows: auto 1fr;
@@ -147,15 +194,12 @@ footer {
     color: #f3f1ff;
     padding: 10px 20px;
     position: relative;
-    font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
-    border-top-style:solid; 
+    border-top-style: solid;
     border-color: #5e1fff;
     border-width: 2px;
-    bottom: -25px;
-   
-
+    grid-area: footer;
 }
 
 .footer-content {
@@ -171,10 +215,12 @@ footer {
     color: #f3f1ff;
     display: flex;
     align-items: center;
+    transition: transform 0.5s ease-in-out;
 }
 
 .footer-link:hover {
     text-decoration: underline;
+    transform: scale(1.15);
 }
 
 .footer-link img {
@@ -197,7 +243,3 @@ footer {
     text-align: center;
     padding-top: 8px;
 }
-
-
-
-
