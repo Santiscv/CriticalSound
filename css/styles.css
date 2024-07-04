@@ -111,7 +111,6 @@
   aside {
     margin-top: 40px;
     margin-left: 20px;
-    min-height: 800px;
     width: 350px;
     display: flex;
     flex-direction: column;
@@ -122,14 +121,25 @@
   .profile-container,
   .friends-container,
   .communities-container {
-    border: solid 2px #5e1fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
     border-radius: 10px;
-    background: linear-gradient(135deg, #e8e6ff, #c5c0ff);
-    height: 200px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
   }
   
   .profile-container:hover,
