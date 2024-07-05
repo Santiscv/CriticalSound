@@ -61,6 +61,7 @@ input{
     border-style: solid;
 }
 .navegation {
+    list-style-type: none;
     display: flex;
     gap: 15px;
 }
@@ -71,7 +72,7 @@ input{
 
 .imgs{
     left:290px;
-    width: 42px;
+    width: 30px;
     position: relative;
     bottom: 60px;
     padding: 1px 7px;
@@ -122,10 +123,6 @@ button:hover{
 
 
 /* -----Aside - genre----- */
-.container .button-genre{
-    list-style: none;
-}
-
 .genre {
     display: grid;
     /*border: 2px #380ba7;*/
@@ -140,6 +137,10 @@ button:hover{
     grid-area: genre;
 }
 
+.genre ul {
+    list-style-type: none;
+    padding: 0; 
+}
 
 .button-genre {
     margin: 10px 5px 0 0;
@@ -345,14 +346,11 @@ footer {
       gap: 10px;
       background-color: #050408;
     }
-  
-    .billboard-liked {
-      width: 10%;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      justify-items: center;
+
+    header ul {
+        display: none;
     }
+<<<<<<< HEAD
   
     .billboard-image {
       width: 60%;
@@ -391,32 +389,33 @@ footer {
         "main"
         "footer";
       justify-items: center;
+=======
+
+    .container {
+        width: 100%;
+        padding: 5px;
+        grid-template-areas: 
+        "billboard-liked"
+        "billboard-criticized";
+>>>>>>> b6aecd6 (The size of the nav icons was changed)
     }
-  
-    header nav {
-      grid-area: header;
+
+    .container .genre {
+        display: none;
     }
-  
-    .information-profile-container {
-      grid-area: profile;
-      max-width: 90%;
-      margin-left: 0;
-      margin-bottom: 30px;
-      width: 100%; /* Ajustar el ancho del contenedor */
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
+
+    .container .billboard-liked{
+        margin: auto;
+        width: 100%;
+        padding: 0;
     }
-  
-    .main-container {
-      max-width: 90%;
-      margin-left: 0;
-      grid-area: main;
-      width: 100%; /* Ajustar el ancho del contenedor */
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
+
+    .container .billboard-criticized{
+        margin: auto;
+        width: 100%;
+        padding: 0;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   
     .billboard-liked {
@@ -434,30 +433,21 @@ footer {
         "billboard-liked"
         "billboard-criticized";
 >>>>>>> 920dfd4 (modified media querie)
+=======
+
+    footer .footer-content {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        text-align: center;
+>>>>>>> b6aecd6 (The size of the nav icons was changed)
     }
-  
-    .billboard-image {
-      width: 20%;
-      margin: 5px 0;
+
+    .footer-link:last-child {
+        margin-top: -45px;
     }
-  
-    footer {
-      grid-area: footer;
-      width: 100%;
-      max-width: 90%; /* Ajustar el ancho máximo */
-      padding: 10px 0;
-      text-align: center;
-      margin: 0 auto; /* Centrar el contenedor */
-    }
-  
-    .footer-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .footer-link {
-      margin: 5px 0;
+
+    footer{
+        margin-top: 230px;
     }
 <<<<<<< HEAD
   }
@@ -476,9 +466,6 @@ footer {
 >>>>>>> 920dfd4 (modified media querie)
 /* pantallas pequeñas (hasta 600px) */
 @media (max-width: 600px) {
-    body{
-        width: fit-content;
-    }
     header {
         height: 30px;
         width: 100%;
@@ -555,10 +542,10 @@ footer {
         padding: 0;
     }
 
-    /* .logotipo{
+    .logotipo{
         width: 20px;
         position: relative;
         right: 250px;
         top: 5px;
-    } */
+    }
 }
