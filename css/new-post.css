@@ -38,21 +38,13 @@ nav {
 }
 
 input {
-    text-align: left; /* Placeholder alineado a la izquierda */
+    text-align: center;
     height: 30px;
     border-radius: 20px;
     width: 230px;
     font-family: "Kanit", sans-serif;
     font-weight: 400;
-    font-style: normal;
-    border-color: #380ba7;
-    border-style: solid;
-    padding-left: 10px; /* Padding para el texto alineado a la izquierda */
-}
-
-input::placeholder {
-    text-align: left; /* Placeholder alineado a la izquierda */
-    color: #999;
+    border: solid 1px #380ba7;
 }
 
 .search-button {
@@ -61,52 +53,60 @@ input::placeholder {
     border-radius: 20px;
     font-family: "Kanit", sans-serif;
     font-weight: 400;
-    font-style: normal;
-    border-color: #380ba7;
-    border-style: solid;
+    border: solid 1px #380ba7;
 }
 
-.navegation {
+.image-links {
+    list-style-type: none;
     display: flex;
     gap: 15px;
 }
 
-.navegation li {
+.image-links li{
     list-style: none;
 }
 
 .imgs {
     left: 290px;
-    width: 42px;
+    width: 30px;
     position: relative;
     bottom: 60px;
     padding: 1px 7px;
     border-radius: 50px;
     transition: transform 0.5s ease-in-out;
+
 }
 
 header {
+    grid-area: header;
     background-image: linear-gradient(to right, #5b1df9, #27252e, #15131a, #050408, black);
     width: auto;
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom-style: solid;
-    border-color: #5e1fff;
-    border-width: 2px;
-    grid-area: header;
+    border-bottom: solid 2px #5e1fff;
+}
+
+h3 {
+    color: #5e1fff;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    position: relative;
+    left: 20px;
+    top: 10px;
 }
 
 button {
     background-color: #5e1fff;
+    grid-template-columns: 30% auto;
     color: white;
 }
 
 button:hover {
     background-color: #d4d0ff;
     cursor: pointer;
-    color: black;
 }
 
 .imgs:hover {
@@ -115,6 +115,35 @@ button:hover {
     cursor: pointer;
 }
 
+/* Navbar Responsive */
+
+.icons {
+    font-size: 2.8rem;
+    color: #5e1fff;
+    cursor: pointer;
+    display: none;
+    /* muestra solo en pantallas pequeñas */
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+/* links texto */
+.text-links {
+    display: none;
+    /* Ocultar*/
+}
+
+.text-links li {
+    display: block;
+    margin: 10px 0;
+}
+
+.text-links li a {
+    color: #1f075c;
+    text-decoration: none;
+    font-size: 18px;
+}
 /* ----- Main ----- */
 
 .new-post {
@@ -304,5 +333,186 @@ footer {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media (max-width: 430px) {
+    body{
+        width: 100%;
+    }
+    .nav {
+        height: 40px;
+        width: 100%;
+    }
+
+    .logotipo {
+        width: 130px;
+        right: 0;
+        top: 0;
+    }
+
+    .buscador {
+        display: none;
+    }
+
+    .image-links, .text-links {
+        display: none;
+    }
+
+    .icons {
+        display: block;
+    }
+
+    .text-links.active {
+        display: block;
+        position: absolute;
+        border: solid 1px #5418eb;
+        background-color: hsla(0, 0%, 100%, 0.322);
+        top: 70px;
+        right: 10px;
+        width: 200px;
+        text-align: center;
+        z-index: 1000;
+    }
+    .text-links.active li {
+        margin: 10px 0;
+    }
+    
+    .text-links.active li a {
+        color: #7b1dff;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    
+    .text-links.active li a:hover {
+        color: black;
+        text-decoration: underline;
+    }
+
+    .new-post {
+        width: 90%;
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .title{
+        width: 350px;
+        font-size: 20px;
+    }
+    
+    .post textarea {
+        width: 350px;
+        font-size: 20px;
+        height: 200px;
+    }
+
+    .post-format {
+        width: 350px;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .preview, .share {
+        width: 350px;
+        font-size: 16px;
+    }
+
+    footer{
+        margin-top: 98px;
+    }
+}
+
+@media (max-width: 603px) {
+
+    .nav {
+        height: 50px;
+        width: 100%;
+    }
+
+    .logotipo {
+        width: 150px;
+        position: relative;
+        left:  30px;
+        top: 0;
+    }
+
+    .buscador {
+        width: 100%;
+        position: relative;
+        bottom: 10px;
+        margin: 10px 0;
+    }
+
+    .image-links, .text-links{
+        display: none;
+    }
+
+    .text-links.active {
+        display: block;
+        position: absolute;
+        border: solid 1px #5418eb;
+        background-color: hsla(0, 0%, 100%, 0.322);
+        top: 70px;
+        right: 10px;
+        width: 200px;
+        text-align: center;
+        z-index: 1000;
+    }
+    .text-links.active li {
+        margin: 10px 0;
+    }
+    
+    .text-links.active li a {
+        color: #7b1dff;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    
+    .text-links.active li a:hover {
+        color: black;
+        text-decoration: underline;
+    }
+
+    input {
+        width: 70%;
+    }
+
+    .search-button {
+        width: 30%;
+    }
+
+    .new-post {
+        width: 90%;
+        max-width: none;
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .post textarea {
+        font-size: 18px;
+        height: 150px;
+    }
+
+    .post-format {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .preview, .share {
+        width: 100%;
+        font-size: 18px;
     }
 }
