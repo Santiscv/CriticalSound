@@ -316,7 +316,14 @@ footer {
 
 /* Media Queries */
 
-
+@media (max-width: 500px) {
+    .icons {
+        left: 450px;
+    }
+    .text-links.active {
+        left: 275px;
+    }
+}
 /* pantallas pequeñas (hasta 600px) */
 @media (max-width: 700px) {
     header {
@@ -355,10 +362,10 @@ footer {
     .text-links.active {
         display: block;
         position: absolute;
-        border: solid 1px #5418eb;
-        background-color: hsla(0, 0%, 100%, 0.322);
+        border: solid 1px #fff;
+        background-color: hsla(0, 4%, 5%, 0.322);
         top: 70px;
-        right: 10px;
+        right: 40px;
         width: 200px;
         text-align: center;
         z-index: 1000;
@@ -368,13 +375,13 @@ footer {
     }
     
     .text-links.active li a {
-        color: #7b1dff;
+        color: #fff;
         text-decoration: none;
         font-size: 18px;
     }
     
     .text-links.active li a:hover {
-        color: black;
+        color: #380ba7;
         text-decoration: underline;
     }
 
@@ -401,13 +408,8 @@ footer {
 }
 
 /* pantallas medianas (901px a 1150px) */
-@media (min-width: 700px) and (max-width: 1150px) {
-    /* .navbar-buttons {
-        gap: 10px;
-    }
-    .imgs {
-        left: 130px;
-    } */
+@media (min-width: 701px) and (max-width: 1150px) {
+
     .logotipo{
         right: 300px;
         top: 5px;
@@ -439,10 +441,10 @@ footer {
     .text-links.active {
         display: block;
         position: absolute;
-        border: solid 1px #5418eb;
-        background-color: hsla(0, 0%, 100%, 0.322);
-        top: 70px;
-        right: 10px;
+        border: solid 1px #fff;
+        background-color: hsla(0, 4%, 5%, 0.322);
+        top: 95px;
+        right: 40px;
         width: 200px;
         text-align: center;
         z-index: 1000;
