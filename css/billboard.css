@@ -1,25 +1,21 @@
+/* Eliminamos los margenes y paddings que agrega el navegador por defecto */
 * {
     padding: 0;
     margin: 0;
-    font-family: "Bebas Neue", sans-serif;
-}
-
-h1 {
-    text-align: center;
 }
 
 body{
     display: grid;
     grid-template-columns: 30% auto;
-    grid-template-rows: 0.2fr 2fr  0.2fr 0.2fr;
-    grid-template-areas: 
+    grid-template-rows: 0.2fr 2fr  0.2fr;
+    grid-template-areas:
         "header header"
-        "genre billboard-liked"
-        "genre billboard-criticized"
+        "container container"
         "footer footer";
 }
 
-/*----Nav----*/
+
+/* Navbar */
 .logotipo {
     width: 170px;
     position: relative;
@@ -60,14 +56,8 @@ input {
     border: solid 1px #380ba7;
 }
 
-.image-links {
-    list-style-type: none;
-    display: flex;
-    gap: 15px;
-}
-
-.image-links li{
-    list-style: none;
+li {
+    display: inline-block;
 }
 
 .imgs {
@@ -90,33 +80,6 @@ header {
     align-items: center;
     justify-content: center;
     border-bottom: solid 2px #5e1fff;
-}
-
-/* ------BURGER----- */
-.icons {
-    font-size: 2.8rem;
-    color: #5e1fff;
-    cursor: pointer;
-    display: none; /* muestra solo en pantallas pequeñas */
-    position: absolute;
-    right: 20px;
-    top: 20px;
-}
-
-/* links texto */
-.text-links {
-    display: none; /* Ocultar*/
-}
-
-.text-links li {
-    display: block;
-    margin: 10px 0;
-}
-
-.text-links li a {
-    color: #1f075c;
-    text-decoration: none;
-    font-size: 18px;
 }
 
 h3 {
@@ -146,39 +109,68 @@ button:hover {
     cursor: pointer;
 }
 
-/* -----Main container----- */
-.container {
-    display: grid; 
-    grid-template-areas: 
-        "genre billboard-liked"
-        "genre billboard-criticized";
-    padding: 20px;
-    max-width: 1200px;
-    min-height: 750px;
+/* Navbar Responsive */
+
+.icons {
+    font-size: 2.8rem;
+    color: #5e1fff;
+    cursor: pointer;
+    display: none;
+    /* muestra solo en pantallas pequeñas */
+    position: absolute;
+    right: 20px;
+    top: 20px;
 }
 
+/* links texto */
+.text-links {
+    display: none;
+    /* Ocultar*/
+}
 
-/* -----Aside - genre----- */
+.text-links li {
+    display: block;
+    margin: 10px 0;
+}
+
+.text-links li a {
+    color: #1f075c;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/*---Container -Main ---*/
+
+.container{
+    display: grid;
+    grid-template-columns:  auto;
+    grid-template-rows: 1fr auto;  
+    grid-template-areas: 
+    "genre billboard-liked"
+    "genre billboard-criticized";
+    margin-top: 30px;
+    grid-area: container;
+}
+
+/*---Genre - aside---*/
 .genre {
     display: grid;
-    /*border: 2px #380ba7;*/
     border-radius: 10px;
-    margin:35px 40px ;
+    margin: 3px 40px;
     padding: 10px;
     border: 2px;
-    background-image: linear-gradient( #65569c,#5c3cad,#59458b,#372c58, black);
+    background-image: linear-gradient(#65569c, #5c3cad, #59458b, #372c58, black);
     box-shadow: 0 2px 6px;
-    width: 150px;
-    height: 600px;
+    width:170px;
+    height: 590px;
+    box-sizing: border-box;
     grid-area: genre;
 }
 
-.genre ul {
-    list-style-type: none;
-    padding: 0; 
-}
-
 .button-genre {
+    display: flex;
+    width: 150px;
+    height: auto;
     margin: 10px 5px 0 0;
     font-size: 18px;
     border: 10px;
@@ -186,27 +178,28 @@ button:hover {
     padding: 10px;
     background-color: #d0d2e7;
     color: rgba(0, 0, 0, 0.865);
-    width: 150px;
-    height: auto;
+    justify-content: center;
 }
 
-
-.button-genre:hover{
-    display: grid;
-    grid-template-columns: 30%;
+.button-genre:hover {
+    display: flex;
     justify-content: center;
-    text-align: center;
-    box-shadow: 0 0 10px 3.5px ;
+    box-shadow: 0 0 10px 3.5px;
     transform: scale(1.05);
 }
 
-
 /* -----Section results billboard----- */
-#billboard-liked{
+h1{
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+#billboard-liked {
+    margin-bottom: 20px;
     grid-area: billboard-liked;
 }
 
-#billboard-criticized{
+#billboard-criticized {
     grid-area: billboard-criticized;
 }
 
@@ -219,33 +212,26 @@ button:hover {
 .billboard-image:hover {
     cursor: pointer;
     background: linear-gradient(#7157ce, #9198e5, #8289db);
-    /*background: linear-gradient(#7e61e4, #9198e5);;*/
-    box-shadow: 0 0 10px 3.5px ;
+    box-shadow: 0 0 10px 3.5px;
     transform: scale(1.05);
 }
 
 .billboard-liked,
 .billboard-criticized {
     background-color: #e8e6ff;
-    border: 4px  #380ba7;
+    border: 4px #380ba7;
     box-shadow: 0 2px 6px black;
     border-radius: 10px;
     padding: 10px;
     width: 940px;
-    height: 230px;
+    height: 250px;
     margin: 10px;
-}
-
-
-.billboard-liked,
-.billboard-criticized {
+    box-sizing: border-box;
     display: grid;
     grid-template-rows: auto;
-    overflow-x: auto;
-    /* allows horizontal scrolling */
+    overflow-x: auto; 
     overflow-y: hidden;
-    white-space: nowrap;
-    /* Prevents elements from being wrapped to a new line */
+    white-space: nowrap; /* Prevents elements from being wrapped to a new line */
 }
 
 /* -----footer------ */
@@ -261,14 +247,15 @@ footer {
     border-top-style: solid;
     border-color: #5e1fff;
     border-width: 2px;
+    margin-top: 30px;
     grid-area: footer;
 }
 
 .footer-content {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    gap: 20px; 
-    border-bottom: 1px solid #666666; 
+    gap: 20px;
+    border-bottom: 1px solid #666666;
     padding: 10px;
 }
 
@@ -306,52 +293,51 @@ footer {
     padding-top: 8px;
 }
 
-/* Media Queries
+/* ---Media query--- */
+@media (max-width: 500px) {
+    .icons {
+        left: 450px;
+    }
+    .text-links.active {
+        left: 275px;
+    }
+}
 
-/* pantallas pequeñas (hasta 430px) */
-@media (max-width: 430px) {
-    body {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "header"
-            "billboard-liked"
-            "billboard-criticized"
-            "footer";
-        box-sizing: border-box;
-        width: fit-content;
+/* pantallas pequeñas (hasta 700px) */
+@media (max-width: 700px) {
+    header {
+        height: 50px;
+        width: 100%;
     }
-    header{
-        width: auto;
-    }
-    .logotipo {
+
+    .logotipo{
         right: 170px;
         top: 5px;
     }
-    
+
     .buscador {
         display: none;
     }
-    
+
     nav .image-links {
         display: none;
     }
-    
+
     .image-links {
         display: none;
     }
-    
+
+  /* ---------BURGER---------- */
     .text-links {
         display: none;
     }
-    
+
     .icons {
         display: block;
-        position: absolute;
-        top: 25px;
+        top: -4px;
+        left: left;
     }
-    
+
     .text-links.active {
         display: block;
         position: absolute;
@@ -359,11 +345,10 @@ footer {
         background-color: hsla(0, 4%, 5%, 0.322);
         top: 70px;
         right: 40px;
-        width: 300px;
+        width: 200px;
         text-align: center;
         z-index: 1000;
     }
-    
     .text-links.active li {
         margin: 10px 0;
     }
@@ -382,25 +367,41 @@ footer {
     .container {
         width: 100%;
         padding: 5px;
+        height: 100%;
+        display: grid;
+        grid-template-columns:  auto;
+        grid-template-rows: auto;  
         grid-template-areas: 
-        "billboard-liked"
-        "billboard-criticized";
+            "genre"
+            "billboard-liked"
+            "billboard-criticized";
     }
 
     .container .genre {
-        display: none;
+        width: 500px;
+        height: 200px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-gap: 10px;
+        overflow: auto;
     }
 
-    .container .billboard-liked{
-        margin: auto;
-        width: 100%;
-        padding: 0;
+    .container .genre .button-genre {
+        width: 100px;
+        padding: 10px 20px;
+        border: none;
     }
-
+    
+    .container .billboard-liked,
     .container .billboard-criticized{
-        margin: auto;
-        width: 100%;
+        max-width:500px;
+        margin: 0 auto;
         padding: 0;
+    }
+    
+    .container .billboard-criticized{
+        margin-bottom: 150px;
     }
 
     footer .footer-content {
@@ -412,40 +413,99 @@ footer {
     .footer-link:last-child {
         margin-top: -45px;
     }
-
-    footer{
-        margin-top: 230px;
-    }
 }
 
-/* pantallas medianas (601px a 1200px) */
-@media (min-width: 601px) and (max-width: 1200px) {
-    header nav {
+/* pantallas medianas (901px a 1150px) */
+@media (min-width: 701px) and (max-width: 1150px) {
+
+    .logotipo{
+        right: 300px;
+        top: 5px;
+    }
+
+    .buscador {
         display: none;
     }
 
-    .container {
-        width: 70%;
-        margin: 0 auto;
+    nav .image-links {
+        display: none;
     }
 
-    .container .billboard-liked {
-        max-width: 500px;
+    .image-links {
+        display: none;
+    }
+
+  /* ---------BURGER---------- */
+    .text-links {
+        display: none;
+    }
+
+    .icons {
+        display: block;
+        top: center;
+        left: left;
+    }
+
+    .text-links.active {
+        display: block;
+        position: absolute;
+        border: solid 1px #fff;
+        background-color: hsla(0, 4%, 5%, 0.322);
+        top: 95px;
+        right: 40px;
+        width: 200px;
+        text-align: center;
+        z-index: 1000;
+    }
+    .text-links.active li {
+        margin: 10px 0;
+    }
+    
+    .text-links.active li a {
+        color: #7b1dff;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    
+    .text-links.active li a:hover {
+        color: black;
+        text-decoration: underline;
+    }
+
+    .container .billboard-liked,
+    .container .billboard-criticized{
+        max-width:800px;
         margin: 0 auto;
         padding: 0;
     }
+}
 
-    .container .billboard-criticized {
-        max-width: 500px;
-        margin: 0 auto;
-        padding: 0;
+/* pantallas grandes (mas de 1200px)*/
+@media (min-width: 1201px){
+    body {
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-areas: 
+            "header header header"
+            "container container container"
+            "footer footer footer";
     }
 
 
-    .logotipo {
-        width: 20px;
-        position: relative;
-        right: 250px;
-        top: 5px;
+    main .container {
+        max-width:500px;
+        margin: 0 auto;
+        margin-left: -85px;
+    }
+
+    .image-links {
+        display: flex;
+    }
+    
+    .text-links {
+        display: none;
+    }
+
+    .icons {
+        display: none;
     }
 }
