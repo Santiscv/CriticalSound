@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -159,6 +158,7 @@ button:hover {
     padding: 20px;
     background: linear-gradient(135deg, #5e1fff, #380ba7);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
     grid-area: new-post;
 }
 
@@ -173,6 +173,7 @@ button:hover {
     padding: 10px;
     font-family: "Kanit", sans-serif;
     animation: fadeInUp 1s ease-in-out;
+    box-sizing: border-box;
 }
 
 .post-format {
@@ -209,6 +210,7 @@ button:hover {
     background-color: #fff;
     color: #380ba7;
     padding: 10px;
+    box-sizing: border-box;
     animation: fadeInUp 1.4s ease-in-out;
     resize: vertical;
 }
