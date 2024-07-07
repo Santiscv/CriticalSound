@@ -409,8 +409,8 @@ footer {
     grid-area: header;
     width: auto;
   }
-  .logotipo{
-    right: 170px;
+  header .logotipo{
+    right: 140px;
     top: 5px;
   }
 
@@ -428,10 +428,11 @@ footer {
   .text-links {
     display: none;
 } 
-  .icons {
+  nav .icons {
     display: block;
     position: absolute;
     top: 25px;
+    right: 20px;
   }
   .text-links.active {
     display: block;
@@ -482,11 +483,100 @@ footer {
     }
   footer {
     grid-area: footer;
-    width: auto;
+    width: 90%;
   }
 }
 
 @media  (max-width : 360px) {
+  body {
+    grid-template-areas:
+        "header"
+        "profile" 
+        "main"
+        "footer";
+  }
+  header{
+    grid-area: header;
+    width: 69%;
+  }
+  header .logotipo{
+    right: 100px;
+    top: 5px;
+  }
+
+  .buscador {
+      display: none;
+  }
+
+  nav .image-links {
+      display: none;
+  }
+
+  .image-links {
+      display: none;
+  }
+  .text-links {
+    display: none;
+} 
+  .icons {
+    display: block;
+    position: absolute;
+    right: -20px;
+    top: 25px;
+  }
+  .text-links.active {
+    display: block;
+    position: absolute;
+    border: solid 1px #fff;
+    background-color: hsla(0, 4%, 5%, 0.322);
+    top: 70px;
+    right: 40px;
+    width: 300px;
+    text-align: center;
+    z-index: 1000;
+  } 
+  .text-links.active li {
+    margin: 10px 0;
+  }
+
+  .text-links.active li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .text-links.active li a:hover {
+    color: #380ba7;
+    text-decoration: underline;
+  }
+
+
+  .information-profile-container{
+    grid-area: profile;
+    margin:0 20px;
+    width: 50%;
+  }
+  .main-container {
+    grid-area: main;
+    margin: 0 20px;
+    width: 50%;
+    
+  }
+  .watchlist-container,
+  .ratings-container {
+    width: 60%;
+    padding: auto;
+    }
+  .billboard-liked {
+    width: 150px;
+    }
+  footer {
+    grid-area: footer;
+    width: 60%;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 1150px) {
   body {
     grid-template-areas:
         "header"
@@ -520,6 +610,7 @@ footer {
   .icons {
     display: block;
     position: absolute;
+    right: -20px;
     top: 25px;
   }
   .text-links.active {
