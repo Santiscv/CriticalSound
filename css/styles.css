@@ -70,8 +70,16 @@ header {
   justify-content: center;
   border-bottom: solid 2px #5e1fff;
 }
-
-h3 {
+h1 {
+  grid-area: aside;
+  font-size: 9px;
+  display: flex;
+  color: #c2bbbb;
+  width: auto;
+  margin-bottom: 5px;
+  margin-left: 30px;
+}
+h3, h2 {
   color: #5e1fff;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
@@ -180,9 +188,9 @@ aside {
   animation: fadeIn 1s ease-in-out;
 }
 
-.profile-container h3,
-.friends-container h3,
-.communities-container h3 {
+.profile-container h2,
+.friends-container h2,
+.communities-container h2 {
   color: #380ba7;
   margin-bottom: 10px;
 }
