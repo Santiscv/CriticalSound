@@ -75,6 +75,7 @@ header {
     border-bottom-style:solid; 
     border-color: #5e1fff;
     border-width: 2px;
+    
 }
 
 
@@ -135,6 +136,16 @@ main {
     padding: 15px 20px 20px 20px;
 }
 
+h1 {
+    font-size: 9px;
+    display: flex;
+    color: #c2bbbb;
+    width: auto;
+    margin-bottom: 5px;
+    margin-left: 40px;
+
+}
+
 .news-feed {
     display: flex;
     flex-direction: column;
@@ -143,6 +154,14 @@ main {
     padding: 10px;
     box-shadow: 0 3px 7px black;
     width: 500px;
+}
+
+h2 {
+    font-size: 12px;
+    display: flex;
+    color: #787676;
+    margin-left: 200px;
+    
 }
 
 .news-feed-posts{
@@ -189,12 +208,12 @@ main {
     margin-top: 10px;
 }
 
-.post h4 {
+.post h3 {
     margin: 10px 10px 10px -5px;   
 }
 
 .post p {
-    margin-top: 10px;
+    margin-top: 6px;
 }
 
 .post-imagen img {
@@ -231,9 +250,13 @@ main {
     padding: 3px;
 }
 
+.comments h3 {
+    margin: 5px 5px;
+    font-size: 17px;
+}
+
 .comments h4 {
     margin: 5px 5px;
-
 }
 
 .comment {
@@ -316,12 +339,16 @@ footer {
 
 /* Media Queries */
 
+/* pantallas pequeñas (hasta 500px) */
 @media (max-width: 500px) {
     .icons {
         left: 450px;
     }
     .text-links.active {
         left: 275px;
+    }
+    h1 {
+        margin-left: 120px;
     }
 }
 /* pantallas pequeñas (hasta 700px) */
