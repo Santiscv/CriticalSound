@@ -293,8 +293,11 @@ footer {
     padding-top: 8px;
 }
 
+<<<<<<< HEAD
 /* Media Queries */
 
+=======
+>>>>>>> 9717817bcac2155aa952aef07139a42292df398b
 /* ---Media query--- */
 @media (max-width: 500px) {
     .icons {
@@ -348,6 +351,9 @@ footer {
     }
  
  
+=======
+
+>>>>>>> 9717817bcac2155aa952aef07139a42292df398b
     .text-links.active {
         display: block;
         position: absolute;
@@ -368,25 +374,39 @@ footer {
         text-decoration: none;
         font-size: 18px;
     }
+<<<<<<< HEAD
    
+=======
+    
+>>>>>>> 9717817bcac2155aa952aef07139a42292df398b
     .text-links.active li a:hover {
         color: #380ba7;
         text-decoration: underline;
     }
+<<<<<<< HEAD
  
  
+=======
+
+>>>>>>> 9717817bcac2155aa952aef07139a42292df398b
     .container {
         width: 100%;
         padding: 5px;
         height: 100%;
         display: grid;
         grid-template-columns:  auto;
+<<<<<<< HEAD
         grid-template-rows: auto; 
         grid-template-areas:
+=======
+        grid-template-rows: auto;  
+        grid-template-areas: 
+>>>>>>> 9717817bcac2155aa952aef07139a42292df398b
             "genre"
             "billboard-liked"
             "billboard-criticized";
     }
+<<<<<<< HEAD
  
     .container .genre{
         display: none;
@@ -394,13 +414,27 @@ footer {
         max-width:500px;
         margin: 0 auto;
         padding: 0;*/
+=======
+
+    .container .genre {
+        width: 500px;
+        height: 200px;
+        overflow: auto;
+>>>>>>> 9717817bcac2155aa952aef07139a42292df398b
     }
 
-    .container .billboard-liked {
-        max-width:500px;
-        margin: 0 auto;
-        /* width: 100%; */
-        padding: 0;
+    .container .genre li{
+        
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-gap: 10px;
+    }
+
+    .container .genre .button-genre {
+        width: 100px;
+        padding: 10px 20px;
+        border: none;
     }
    
     .container .billboard-liked,
@@ -409,7 +443,11 @@ footer {
         margin: 0 auto;
         padding: 0;
     }
+<<<<<<< HEAD
    
+=======
+    
+>>>>>>> 9717817bcac2155aa952aef07139a42292df398b
     .container .billboard-criticized{
         margin-bottom: 150px;
     }
@@ -425,6 +463,7 @@ footer {
     .footer-link:last-child {
         margin-top: -45px;
     }
+<<<<<<< HEAD
  }
  
  
@@ -432,13 +471,38 @@ footer {
  @media (min-width: 701px) and (max-width: 1150px) {
  
  
+=======
+}
+
+/* pantallas medianas (901px a 1150px) */
+@media (min-width: 701px) and (max-width: 1150px) {
+
+>>>>>>> 9717817bcac2155aa952aef07139a42292df398b
     .logotipo{
         right: 300px;
         top: 5px;
     }
+<<<<<<< HEAD
  
  
     .buscador {
+=======
+
+    .buscador {
+        display: none;
+    }
+
+    nav .image-links {
+        display: none;
+    }
+
+    .image-links {
+        display: none;
+    }
+
+  /* ---------BURGER---------- */
+    .text-links {
+>>>>>>> 9717817bcac2155aa952aef07139a42292df398b
         display: none;
     }
  

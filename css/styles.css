@@ -61,32 +61,25 @@ li {
 }
 
 header {
-  grid-area: header;
-  background-image: linear-gradient(to right, #5b1df9,#27252e,#15131a,#050408, black);
-  width: auto;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: solid 2px #5e1fff;
+    background: black;
+    width: auto;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-style:solid; 
+    border-color: #5e1fff;
+    border-width: 2px;
 }
-h1 {
-  grid-area: aside;
-  font-size: 9px;
-  display: flex;
-  color: #c2bbbb;
-  width: auto;
-  margin-bottom: 5px;
-  margin-left: 30px;
-}
-h3, h2 {
-  color: #5e1fff;
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-size: 22px;
-  position: relative;
-  left: 20px;
-  top: 10px;
+h3{
+    color: #5e1fff;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+    font-size: 22px;    
+    position: relative;
+    left: 20px;
+    top: 10px;
 }
 
 button {
@@ -175,24 +168,17 @@ aside {
   transform: translateY(-10px);
 }
 
-.profile-container,
-.friends-container,
-.communities-container {
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 10px;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 1s ease-in-out;
-}
-
-.profile-container h2,
-.friends-container h2,
-.communities-container h2 {
-  color: #380ba7;
-  margin-bottom: 10px;
+.friends-container{
+    position: relative;
+    top: 95px;
+    left: 20px;
+    border-style: dotted;
+    height: 200px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #5e1fff;
+    border-width: 2px ;
+    background-color: #e8e6ff;
 }
 
 .profile-icono,
