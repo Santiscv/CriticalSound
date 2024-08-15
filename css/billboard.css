@@ -295,21 +295,16 @@ footer {
 
 /* Media Queries */
 
-/* Media Query para pantallas menores a 720px */
-@media (max-width: 720px) {
-    /* Ocultar Navbar */
-    nav {
-      display: none;
+/* ---Media query--- */
+@media (max-width: 500px) {
+    .icons {
+        left: 450px;
     }
-  
-    /* Ajustar logotipo */
-    .logotipo {
-      width: 150px;
-      position: relative;
-      right: 0;
-      top: 0;
+    .text-links.active {
+        left: 275px;
     }
-}
+ }
+ 
 
 /* pantallas pequeñas (hasta 700px) */
 @media (max-width: 700px) {
@@ -317,131 +312,82 @@ footer {
         height: 50px;
         width: 100%;
     }
-
+ 
+ 
     .logotipo{
         right: 170px;
         top: 5px;
     }
-
+ 
+ 
     .buscador {
         display: none;
     }
-
+ 
+ 
     nav .image-links {
         display: none;
     }
-
+ 
+ 
     .image-links {
         display: none;
     }
-
+ 
+ 
   /* ---------BURGER---------- */
     .text-links {
         display: none;
     }
-
+ 
+ 
     .icons {
         display: block;
         top: -4px;
         left: left;
     }
-  
-    .footer-link {
-      margin: 5px 0;
-    }
-  }
-  
-  /* Media Query para pantallas entre 601px y 1200px */
-  @media (min-width: 601px) and (max-width: 1200px) {
-    body {
-      display: grid;
-      grid-template-columns: auto;
-      grid-template-areas:
-        "header"
-        "profile"
-        "main"
-        "footer";
-      justify-items: center;
-    }
-  
-    header nav {
-      grid-area: header;
-    }
-  
-    .information-profile-container {
-      grid-area: profile;
-      max-width: 90%;
-      margin-left: 0;
-      margin-bottom: 30px;
-      width: 100%; /* Ajustar el ancho del contenedor */
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-    }
-  
-    .main-container {
-      max-width: 90%;
-      margin-left: 0;
-      grid-area: main;
-      width: 100%; /* Ajustar el ancho del contenedor */
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
+ 
+ 
+    .text-links.active {
+        display: block;
+        position: absolute;
+        border: solid 1px #fff;
+        background-color: hsla(0, 4%, 5%, 0.322);
+        top: 70px;
+        right: 40px;
+        width: 200px;
+        text-align: center;
+        z-index: 1000;
     }
     .text-links.active li {
         margin: 10px 0;
     }
-    
+   
     .text-links.active li a {
         color: #fff;
         text-decoration: none;
         font-size: 18px;
     }
-  
-    .footer-link {
-      margin: 5px 0;
+   
+    .text-links.active li a:hover {
+        color: #380ba7;
+        text-decoration: underline;
     }
-  }
-  
-/* pantallas pequeñas (hasta 600px) */
-@media (max-width: 600px) {
-    header {
-        height: 30px;
-        width: 100%;
-    }
-    header nav {
-        display: none;
-    }
-
-
-    header .buscador {
-        width: 50%;
-        margin-bottom: 10px; 
-    }
-
-    header ul {
-        display: none;
-    }
->>>>>>> dc577a4 (change the media queries)
-
+ 
+ 
     .container {
         width: 100%;
         padding: 5px;
         height: 100%;
         display: grid;
         grid-template-columns:  auto;
-        grid-template-rows: auto;  
-        grid-template-areas: 
-<<<<<<< HEAD
-        "billboard-liked"
-        "billboard-criticized";
->>>>>>> b6aecd6 (The size of the nav icons was changed)
-=======
+        grid-template-rows: auto; 
+        grid-template-areas:
             "genre"
             "billboard-liked"
             "billboard-criticized";
     }
-
+ 
     .container .genre{
         display: none;
         /* width: 100%; 
@@ -456,122 +402,70 @@ footer {
         /* width: 100%; */
         padding: 0;
     }
-    
+   
     .container .billboard-liked,
     .container .billboard-criticized{
         max-width:500px;
         margin: 0 auto;
         padding: 0;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  
-    .billboard-liked {
-      width: 90%;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      justify-items: center;
-=======
-
-    .container {
-        width: 100%;
-        padding: 5px;
-        grid-template-areas: 
-        "billboard-liked"
-        "billboard-criticized";
->>>>>>> 920dfd4 (modified media querie)
-=======
-
-    footer .footer-content {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        text-align: center;
->>>>>>> b6aecd6 (The size of the nav icons was changed)
-    }
-
-    .footer-link:last-child {
-        margin-top: -45px;
-    }
-
-    footer{
-        margin-top: 230px;
-    }
-}
-
-/* pantallas pequeñas (hasta 600px) */
-@media (max-width: 600px) {
-    header {
-        height: 30px;
-        width: 100%;
-    }
-    header nav {
-        display: none;
-    }
-
-
-    header .buscador {
-        width: 50%;
-        margin-bottom: 10px; 
-    }
-
-    header ul {
-        display: none;
-    }
-
-    .container {
-        width: 100%;
-        padding: 5px;
-        grid-template-areas: 
-        "billboard-liked"
-        "billboard-criticized";
-    }
-
-    .container .genre{
-        display: none;
-    }
-
-    .container .billboard-liked {
-        max-width:500px;
-        margin: 0 auto;
-        padding: 0;
-    }
-
-    .container .billboard-criticized {
-        max-width:500px;
-        margin: 0 auto;
-        padding: 0;
-=======
-    
+   
     .container .billboard-criticized{
         margin-bottom: 150px;
->>>>>>> dc577a4 (change the media queries)
     }
-
+ 
+ 
     footer .footer-content {
         grid-template-columns: 1fr;
         gap: 10px;
         text-align: center;
     }
-
+ 
+ 
     .footer-link:last-child {
         margin-top: -45px;
     }
-}
-
-/* pantallas medianas (601px a 1200px) */
-@media (min-width: 601px) and (max-width: 1200px) {
-    header nav {
+ }
+ 
+ 
+ /* pantallas medianas (901px a 1150px) */
+ @media (min-width: 701px) and (max-width: 1150px) {
+ 
+ 
+    .logotipo{
+        right: 300px;
+        top: 5px;
+    }
+ 
+ 
+    .buscador {
         display: none;
     }
-
+ 
+ 
+    nav .image-links {
+        display: none;
+    }
+ 
+ 
+    .image-links {
+        display: none;
+    }
+ 
+ 
+  /* ---------BURGER---------- */
+    .text-links {
+        display: none;
+    }
+ 
+ 
     .icons {
         display: block;
         top: center;
         left: left;
     }
-
+ 
+ 
     .text-links.active {
         display: block;
         position: absolute;
@@ -586,52 +480,58 @@ footer {
     .text-links.active li {
         margin: 10px 0;
     }
-    
+   
     .text-links.active li a {
         color: #7b1dff;
         text-decoration: none;
         font-size: 18px;
     }
-    
+   
     .text-links.active li a:hover {
         color: black;
         text-decoration: underline;
     }
-
+ 
+ 
     .container .billboard-liked,
     .container .billboard-criticized{
         max-width:800px;
         margin: 0 auto;
         padding: 0;
     }
-}
-
-/* pantallas grandes (mas de 1200px)*/
-@media (min-width: 1201px){
+ }
+ 
+ 
+ /* pantallas grandes (mas de 1200px)*/
+ @media (min-width: 1201px){
     body {
         grid-template-columns: 1fr 3fr 1fr;
-        grid-template-areas: 
+        grid-template-areas:
             "header header header"
             "container container container"
             "footer footer footer";
     }
-
-
+ 
+ 
+ 
+ 
     main .container {
         max-width:500px;
         margin: 0 auto;
         margin-left: -85px;
     }
-
+ 
+ 
     .image-links {
         display: flex;
     }
-    
+   
     .text-links {
         display: none;
     }
-
+ 
+ 
     .icons {
         display: none;
     }
-}
+} 
