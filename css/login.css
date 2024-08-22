@@ -1,40 +1,47 @@
-*{
-margin: 0;
-padding:0;
-box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
+main {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns:1fr 1fr;
     grid-template-areas: 
-    "liked liked register"
-    "criticized criticized register "
+    "billboard register";
+    font-family: "Kanit", sans-serif;
+    background-color: #f5f5f5;
+    transition: background-color 0.5s ease;
 }
-
-/* contenedor de registro*/
+.container{
+    grid-area: register;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/* Contenedor de registro */
 .register-container {
-    width:300px;
-    height: 500px;
+    width: 300px;
+    height: 520px;
     background-color: #e8e6ff;
     border: 2px solid #380ba7;
     border-radius: 10px;
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     gap: 4px;
-    position: relative;
     box-shadow: 0 2px 6px black;
-    left:1000px; /* se va a romper al usar media query (usar display) */
-    grid-area: register
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
+.register-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px black;
+}
 
 .source-register {
-    /* border: 1px solid blue;*/
     height: 100px;
     display: flex;
     flex-direction: column;
@@ -42,150 +49,103 @@ body{
     gap: 4px;
     position: relative;
     bottom: 70px;
-    
-}
-.button-pass {
-    margin-top: 50px;
-    width:145px;
-    border-radius: 10px;
-    background-color: #380ba7;
-    color: white;
-    font-family: "Kanit", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-
 }
 
-.button-register{
-    width: 60px;
-    background-color: #380ba7;
-    color: white;
-    border-radius: 10px;
-    font-family: "Kanit", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    
-
+.button-pass, .button-register {
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.button-pass:hover, .button-register:hover {
+    background-color: #5731d5;
+    transform: scale(1.1);
+}
 
-.name {
+.name, .password {
     text-align: left;
     border-radius: 5px;
     border-color: #380ba7;
     border-style: solid;
-
+    padding: 10px;
+    transition: box-shadow 0.3s ease;
 }
 
-.password{
-    text-align: left;
-    border-radius: 5px;
-    border-color: #380ba7;
-    border-style: solid;
-
+.name:focus, .password:focus {
+    box-shadow: 0 0 8px rgba(56, 11, 167, 0.5);
 }
 
-.logotype{
+.logotype {
     position: relative;
-    bottom:80px;
+    bottom: 80px;
     height: 200px;
     padding-left: 30px;
-    
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
-hr{
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+hr {
     width: 80%;
     color: black;
     margin-bottom: 50px;
     margin-top: 20px;
 }
-
-label {
-    font-family: "Kanit", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+.billboard{
+    grid-area: billboard;
+    display: grid;
 }
 
-/* secciones billboard*/
-.billboard-liked,
-.billboard-criticized {
+/* Secciones Billboard */
+.billboard-liked, .billboard-criticized {
     background-color: #e8e6ff;
-    border: 4px  #380ba7;
+    border: 2px solid #380ba7;
     box-shadow: 0 2px 6px black;
     border-radius: 10px;
     padding: 10px;
-    width: 940px;
+    width: 800px;
     height: 230px;
-    margin: 10px;
-}
-.billboard-liked{
-    position:absolute;
-    top:90px;
-    background-color: #e8e6ff;
-    border: 2px solid #380ba7;
-    border-radius: 10px;
-    padding: 10px;
-    width: 800px;
-    height: 220px; /* Allows the height to be automatically adjusted to maintain proportion. */
-    margin: 10px; 
-    overflow-x: auto; /* allows horizontal scrolling */
-    overflow-y: hidden;
-    white-space: nowrap; /* Prevents elements from being wrapped to a new line */
-    margin-bottom: 10px;
-    left:130px;
-    grid-area: liked;
-    
-}
-
-.billboard-criticized{
-    position: absolute;
-    top: 320px;
-    background-color: #e8e6ff;
-    border: 2px solid #380ba7;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 10px;
-    width: 800px;
-    height: 220px; 
-    margin-top: 15px; 
-    overflow-x: auto; 
+    margin: 50px;
+    overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
-    margin-top: 60px;
-    left:130px;
-    grid-area:criticized;
+    transition: transform 0.5s ease;
+}
+
+
+.billboard-liked:hover, .billboard-criticized:hover {
+    transform: translateY(-10px);
 }
 
 .billboard-image {
-    width: 185px; 
+    width: 185px;
     height: auto;
-    margin: 100 px;
+    margin: 10px;
     padding: 10px 25px;
+    transition: transform 0.3s ease;
 }
 
-aside{
-    display: grid;
-    grid-column-start: span 2;
-    
-
+.billboard-image:hover {
+    transform: scale(1.1);
 }
 
 
-/*MEDIA QUERIES*/
+/* Media Queries */
 
-/*break para pantalla chica hasta 600px */
+/* Break para pantalla chica hasta 600px */
 @media (max-width: 600px) {
-    main{
-        width:50%;
+    main {
+        width: 50%;
     }
-    aside{
-        width:50%
-
+    aside {
+        width: 50%;
+    }
 }
-}
 
-
-/* break para pantallas grandes*/
-@media (min-width:600px) and (max-width:1200px){
-
+/* Break para pantallas grandes */
+@media (min-width: 600px) and (max-width: 1200px) {
+    /* Puedes añadir ajustes específicos para pantallas medianas aquí */
 }
