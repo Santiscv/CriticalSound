@@ -4,75 +4,17 @@
   margin: 0;
 }
 
-/* Navbar */
-/* .logotipo {
-  width: 170px;
-  position: relative;
-  right: 250px;
-  top: 9px;
-} */
-
-/* nav {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-} */
-
-/* .buscador {
-  width: 330px;
-  position: relative;
-  bottom: 70px;
-  display: flex;
-  flex-direction: row;
-} */
-
-/* input {
-  text-align: center;
-  height: 30px;
-  border-radius: 20px;
-  width: 230px;
-  font-family: "Kanit", sans-serif;
-  font-weight: 400;
-  border: solid 1px #380ba7;
-} */
-
-/* .search-button {
-  height: 33px;
-  width: 100px;
-  border-radius: 20px;
-  font-family: "Kanit", sans-serif;
-  font-weight: 400;
-  border: solid 1px #380ba7;
-} */
 
 li {
   display: inline-block;
 }
 
-/* .imgs {
-  left:290px;
-  width: 30px;
-  position: relative;
-  bottom: 60px;
-  padding: 1px 7px;
-  border-radius: 50px;
-  transition: transform 0.5s ease-in-out;
 
-} */
 
 header {
   grid-area: header;
 }
-/* header {
-  grid-area: header;
-  background-image: linear-gradient(to right, #5b1df9,#27252e,#15131a,#050408, black);
-  width: auto;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: solid 2px #5e1fff;
-} */
+
 h1 {
   grid-area: aside;
   font-size: 9px;
@@ -92,50 +34,6 @@ h3, h2 {
   top: 10px;
 }
 
-/* button {
-  background-color: #5e1fff;
-  grid-template-columns: 30% auto;
-  color: white;
-} */
-
-/* button:hover {
-  background-color: #d4d0ff;
-  cursor: pointer;
-} */
-
-/* .imgs:hover{
-  box-shadow: 0 0 10px 3.5px #5b1df9;
-  transform: scale(1.15);
-  cursor: pointer;
-} */
-
-/* Navbar Responsive */
-
-/* .icons {
-  font-size: 2.8rem;
-  color: #5e1fff;
-  cursor: pointer;
-  display: none; 
-  position: absolute;
-  right: 20px;
-  top: 20px;
-} */
-
-/* links texto */
-/* .text-links {
-  display: none;
-} */
-
-/* .text-links li {
-  display: block;
-  margin: 10px 0;
-} */
-
-/* .text-links li a {
-  color: #1f075c;
-  text-decoration: none;
-  font-size: 18px;
-} */
 
 /* Body grid layout */
 body {
@@ -325,60 +223,6 @@ aside {
 footer {
   grid-area: footer;
 }
-/* footer {
-  display: grid;
-  grid-area: footer;
-  grid-template-rows: auto 1fr;
-  background-color: black;
-  color: #f3f1ff;
-  font-family: "Bebas Neue", sans-serif;
-  padding: 10px 20px;
-  position: relative;
-} */
-
-/* .footer-content {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 20px;
-  border-bottom: 1px solid #666666;
-  padding: 10px;
-} */
-
-/* .footer-link {
-  text-decoration: none;
-  color: #f3f1ff;
-  display: flex;
-  align-items: center;
-  transition: transform 0.5s ease-in-out;
-
-} */
-
-/* .footer-link:hover {
-  text-decoration: underline;
-  transform: scale(1.15);
-
-} */
-
-/* .footer-link img {
-  width: 25px;
-  height: 25px;
-  border-radius: 30%;
-  margin-right: 10px;
-} */
-
-/* .footer-link:first-child {
-  justify-self: start;
-} */
-
-/* .footer-link:last-child {
-  justify-self: end;
-} */
-
-/* .reserved {
-  grid-column: 1 / -1;
-  text-align: center;
-  padding-top: 8px;
-} */
 
 /* Animaciones */
 @keyframes fadeIn {
