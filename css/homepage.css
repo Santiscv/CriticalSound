@@ -10,33 +10,6 @@ body {
     min-height: 100vh;
 }
 
-/* ------BURGER----- */
-/* .icons {
-    font-size: 2.8rem;
-    color: #5e1fff;
-    cursor: pointer;
-    display: none;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-} */
-
-/* links texto */
-/* .text-links {
-    display: none;
-} */
-
-/* .text-links li {
-    display: block;
-    margin: 10px 0;
-} */
-
-/* .text-links li a {
-    color: #1f075c;
-    text-decoration: none;
-    font-size: 18px;
-} */
-
 
 /* ------Main----- */
 main {
@@ -46,13 +19,11 @@ main {
 }
 
 h1 {
-    font-size: 9px;
+    font-size: 12px;
     display: flex;
     color: #c2bbbb;
     width: auto;
     margin-bottom: 5px;
-    margin-left: 40px;
-
 }
 
 .news-feed {
@@ -189,6 +160,7 @@ h2 {
         margin-left: 120px;
     }
 }
+
 /* pantallas pequeñas (hasta 700px) */
 @media (max-width: 700px) {
 
@@ -203,31 +175,6 @@ h2 {
         padding: 0;
     }
 
-}
-
-/* pantallas medianas (701px a 1150px) */
-@media (min-width: 701px) and (max-width: 1150px) {
-    section {
-        margin-left: -100px;
-    }
-}
-
-/* Media Queries 2 (unir con mq 1) */
-
-/* pantallas pequeñas (hasta 500px) */
-@media (max-width: 500px) {
-    .icons {
-        left: 450px;
-    }
-    .text-links.active {
-        left: 275px;
-    }
-    h1 {
-        margin-left: 120px;
-    }
-}
-/* pantallas pequeñas (hasta 700px) */
-@media (max-width: 700px) {
     header {
         height: 50px;
         width: 100%;
@@ -296,66 +243,17 @@ h2 {
     .footer-link:last-child {
         margin-top: -45px;
     }
+
 }
 
 /* pantallas medianas (701px a 1150px) */
 @media (min-width: 701px) and (max-width: 1150px) {
-
-    .logotipo{
-        right: 300px;
-        top: 5px;
-    }
-
-    .buscador {
-        display: none;
-    }
-
-    nav .image-links {
-        display: none;
-    }
-
-    .image-links {
-        display: none;
-    }
-
-  /* ---------BURGER---------- */
-    .text-links {
-        display: none;
-    }
-
-    .icons {
-        display: block;
-        top: center;
-        left: left;
-    }
-
-    .text-links.active {
-        display: block;
-        position: absolute;
-        border: solid 1px #fff;
-        background-color: hsla(0, 4%, 5%, 0.322);
-        top: 95px;
-        right: 40px;
-        width: 200px;
-        text-align: center;
-        z-index: 1000;
-    }
-
-    .text-links.active li {
-        margin: 10px 0;
-    }
-    
-    .text-links.active li a {
-        color: #7b1dff;
-        text-decoration: none;
-        font-size: 18px;
-    }
-    
-    .text-links.active li a:hover {
-        color: #380ba7;
-        text-decoration: underline;
+    section {
+        margin-left: -100px;
     }
 }
+
+
 
 /* pantallas grandes (mas de 1200px)*/
 @media (min-width: 1201px){

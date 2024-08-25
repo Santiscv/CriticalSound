@@ -4,91 +4,76 @@
 }
 
 /*------header------*/
-.logotipo{
-    width: 170px;
-    position: relative;
-    right: 250px;
-    top: 9px;
-}
-nav{
+header {
+    background-image: linear-gradient(to right, #5b1df9, #27252e, #15131a, #050408, black);
+    width: 100%;
+    height: 100px;
+    border-bottom: 2px solid #5e1fff;
     display: flex;
-    align-items:baseline;
+    align-items: center;
     justify-content: space-between;
 }
-.buscador{
-    width: 330px;
-    position: relative;
-    bottom: 70px;
+
+nav {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
 }
-input{
+
+.logotipo {
+    height: 170px;
+    width: auto;
+}
+
+.buscador {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+input {
     text-align: center;
     height: 30px;
     border-radius: 20px;
     width: 230px;
     font-family: "Kanit", sans-serif;
     font-weight: 400;
-    font-style: normal;
-    border-color: #380ba7;
-    border-style: solid;
+    border: 2px solid #380ba7;
 }
-.search-button{
+
+.search-button {
     height: 33px;
     width: 100px;
     border-radius: 20px;
     font-family: "Kanit", sans-serif;
     font-weight: 400;
-    font-style: normal;
-    border-color: #380ba7;
-    border-style: solid;
+    border: 2px solid #380ba7;
 }
 
-/* --------------------------------- */
-
-button{
-    background-color: #5e1fff;
-    color: white;
+.image-links {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin-right: 50px;
 }
 
-button:hover{
-    background-color: #d4d0ff;
-    cursor: pointer;
-    color: black;
+.image-links li {
+    display: flex;
+    align-items: center;
 }
 
-.imgs:hover{
+.imgs {
+    width: 30px;
+    transition: transform 0.5s ease-in-out;
+    border-radius: 50px;
+    padding: 1px 7px;
+}
+
+.imgs:hover {
     box-shadow: 0 0 10px 3.5px #5b1df9;
     transform: scale(1.15);
     cursor: pointer;
-}
-
-.image-links li{
-    display: inline-block;
-    margin-right: 15px;
-}
-.imgs{
-    left: 250px;
-    width: 30px;
-    position: relative;
-    bottom: 60px;
-    padding: 1px 7px;
-    border-radius: 50px;
-    transition: transform 0.5s ease-in-out;
-}
-
-header {
-    background-image: linear-gradient(to right, #5b1df9,#27252e,#15131a,#050408, black);
-    width: auto;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom-style:solid; 
-    border-color: #5e1fff;
-    border-width: 2px;
-    
-    
 }
 
 
