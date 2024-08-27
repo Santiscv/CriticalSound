@@ -22,7 +22,7 @@ main {
 /* Contenedor de registro */
 .register-container {
     width: 300px;
-    height: 520px;
+    height: 510px;
     background-color: #e8e6ff;
     border: 2px solid #380ba7;
     border-radius: 10px;
@@ -34,7 +34,9 @@ main {
     gap: 4px;
     box-shadow: 0 2px 6px black;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
+    
 }
+
 
 .register-container:hover {
     transform: scale(1.05);
@@ -109,6 +111,7 @@ hr {
     width: 800px;
     height: 230px;
     margin: 50px;
+    margin-top: 50px;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
@@ -135,17 +138,162 @@ hr {
 
 /* Media Queries */
 
-/* Break para pantalla chica hasta 600px */
-@media (max-width: 600px) {
-    main {
-        width: 50%;
+/* Break para pantalla chica hasta 480px */
+@media (max-width: 480px) and (max-width: 600px) {
+    body {
+        grid-template-areas: 
+        "register" ;
+        
     }
-    aside {
-        width: 50%;
+    .register-container {
+        grid-area: register;
+        width: 90vw;
+        margin: 0 auto;
+        margin-top: 10%;
+        inset:0;
+        margin-right: 10%
     }
+    .source-register{
+        display:grid;
+        align-items: center;
+        
+    }
+    hr,.button-pass{
+        margin: 0 auto;
+    }
+    
+    .billboard-liked, .billboard-criticized {
+        display:none
+    }
+    
+
 }
 
-/* Break para pantallas grandes */
-@media (min-width: 600px) and (max-width: 1200px) {
-    /* Puedes añadir ajustes específicos para pantallas medianas aquí */
+/**break para pantalla chica hasta 320px*/
+
+@media screen and (max-width: 320px) {
+    body {
+        grid-template-areas: 
+        "register"
+    }
+    
+    .register-container {
+        grid-area: register;
+        width: 90vw;
+        height: 95vh;
+        margin: 0 auto;
+        inset:0;
+        margin-top: 5%;
+        margin-right: 10%;
+
+    }
+    
+    .source-register{
+        display:grid;
+        align-items: center;
+        
+    }
+    .name, .password{
+        width: 90%;
+        margin-left:12px ;
+
+    }
+    .no-account{
+        margin-left: 12px;
+    }
+    
+    hr,.button-pass{
+        margin: 0 auto;
+    }
+    
+    .billboard-liked, .billboard-criticized {
+        display:none
+    }    
+}
+
+@media (min-width: 600px) and (max-width: 1150px) {
+    body {
+        grid-template-areas: 
+        "register"
+    }
+    
+    .register-container {
+        grid-area: register;
+        width: 90vw;
+        margin-right: 40px;
+        margin-top: 20%;
+    }
+    .logotype{
+        width: 500px;
+        margin-left: 5px;
+        
+    }
+
+    .name, .password{
+        width: 400px;
+    }
+    
+    .button-pass{
+        width: 300px;
+    }
+
+    .no-account{
+        margin-left: 120px;
+    }
+    .billboard-liked, .billboard-criticized {
+        display:none
+        
+    }
+    
+@media (min-width: 1200px){
+    body {
+        grid-template-areas: 
+        "liked register"
+        "criticized register "
+        
+        }
+    
+        
+        .register-container {
+            width: 25%;
+            left: -65%;
+            margin-top: 5%;
+            grid-area: register;
+        }
+    
+        .source-register {
+    
+            width: 80%;
+            margin-right: 30px;     
+        }
+        
+        
+        .billboard-liked, .billboard-criticized {
+            
+            width: 60%;
+            display:flex;
+            flex-direction:row;
+            margin-top: 4.2%;
+            left:50px;
+        }    
+        
+        
+        .billboard-liked{
+            grid-area:liked;
+        }
+        
+        .billboard-criticized{
+            grid-area: criticized;
+        }
+        
+        .no-account{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin:0 auto;
+        }
+}
+
+
+
 }
