@@ -4,14 +4,7 @@
   margin: 0;
 }
 
-li {
-  display: inline-block;
-}
-
-header {
-  grid-area: header;
-}
-
+/* -----------Tittles---------- */
 h1 {
   grid-area: aside;
   font-size: 9px;
@@ -22,17 +15,16 @@ h1 {
   margin-left: 30px;
 }
 h3, h2 {
-  color: #5e1fff;
+  color: #380ba7;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-size: 22px;
-  position: relative;
+  /* position: relative;
   left: 20px;
-  top: 10px;
+  top: 10px; */
 }
 
-
-/* Body grid layout */
+/* -----------Body grid---------- */
 body {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -45,8 +37,11 @@ body {
       "footer footer";
 }
 
-/* Aside */
+header {
+  grid-area: header;
+}
 
+/*-------- Aside -----------*/
 
 .information-profile-container {
   margin-top: 20px;
@@ -82,13 +77,6 @@ body {
   animation: fadeIn 1s ease-in-out;
 }
 
-.profile-container h2,
-.friends-container h2,
-.communities-container h2 {
-  color: #380ba7;
-  margin-bottom: 10px;
-}
-
 .profile-icono,
 .friends-icono {
   padding-left: 20px;
@@ -103,8 +91,18 @@ body {
 .friends-icono:hover {
   transform: scale(1.1);
 }
+.information-profile-container {
+  animation: fadeIn 1s ease-in-out;
+}
 
-/* Main */
+.profile-container,
+.friends-container,
+.communities-container {
+  animation: slideIn 0.5s ease-in-out;
+}
+
+/* ----------Main container------ */
+
 .main-container{
   display: grid;
   grid-template-columns:  auto;
@@ -154,13 +152,6 @@ body {
   animation: fadeIn 1s ease-in-out;
 }
 
-.watchlist-container h3,
-.ratings-container h3 {
-  color: #380ba7;
-  margin-bottom: 10px;
-  align-self: flex-start;
-}
-
 .billboard-liked {
   width: 700px;
   display: flex;
@@ -184,8 +175,6 @@ body {
   transform: scale(1.1);
   border-radius: 10px;
 }
-
-
 
 .button-watchlist,
 .rating-button {
@@ -222,8 +211,7 @@ body {
   transform: scale(1.05);
 }
 
-
-/* Footer */
+/* ------Footer----- */
 footer {
   grid-area: footer;
 }
@@ -249,16 +237,6 @@ footer {
   }
 }
 
-.information-profile-container {
-  animation: fadeIn 1s ease-in-out;
-}
-
-.profile-container,
-.friends-container,
-.communities-container {
-  animation: slideIn 0.5s ease-in-out;
-}
-
 /* -------------media queries------------ */
 
 @media (min-width:481px) and (max-width: 600px){
@@ -270,7 +248,8 @@ footer {
   }
   header{
     grid-area: header;
-    width: auto;
+    width: 100%;
+    height: 50px;
   }
   .buscador {
       display: none;
@@ -288,8 +267,8 @@ footer {
 } 
   .icons {
     display: block;
-    position: absolute;
-    top: 25px;
+    top: -4px;
+    left: left;
   }
   .text-links.active {
     display: block;
@@ -298,7 +277,7 @@ footer {
     background-color: hsla(0, 4%, 5%, 0.322);
     top: 70px;
     right: 40px;
-    width: 300px;
+    width: 200px;
     text-align: center;
     z-index: 1000;
   } 
@@ -355,13 +334,15 @@ footer {
   }
   header{
     grid-area: header;
+    height: 50px;
+    width: 100%;
   }
 
   .buscador {
       display: none;
   }
 
-  nav .image-links {
+  .image-links {
       display: none;
   }
 
@@ -371,20 +352,19 @@ footer {
   .text-links {
     display: none;
 } 
-  nav .icons {
+  .icons {
     display: block;
-    position: absolute;
-    top: 25px;
-    right: 20px;
+    top: -4px;
+    left: left;
   }
   .text-links.active {
     display: block;
     position: absolute;
     border: solid 1px #fff;
     background-color: hsla(0, 4%, 5%, 0.322);
-    top: 70px;
-    right: 40px;
-    width: 300px;
+    top: 45px;
+    right: 45px;
+    width: 200px;
     text-align: center;
     z-index: 1000;
   } 
