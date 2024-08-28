@@ -42,7 +42,7 @@ main {
 }
 
 .site-logo {
-    width: 100px;
+    width: 90px;
     height: auto;
 }
 
@@ -84,7 +84,7 @@ main {
 }
 
 .tittle-form{
-  color: red;
+    color: red;
 }
 /* styles for terms and checkbox*/
 .terms-container {
@@ -99,6 +99,18 @@ main {
 
 .terms-label {
     color: #5b1df9;
+    
+}
+
+.terms-label a {
+    text-decoration: none;
+    color: inherit;
+    transition: text-decoration 0.3s ease, font-size 0.3s ease;
+}
+
+.terms-label a:hover {
+    text-decoration: underline;
+    font-size: 1.1em;
 }
 
 /* styles for button*/
@@ -114,23 +126,37 @@ main {
     position: relative;
 }
 .submit-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.3);
-  transition: all 0.4s;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.4s;
 }
 
 .submit-button:hover::before{
-  left: 100%;
-  cursor: pointer;
+    left: 100%;
+    cursor: pointer;
 }
 
 .submit-button:hover {
-  background-color: #380ba7;
-  transform: scale(1.05);
+    background-color: #380ba7;
+    transform: scale(1.05);
 }
 
+/*      Media Queries        */
+
+@media (max-width: 750px) {
+    main {
+        max-width: 350px;
+        width: 90%;
+    }
+    .form-header h1 {
+        font-size: 1.7em;
+    }
+    .input-group {
+        margin-bottom: 12px;
+    }
+}
