@@ -266,7 +266,7 @@ footer {
         top: 50px;
     }
 
-    footer .footer-content {
+    /* footer .footer-content {
         grid-template-columns: 1fr;
         gap: 10px;
         text-align: center;
@@ -274,7 +274,7 @@ footer {
 
     .footer-link:last-child {
         margin-top: -45px;
-    }
+    } */
 }
 
 @media (min-width: 701px) and (max-width: 1150px) {

@@ -161,67 +161,8 @@ body {
 }
 /* ---MEDIA QUERIES---- */
 
-@media (max-width: 700px) {
-    header {
-        height: 50px;
-        width: 100%;
-    }
-
-    .buscador {
-        display: none;
-    }
-
-    .image-links {
-        display: none;
-    }
-
-    /* -------BURGER------- */
-    .text-links {
-        display: none;
-    }
-
-    .icons {
-        display: block;
-        position: absolute;
-        top: -4px;
-    }
-
-    .text-links.active {
-        display: block;
-        position: absolute;
-        border: solid 1px #5418eb;
-        background-color: hsla(0, 4%, 5%, 0.322);
-        top: 95px;
-        right: 40px;
-        width: 200px;
-        text-align: center;
-        z-index: 1000;
-    }
-    .text-links.active li {
-        margin: 10px 0;
-    }
-    
-    .text-links.active li a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 18px;
-    }
-    
-    .text-links.active li a:hover {
-        color: #380ba7;
-        text-decoration: underline;
-    }
-}
 
 @media (min-width: 701px) and (max-width: 1150px){
-    input {
-        width: 70%;
-    }
-
-    .search-button {
-        width: 30%;
-    }
-
     .new-post {
         width: 90%;
         max-width: none;

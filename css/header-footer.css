@@ -267,8 +267,7 @@ footer {
 
 .footer-content {
     display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 20px; 
+    justify-content: center;
     border-bottom: 1px solid #666666; 
     padding: 10px;
 }
@@ -279,6 +278,7 @@ footer {
     display: flex;
     align-items: center;
     transition: transform 0.5s ease-in-out;
+    font-size: 18px;
 }
 
 .footer-link:hover {
@@ -293,14 +293,6 @@ footer {
     margin-right: 10px;
 }
 
-.footer-link:first-child {
-    justify-self: start;
-}
-
-.footer-link:last-child {
-    justify-self: end;
-}
-
 .reserved {
     grid-column: 1 / -1;
     text-align: center;
@@ -311,51 +303,50 @@ footer {
 /* --------MEDIA QUERIES FOR HEADER AND FOOTER IN HOMEPAGE VIEW------------- */
 
 @media (max-width: 500px) {
-    .icons {
+    #homepage .icons {
         left: 450px;
     }
-    .text-links.active {
+    #homepage .text-links.active {
         left: 275px;
     }
 }
 
-/* pantallas pequeñas (hasta 700px) */
 @media (max-width: 700px) {
 
-    header {
+    #homepage header {
         height: 50px;
         width: 100%;
     }
 
-    .logotipo{
+    #homepage .logotipo{
         right: 170px;
         top: 5px;
     }
 
-    .buscador {
+    #homepage .buscador {
         display: none;
     }
 
-    nav .image-links {
+    #homepage nav .image-links {
         display: none;
     }
 
-    .image-links {
+    #homepage .image-links {
         display: none;
     }
 
-  /* ---------BURGER---------- */
-    .text-links {
+
+    #homepage .text-links {
         display: none;
     }
 
-    .icons {
+    #homepage .icons {
         display: block;
         top: -4px;
         left: left;
     }
 
-    .text-links.active {
+    #homepage .text-links.active {
         display: block;
         position: absolute;
         border: solid 1px #fff;
@@ -366,50 +357,105 @@ footer {
         text-align: center;
         z-index: 1000;
     }
-    .text-links.active li {
+    #homepage .text-links.active li {
         margin: 10px 0;
     }
     
-    .text-links.active li a {
+    #homepage .text-links.active li a {
         color: #fff;
         text-decoration: none;
         font-size: 18px;
     }
     
-    .text-links.active li a:hover {
+    #homepage .text-links.active li a:hover {
         color: #380ba7;
         text-decoration: underline;
-    }
-
-    footer .footer-content {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .footer-link:last-child {
-        margin-top: -45px;
     }
 }
 
 @media (min-width: 1201px){
-    header {
+    #homepage header {
         grid-area: header;
     }
 
-    footer {
+    #homepage footer {
         grid-area: footer;
     }
 
-    .image-links {
+    #homepage .image-links {
         display: flex;
     }
     
-    .text-links {
+    #homepage .text-links {
         display: none;
     }
 
-    .icons {
+    #homepage .icons {
         display: none;
+    }
+}
+
+/* --------MEDIA QUERIES FOR HEADER AND FOOTER IN NEW-POST VIEW------------- */
+
+@media (max-width: 700px) {
+    #new-post header {
+        height: 50px;
+        width: 100%;
+    }
+
+    #new-post .buscador {
+        display: none;
+    }
+
+    #new-post .image-links {
+        display: none;
+    }
+
+    /* -------BURGER------- */
+    #new-post .text-links {
+        display: none;
+    }
+
+    #new-post .icons {
+        display: block;
+        position: absolute;
+        top: -4px;
+    }
+
+    #new-post .text-links.active {
+        display: block;
+        position: absolute;
+        border: solid 1px #5418eb;
+        background-color: hsla(0, 4%, 5%, 0.322);
+        top: 95px;
+        right: 40px;
+        width: 200px;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    #new-post .text-links.active li {
+        margin: 10px 0;
+    }
+    
+    #new-post .text-links.active li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    
+    #new-post .text-links.active li a:hover {
+        color: #380ba7;
+        text-decoration: underline;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1150px){
+    #new-post input {
+        width: 70%;
+    }
+
+    #new-post .search-button {
+        width: 30%;
     }
 }
