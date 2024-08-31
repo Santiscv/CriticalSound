@@ -125,7 +125,7 @@ button:hover{
 }
 
 /* --------media queries------------- */
-@media (min-width:481px) and (max-width: 600px){
+@media (min-width:320px) and (max-width: 600px){
     header{
         height: 50px;
       }
@@ -133,7 +133,14 @@ button:hover{
         margin-right: 120px;
         margin-bottom: 5px;
     }
-  
+    
+    .logotipo{
+        display:none
+    }
+    .logotipo-responsive{
+        display: flex;
+        margin: 10px
+    }
     input{
         width: 115px;
         font-size: 9px;
