@@ -49,16 +49,16 @@ header {
 
 /*---Genre - aside---*/
 .genre {
-    display: grid;
-    border-radius: 10px;
-    padding: 10px;
-    border: 2px;
-    background-image: linear-gradient(#65569c, #5c3cad, #59458b, #372c58, black);
-    box-shadow: 0 2px 6px;
+    grid-area: genre;
     width:170px;
     height: 600px;
+    margin-left: 15px;
+    padding: 10px;
+    border: 2px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px;
     box-sizing: border-box;
-    grid-area: genre;
+    background-image: linear-gradient(#65569c, #5c3cad, #59458b, #372c58, black);
 }
 
 .genre ul {
@@ -67,7 +67,6 @@ header {
 
 .button-genre {
     display: flex;
-    font-family: "Kanit", sans-serif;
     width: 150px;
     height: auto;
     margin: 6px 5px 0 0;
@@ -75,6 +74,7 @@ header {
     border: 10px;
     border-radius: 5px;
     padding: 10px;
+    font-family: "Kanit", sans-serif;
     background-color: #d0d2e7;
     color: rgba(0, 0, 0, 0.865);
 }
@@ -101,14 +101,14 @@ header {
 .billboard-criticized {
     grid-area: billboard-criticized;
     grid-area: billboard-liked;
-    background-color: #e8e6ff;
-    border: 4px #380ba7;
-    box-shadow: 0 2px 6px black;
-    border-radius: 10px;
-    padding: 10px;
     width: 940px;
     height: 250px;
     margin: 10px;
+    border: 4px #380ba7;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px black;
+    background-color: #e8e6ff;
     box-sizing: border-box;
     overflow-y: hidden;
 }
@@ -219,18 +219,9 @@ footer {
     }
 
     .container {
-        width: auto;
-        padding: 5px;
-        height: 100%;
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "title"
-            "genre"
-            "billboard-liked"
-            "billboard-criticized";
-        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin-top: 10px;
     }
 
@@ -258,16 +249,6 @@ footer {
     footer{
         top: 50px;
     }
-
-    /* footer .footer-content {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .footer-link:last-child {
-        margin-top: -45px;
-    } */
 }
 
 @media (min-width: 701px) and (max-width: 1150px) {
