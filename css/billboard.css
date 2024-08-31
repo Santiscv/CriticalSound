@@ -28,7 +28,7 @@ h2 {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-size: 22px;
-    position: relative;
+    margin-top: 0;
 }
 
 header {
@@ -84,16 +84,6 @@ header {
     transform: scale(1.00);
 }
 
-/* -----Section results billboard----- */
-#billboard-liked {
-    margin-bottom: 20px;
-    grid-area: billboard-liked;
-}
-
-#billboard-criticized {
-    grid-area: billboard-criticized;
-}
-
 .billboard-image {
     width: 200px;
     height: auto;
@@ -109,6 +99,8 @@ header {
 
 .billboard-liked,
 .billboard-criticized {
+    grid-area: billboard-criticized;
+    grid-area: billboard-liked;
     background-color: #e8e6ff;
     border: 4px #380ba7;
     box-shadow: 0 2px 6px black;
@@ -185,6 +177,7 @@ footer {
     h2{
         text-align: center;
         left: 10px;
+        margin-top: 10px;
     }
 
     /* ---------BURGER---------- */
@@ -245,7 +238,7 @@ footer {
         width: 500px;
         height: 200px;
         overflow: auto;
-        margin: 3px 40px;
+        margin: 0 auto;
     }
 
     .container .genre li {
@@ -297,6 +290,7 @@ footer {
 
     h2{
         text-align: center;
+        margin-top: 10px;
     }
 
     /* ---------BURGER---------- */
