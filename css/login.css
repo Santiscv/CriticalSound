@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 main {
@@ -212,18 +211,39 @@ hr {
 }
 
 @media (min-width: 600px) and (max-width: 1150px) {
-    body {
-        grid-template-areas: 
-        "register"
+    body{
+        height: max-content;
     }
-    
-    .register-container {
-        grid-area: register;
-        width: 90vw;
-        margin-right: 40px;
-        margin-top: 20%;
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
     }
-    .logotype{
+    aside{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .results-billboard{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .billboard-liked, .billboard-criticized{
+        width: 60%;
+        /* margin: 20px; cambiar el espacio el blanco */
+    }
+    .container {
+        width: 100%;
+        /* margin-right: 40px;
+        margin-top: 20%; */
+    }
+    /* .logotype{
         width: 500px;
         margin-left: 5px;
         
@@ -239,11 +259,8 @@ hr {
 
     .no-account{
         margin-left: 120px;
-    }
-    .billboard-liked, .billboard-criticized {
-        display:none
-        
-    }
+    } */
+
     
 @media (min-width: 1200px){
     body {
