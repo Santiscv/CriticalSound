@@ -5,7 +5,14 @@
 
 /*------header------*/
 header {
-    background-image: linear-gradient(to right, #5b1df9, #27252e, #15131a, #050408, black);
+    background-image: linear-gradient(
+        to right,
+        #5b1df9,
+        #27252e,
+        #15131a,
+        #050408,
+        black
+    );
     width: 100%;
     height: 100px;
     border-bottom: 2px solid #5e1fff;
@@ -76,7 +83,6 @@ input {
     cursor: pointer;
 }
 
-
 /* ------responsive----- */
 .icons {
     font-size: 2.8rem;
@@ -104,36 +110,103 @@ input {
     font-size: 18px;
 }
 
-/* --------------------------------- */
+    /* --------------------------------- */
 
-button{
+button {
     background-color: #5e1fff;
     color: white;
 }
 
-button:hover{
+button:hover {
     background-color: #d4d0ff;
     cursor: pointer;
     color: black;
 }
 
-.imgs:hover{
+.imgs:hover {
     box-shadow: 0 0 10px 3.5px #5b1df9;
     transform: scale(1.15);
     cursor: pointer;
 }
 
 /* --------media queries------------- */
-@media (min-width:481px) and (max-width: 600px){
-    header{
+@media (min-width: 320px) and (max-width: 480px) {
+    header {
         height: 50px;
-      }
+    }
     .buscador {
-        margin-right: 120px;
+        margin-right: 150px;
         margin-bottom: 5px;
     }
-  
-    input{
+    
+    input {
+        width: 115px;
+        font-size: 9px;
+    }
+    
+    .search-button {
+        width: 50px;
+        font-size: 10px;
+    }
+    
+    nav .image-links {
+        display: none;
+    }
+    
+    .image-links {
+        display: none;
+    }
+    
+
+    .text-links {
+        display: none;
+    }
+    .icons {
+        display: flex;
+        top: -2px;
+        /* left: left; */
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .text-links.active {
+        display: block;
+        position: absolute;
+        border: solid 1px #fff;
+        background-color: hsla(0, 4%, 5%, 0.322);
+        top: 40px;
+        right: 40px;
+        width: 200px;
+        text-align: center;
+        z-index: 1000;
+    }
+    .text-links.active li {
+        margin: 10px 0;
+    }
+    
+    .text-links.active li a {
+        color: #7b1dff;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    
+    .text-links.active li a:hover {
+        color: #380ba7;
+        text-decoration: underline;
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 600px) {
+    header {
+        height: 50px;
+    }
+    .buscador {
+        margin-right: 210px;
+        margin-bottom: 5px;
+    }
+
+    input {
         width: 115px;
         font-size: 9px;
     }
@@ -146,56 +219,57 @@ button:hover{
     nav .image-links {
         display: none;
     }
-  
+
     .image-links {
         display: none;
     }
 
     /*---- reponsive--- */
     .text-links {
-      display: none;
-  } 
+        display: none;
+    }
     .icons {
-      display: block;
-      top: -2px;
+        display: block;
+        top: -2px;
     }
     .text-links.active {
-      display: block;
-      position: absolute;
-      border: solid 1px #fff;
-      background-color: hsla(0, 4%, 5%, 0.322);
-      top: 40px;
-      right: 40px;      
-      width: 200px;
-      text-align: center;
-      z-index: 1000;
-    } 
+        display: block;
+        position: absolute;
+        border: solid 1px #fff;
+        background-color: hsla(0, 4%, 5%, 0.322);
+        top: 40px;
+        right: 40px;
+        width: 200px;
+        text-align: center;
+        z-index: 1000;
+    }
     .text-links.active li {
-      margin: 10px 0;
+        margin: 10px 0;
     }
-  
+
     .text-links.active li a {
-      color: #7b1dff;
-      text-decoration: none;
-      font-size: 18px;
+        color: #7b1dff;
+        text-decoration: none;
+        font-size: 18px;
     }
-  
+
     .text-links.active li a:hover {
-      color: #380ba7;
-      text-decoration: underline;
+        color: #380ba7;
+        text-decoration: underline;
     }
-}
-@media (min-width : 601px) and (max-width: 768px) {
-    header{
+    }
+
+    @media (min-width: 601px) and (max-width: 768px) {
+    header {
         height: 50px;
-      }
-    
-      .buscador {
+    }
+
+    .buscador {
         margin-right: 210px;
         margin-bottom: 5px;
     }
-  
-    input{
+
+    input {
         width: 115px;
         font-size: 9px;
     }
@@ -204,22 +278,23 @@ button:hover{
         width: 50px;
         font-size: 10px;
     }
-      .image-links {
-          display: none;
-      }
-    
-      .image-links {
-          display: none;
-      }
-    /* ------responsive----- */
-      .text-links {
+    .image-links {
         display: none;
-    } 
-      .icons {
+    }
+
+    .image-links {
+        display: none;
+    }
+    /* ------responsive----- */
+    .text-links {
+        display: none;
+    }
+    .icons {
         display: block;
         top: -2px;
-      }
-      .text-links.active {
+        left: left;
+    }
+    .text-links.active {
         display: block;
         position: absolute;
         border: solid 1px #fff;
@@ -229,27 +304,26 @@ button:hover{
         width: 200px;
         text-align: center;
         z-index: 1000;
-      } 
-      .text-links.active li {
+    }
+    .text-links.active li {
         margin: 10px 0;
-      }
-    
-      .text-links.active li a {
+    }
+
+    .text-links.active li a {
         color: #7b1dff;
         text-decoration: none;
         font-size: 18px;
-      }
-    
-      .text-links.active li a:hover {
+    }
+
+    .text-links.active li a:hover {
         color: #380ba7;
         text-decoration: underline;
-      }
-}
+    }
+    }
 
+    /* ---------footer------ ----*/
 
-/* ---------footer------ ----*/
-
-footer {
+    footer {
     display: grid;
     grid-template-rows: auto 1fr;
     background-color: black;
@@ -259,43 +333,41 @@ footer {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
-    border-top-style:solid; 
+    border-top-style: solid;
     border-color: #5e1fff;
     border-width: 2px;
+    }
 
-}
-
-.footer-content {
+    .footer-content {
     display: grid;
     justify-content: center;
-    border-bottom: 1px solid #666666; 
+    border-bottom: 1px solid #666666;
     padding: 10px;
-}
+    }
 
-.footer-link {
+    .footer-link {
     text-decoration: none;
     color: #f3f1ff;
     display: flex;
     align-items: center;
     transition: transform 0.5s ease-in-out;
     font-size: 18px;
-}
+    }
 
-.footer-link:hover {
+    .footer-link:hover {
     text-decoration: underline;
     transform: scale(1.15);
-}
+    }
 
-.footer-link img {
+    .footer-link img {
     width: 25px;
     height: 25px;
     border-radius: 30%;
     margin-right: 10px;
-}
+    }
 
-.reserved {
+    .reserved {
     grid-column: 1 / -1;
     text-align: center;
     padding-top: 8px;
-}
-
+    }
