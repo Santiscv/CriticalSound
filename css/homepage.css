@@ -199,5 +199,12 @@ h2 {
         margin: 0 auto;
         margin-left: -85px;
     }
+
+    header {
+        grid-area: header;
+    }
+    footer {
+        grid-area: footer;
+    }
 }
 
