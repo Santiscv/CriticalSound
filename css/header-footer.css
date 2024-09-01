@@ -128,9 +128,13 @@ button:hover{
 @media (min-width:320px) and (max-width: 600px){
     header{
         height: 50px;
+        display: flex; /*-modificado-*/
+        align-items: center; /*-modificado-*/
+        justify-content: space-between; /*-modificado-*/
       }
     .buscador {
-        margin-right: 120px;
+        margin-right: auto; /*-modificado-*/
+        margin-left: auto; /*-modificado-*/
         margin-bottom: 5px;
     }
     
@@ -164,8 +168,10 @@ button:hover{
       display: none;
   } 
     .icons {
-      display: block;
-      top: -2px;
+      top: 5px;
+      position: absolute; /*-modificado-*/
+      display: flex;/*-modificado-*/
+      right: 0;/*-modificado-*/
     }
     .text-links.active {
       display: block;
@@ -196,15 +202,21 @@ button:hover{
 @media (min-width : 601px) and (max-width: 768px) {
     header{
         height: 50px;
+        display: flex; /*-modificado-*/
+        align-items: center; /*-modificado-*/
+        justify-content: space-between; /*-modificado-*/
       }
     
       .buscador {
-        margin-right: 210px;
+        /* margin-right: 210px;
+        margin-bottom: 5px; */
+        margin-right: auto; /*-modificado-*/
+        margin-left: auto; /*-modificado-*/
         margin-bottom: 5px;
     }
   
     input{
-        width: 115px;
+        width: 230px;/*-modificado-*/
         font-size: 9px;
     }
 
@@ -225,7 +237,9 @@ button:hover{
     } 
       .icons {
         display: block;
-        top: -2px;
+        position: absolute; /* O usa absolute si quieres que sea relativo al contenedor */
+        right: 0;
+        top: 3px;
       }
       .text-links.active {
         display: block;
