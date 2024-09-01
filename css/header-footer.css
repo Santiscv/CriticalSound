@@ -275,7 +275,7 @@ footer {
 
 .footer-content {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    justify-content: center;
     gap: 20px; 
     border-bottom: 1px solid #666666; 
     padding: 10px;
@@ -291,22 +291,14 @@ footer {
 
 .footer-link:hover {
     text-decoration: underline;
-    transform: scale(1.15);
+    transform: scale(1.25);
+    
 }
 
 .footer-link img {
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     border-radius: 30%;
-    margin-right: 10px;
-}
-
-.footer-link:first-child {
-    justify-self: start;
-}
-
-.footer-link:last-child {
-    justify-self: end;
 }
 
 .reserved {
