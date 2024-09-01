@@ -237,7 +237,7 @@ button:hover{
     } 
       .icons {
         display: block;
-        position: absolute; /* O usa absolute si quieres que sea relativo al contenedor */
+        position: absolute;
         right: 0;
         top: 3px;
       }
