@@ -28,7 +28,7 @@ h2 {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-size: 22px;
-    position: relative;
+    margin-top: 0;
 }
 
 header {
@@ -39,6 +39,7 @@ header {
 .container{
     display: grid;
     grid-template-rows: 1fr auto;  
+    grid-template-columns: 0.8fr 1fr;
     grid-template-areas: 
     "title title"
     "genre billboard-liked"
@@ -49,16 +50,16 @@ header {
 
 /*---Genre - aside---*/
 .genre {
-    display: grid;
-    border-radius: 10px;
+    grid-area: genre;
+    width:60%;
+    height: 600px;
+    margin-left: 15px;
     padding: 10px;
     border: 2px;
-    background-image: linear-gradient(#65569c, #5c3cad, #59458b, #372c58, black);
+    border-radius: 10px;
     box-shadow: 0 2px 6px;
-    width:170px;
-    height: 600px;
     box-sizing: border-box;
-    grid-area: genre;
+    background-image: linear-gradient(#65569c, #5c3cad, #59458b, #372c58, black);
 }
 
 .genre ul {
@@ -67,14 +68,14 @@ header {
 
 .button-genre {
     display: flex;
-    font-family: "Kanit", sans-serif;
-    width: 150px;
+    width: 100%;
     height: auto;
     margin: 6px 5px 0 0;
     font-size: 18px;
     border: 10px;
     border-radius: 5px;
     padding: 10px;
+    font-family: "Kanit", sans-serif;
     background-color: #d0d2e7;
     color: rgba(0, 0, 0, 0.865);
 }
@@ -82,16 +83,6 @@ header {
 .button-genre:hover {
     box-shadow: 0 0 10px 3.5px;
     transform: scale(1.00);
-}
-
-/* -----Section results billboard----- */
-#billboard-liked {
-    margin-bottom: 20px;
-    grid-area: billboard-liked;
-}
-
-#billboard-criticized {
-    grid-area: billboard-criticized;
 }
 
 .billboard-image {
@@ -109,14 +100,16 @@ header {
 
 .billboard-liked,
 .billboard-criticized {
-    background-color: #e8e6ff;
-    border: 4px #380ba7;
-    box-shadow: 0 2px 6px black;
-    border-radius: 10px;
-    padding: 10px;
+    grid-area: billboard-criticized;
+    grid-area: billboard-liked;
     width: 940px;
     height: 250px;
     margin: 10px;
+    border: 4px #380ba7;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px black;
+    background-color: #e8e6ff;
     box-sizing: border-box;
     overflow-y: hidden;
 }
@@ -133,111 +126,21 @@ footer {
 
 /* ---Media query--- */
 @media (max-width: 500px) {
-    .icons {
-        left: 450px;
-    }
-
-    .text-links.active {
-        left: 275px;
-    }
-
     h1 {
         margin-left: 120px;
     }
 }
 
 @media (max-width: 700px) {
-    header {
-        height: 50px;
-        width: 100%;
-    }
-
-    .logotipo {
-        right: 170px;
-        top: 5px;
-    }
-
-    .buscador{
-        margin-right: 30%;
-        margin-bottom: 10px;
-    }
-
-    input {
-        width: 80%;
-        height: 25px;
-        font-size: 10px;
-    }
-
-    .search-button {
-        width: 40%;
-        height: 25px;
-        font-size: 10px;
-    }
-
-    nav .image-links {
-        display: none;
-    }
-
-    .image-links {
-        display: none;
-    }
-
     h2{
         text-align: center;
-        left: 10px;
-    }
-
-    /* ---------BURGER---------- */
-    .text-links {
-        display: none;
-    }
-
-    .icons {
-        display: block;
-        top: -4px;
-        left: left;
-    }
-
-    .text-links.active {
-        display: block;
-        position: absolute;
-        border: solid 1px #fff;
-        background-color: hsla(0, 4%, 5%, 0.322);
-        top: 70px;
-        right: 40px;
-        width: 200px;
-        text-align: center;
-        z-index: 1000;
-    }
-
-    .text-links.active li {
-        margin: 10px 0;
-    }
-
-    .text-links.active li a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 18px;
-    }
-
-    .text-links.active li a:hover {
-        color: #380ba7;
-        text-decoration: underline;
+        margin-top: 30px;
     }
 
     .container {
-        width: auto;
-        padding: 5px;
-        height: 100%;
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "title"
-            "genre"
-            "billboard-liked"
-            "billboard-criticized";
-        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin-top: 10px;
     }
 
@@ -245,13 +148,14 @@ footer {
         width: 500px;
         height: 200px;
         overflow: auto;
-        margin: 3px 40px;
+        margin: 0 auto;
     }
 
     .container .genre li {
         display: grid;
         grid-template-columns: repeat(4, 0.4fr);
         grid-template-rows: repeat(4, auto);
+        gap: 3px;
         margin-left: 20px;
     }
 
@@ -265,86 +169,27 @@ footer {
     footer{
         top: 50px;
     }
-
-    /* footer .footer-content {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .footer-link:last-child {
-        margin-top: -45px;
-    } */
 }
 
 @media (min-width: 701px) and (max-width: 1150px) {
-    .logotipo {
-        right: 300px;
-        top: 5px;
-    }
-
-    .buscador{
-        margin-right: 30%;
-    }
-
-    nav .image-links {
-        display: none;
-    }
-
-    .image-links {
-        display: none;
-    }
-
     h2{
         text-align: center;
+        margin-top: 10px;
     }
 
-    /* ---------BURGER---------- */
-    .text-links {
-        display: none;
-    }
-
-    .icons {
-        display: block;
-        top: center;
-        left: left;
-    }
-
-    .text-links.active {
-        display: block;
-        position: absolute;
-        border: solid 1px #fff;
-        background-color: hsla(0, 4%, 5%, 0.322);
-        top: 95px;
-        right: 40px;
-        width: 200px;
-        text-align: center;
-        z-index: 1000;
-    }
-
-    .text-links.active li {
-        margin: 10px 0;
-    }
-
-    .text-links.active li a {
-        color: #7b1dff;
-        text-decoration: none;
-        font-size: 18px;
-    }
-
-    .text-links.active li a:hover {
-        color: black;
-        text-decoration: underline;
-    }
-
-    .container .billboard-liked,
-    .container .billboard-criticized {
+    .billboard-liked,
+    .billboard-criticized {
         max-width: 650px;
         margin: 0 auto;
         padding: 0;
     }
     
-    .container .genre .button-genre {
+    .genre{
+        min-width: 110px;
+    }
+
+    .button-genre {
+        min-width: 93px;
         padding: 10px 20px;
         border: none;
     }
