@@ -168,6 +168,9 @@ h2 {
     .post-imagen img {
         max-height: 380px;
     }
+    h1 {
+        margin-top: 15px;
+    }
 }
 
 /* pantallas medianas (701px a 1150px) */
