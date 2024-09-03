@@ -149,12 +149,6 @@ h2 {
 
 /* ---MEDIA QUERIES FOR HOMEPAGE VIEW--- */
 
-/* pantallas pequeñas (hasta 500px) */
-/* @media (max-width: 510px) {
-    .news-feed {
-        width: auto;
-    }
-} */
 
 /* pantallas pequeñas (hasta 700px) */
 @media (min-width: 320px) and (max-width: 600px) {
@@ -162,17 +156,16 @@ h2 {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 10px;
+        /* margin-top: 10px; quite el margen entre el main y header */
         flex-direction: column;
     }
-        /* width: 100%;
-        padding: 5px;
-    }*/
     .news-feed {
-        width: auto;
+        width: 180%;
         max-width:500px;
-        /* margin: 0 auto; */
-        padding: 0;
+    }
+    
+    .post-imagen img {
+        max-height: 380px;
     }
 }
 
@@ -182,16 +175,12 @@ h2 {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 10px;
+        /* margin-top: 10px; */
         flex-direction: column;
     }
-    /* section {
-        margin-left: -100px;
-    }  */
     .icons {
-        top: -5px
+        top: -3px
     }
-
 }
 
 @media (min-width: 769px) and (max-width: 1050px) { 
@@ -199,7 +188,7 @@ h2 {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 10px;
+        /* margin-top: 10px; */
         flex-direction: column;
     }
 }
@@ -214,17 +203,15 @@ h2 {
             ". main ."
             "footer footer footer";
     }
-
     main {
         grid-area: main;
+        
     }
-
     main .news-feed {
         max-width:500px;
         margin: 0 auto;
         margin-left: -85px;
     }
-
     header {
         grid-area: header;
     }
