@@ -17,7 +17,9 @@ body {
     line-height: 1.6;
     transition: background-color 0.5s ease;
 }
-
+body.dark{
+    background-color: #121212;
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -32,6 +34,17 @@ body {
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
 }
+.dark .container{
+    background: #212E36;
+    color: white;
+}
+.principal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
 
 .tittle-principal, .tittle-terms {
     font-family: "Bebas Neue", sans-serif;
@@ -41,12 +54,20 @@ body {
     animation-delay: 0.2s;
 
 }
-
-.tittle-principal{
-    text-align: center;
+.dark .tittle-principal{
+    color: rgb(172, 70, 240);
 }
 
-
+.dark .tittle-terms{
+    color: rgb(172, 70, 240);
+}
+.imgs{
+    width: 40px;
+    margin-top: 5px;
+}
+.dark .imgs{
+    box-shadow: inset -1px -1px 1px rgb(248, 248, 63);
+}
 .terms {
     opacity: 0;
     animation: fadeIn 1.5s ease-in-out forwards;
@@ -61,6 +82,10 @@ body {
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
     animation-delay: 1s;
+}
+
+.dark .footer{
+    color: white;
 }
 
 /* Keyframes */
