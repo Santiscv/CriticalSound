@@ -3,17 +3,8 @@
     margin: 0;
 }
 
-body{
-    display: grid;
-    grid-template-columns: 30% auto;
-    grid-template-rows: 0.2fr 2fr  0.2fr;
-    grid-template-areas:
-        "header header"
-        "container container"
-        "footer footer";
-}
-
 h1 {
+    width: 300px;
     grid-area: title;
     font-family: "Bebas Neue", sans-serif;
     font-size: 12px;
@@ -24,28 +15,23 @@ h1 {
 }
 
 h2 {
-    color: #380ba7;
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-size: 22px;
+    text-align: center;
     margin-top: 0;
-}
-
-header {
-    grid-area: header;
+    color: white;
 }
 
 /*---Container -Main ---*/
 .container{
     display: grid;
-    grid-template-rows: 1fr auto;  
     grid-template-columns: 0.8fr 1fr;
     grid-template-areas: 
     "title title"
-    "genre billboard-liked"
-    "genre billboard-criticized";
-    margin-top: 30px;
-    grid-area: container;
+    "genre article-liked"
+    "genre article-criticized"
+    "genre article-new-releases";
 }
 
 /*---Genre - aside---*/
@@ -85,6 +71,16 @@ header {
     transform: scale(1.00);
 }
 
+.billboard{
+    width: 940px;
+    border: 4px #380ba7;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px black;
+    background-image: linear-gradient(#65569c, #5c3cad, #59458b, #372c58, black);
+    box-sizing: border-box;
+}
+
 .billboard-image {
     width: 200px;
     height: auto;
@@ -93,35 +89,130 @@ header {
 
 .billboard-image:hover {
     cursor: pointer;
-    background: linear-gradient(#7157ce, #9198e5, #8289db);
+    background: linear-gradient(#cac4dd, #9198e5, #8289db);
     box-shadow: 0 0 10px 3.5px;
     transform: scale(1.05);
 }
 
-.billboard-liked,
-.billboard-criticized {
-    grid-area: billboard-criticized;
-    grid-area: billboard-liked;
-    width: 940px;
-    height: 250px;
+.article-liked,
+.article-criticized,
+.article-new-releases{
+    grid-area: article-liked;
+    grid-area: article-criticized;
+    grid-area: article-new-releases;
+    width: 98%;
+    height: auto;
     margin: 10px;
-    border: 4px #380ba7;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px black;
-    background-color: #e8e6ff;
-    box-sizing: border-box;
     overflow-y: hidden;
 }
 
-.billboard-liked figure,
-.billboard-criticized figure {
+.article-liked figure,
+.article-criticized figure,
+.article-new-releases figure{
     display: flex;
 }
 
-/* -----footer------ */
-footer {
-    grid-area: footer;
+footer{
+    margin-top: 10px;
 }
 
 /* ---Media query--- */
+@media (max-width:480px) {
+    .container{
+        display: grid;
+        grid-template-columns: 0.8fr;
+        grid-template-areas: 
+        "title"
+        "genre" 
+        "article-liked"
+        "article-criticized"
+        "article-new-releases";
+        gap: 10px;
+    }    
+    .genre{
+        width: 10%;
+        height: auto;
+        margin-left: 30px;
+    }
+    .category{
+        display: grid;
+        grid-template-columns: repeat(2, 0.4fr);
+        gap: 3px;
+        margin-left: 30px;
+    }
+    .billboard{
+        margin-left: 30px;
+        width: 10%;
+    }
+}
+
+@media (min-width:481px) and (max-width: 600px){
+    .container{
+        display: grid;
+        grid-template-columns: 0.8fr;
+        grid-template-areas: 
+        "title"
+        "genre" 
+        "article-liked"
+        "article-criticized"
+        "article-new-releases";
+        gap: 10px;
+    }    
+    .genre{
+        width: 16%;
+        height: auto;
+        margin-left: 30px;
+    }
+    .category{
+        display: grid;
+        grid-template-columns: repeat(2, 0.4fr);
+        gap: 3px;
+        margin-left: 30px;
+    }
+    .billboard{
+        margin-left: 30px;
+        width: 16%;
+    }
+}
+
+@media (min-width : 601px) and (max-width: 768px) {
+    .container{
+        display: grid;
+        grid-template-columns: 0.8fr;
+        grid-template-areas: 
+        "title"
+        "genre" 
+        "article-liked"
+        "article-criticized"
+        "article-new-releases";
+        gap: 10px;
+    }
+    .genre{
+        width: 22%;
+        height: auto;
+        margin-left: 30px;
+    }
+    .category{
+        display: grid;
+        grid-template-columns: repeat(4, 0.4fr);
+        grid-template-rows: repeat(4, auto);
+        gap: 3px;
+        margin-left: 30px;
+    }
+    .billboard{
+        margin-left: 30px;
+        width: 22%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1050px) { 
+    .billboard{
+        width: 600px;
+    }
+    .genre{
+        min-width: 75%;
+    }
+    .button-genre{
+        min-width: 91px;
+    }
+}
