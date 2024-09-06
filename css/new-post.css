@@ -44,7 +44,7 @@ body.dark{
     grid-area: new-post;
 }
 .dark .new-post{
-    background: #171920;
+    background: #212E36;
 }
 .title {
     width: 100%;
@@ -60,7 +60,8 @@ body.dark{
 }
 
 .dark .title{
-    background: #212E36;
+    background: #171920;
+    color: white;
 }
 
 .post-format {
@@ -75,7 +76,7 @@ body.dark{
 }
 
 .dark .post-format{
-    background: #212E36;
+    background: #171920;
 }
 
 .post-format img {
@@ -105,7 +106,8 @@ body.dark{
     resize: vertical;
 }
 .dark textarea{
-    background: #212E36;
+    background: #171920;
+    color: white;
 }
 
 .buttons {
