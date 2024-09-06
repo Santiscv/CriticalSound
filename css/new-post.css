@@ -14,6 +14,9 @@ body {
         min-height: 100vh;
     font-family: 'Kanit', sans-serif;
 }
+body.dark{
+    background-color: #121212;
+  }
 
 
 /* ----- Main ----- */
@@ -40,9 +43,10 @@ body {
     box-sizing: border-box;
     grid-area: new-post;
 }
-
+.dark .new-post{
+    background: #212E36;;
+}
 .title {
-    box-shadow: 0 0 10px 3.5px #5b1df9;
     width: 100%;
     border: 2px solid #380ba7;
     border-radius: 5px;
@@ -55,6 +59,10 @@ body {
     box-sizing: border-box;
 }
 
+.dark .title{
+    background: #171920;
+}
+
 .post-format {
     display: flex;
     justify-content: space-between;
@@ -64,6 +72,10 @@ body {
     list-style: none;
     animation: fadeInUp 1.2s ease-in-out;
     background-color: #fff;
+}
+
+.dark .post-format{
+    background: #171920;
 }
 
 .post-format img {
@@ -85,13 +97,15 @@ body {
     border: 2px solid #380ba7;
     border-radius: 10px;
     margin-top: 10px;
-    box-shadow: 0 0 10px 3.5px #5b1df9;
     background-color: #fff;
     color: #380ba7;
     padding: 10px;
     box-sizing: border-box;
     animation: fadeInUp 1.4s ease-in-out;
     resize: vertical;
+}
+.dark textarea{
+    background: #171920;
 }
 
 .buttons {
