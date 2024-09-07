@@ -16,7 +16,7 @@ body {
 }
 body.dark{
     background-color: #121212;
-  }
+}
 
 
 /* ----- Main ----- */
@@ -177,12 +177,110 @@ body.dark{
 }
 /* ---MEDIA QUERIES---- */
 
-
-@media (min-width: 701px) and (max-width: 1150px){
+@media (min-width: 320px) and (max-width: 600px){
     .new-post {
         width: 90%;
         max-width: none;
         padding: 15px;
+        height: 80%;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .post textarea {
+        font-size: 18px;
+        height: 180px;
+    }
+
+    .post-format {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .preview, .share {
+        width: 100%;
+        font-size: 18px;
+    }
+}
+@media (min-width: 601px) and (max-width: 768px){
+    .new-post {
+        width: 95%;
+        max-width: none;
+        padding: 15px;
+        height: 85%;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .post textarea {
+        font-size: 18px;
+        height: 150px;
+    }
+
+    .post-format {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .preview, .share {
+        width: 100%;
+        font-size: 18px;
+    }
+}
+@media (min-width: 769px) and (max-width: 1050px){
+    .new-post {
+        width: 95%;
+        max-width: none;
+        padding: 15px;
+        height: 85%;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .post textarea {
+        font-size: 18px;
+        height: 150px;
+    }
+
+    .post-format {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .preview, .share {
+        width: 100%;
+        font-size: 18px;
+    }
+}
+
+
+@media (min-width: 1050px) and (max-width: 1200px){
+    .new-post {
+        width: 95%;
+        max-width: none;
+        padding: 15px;
+        height: 85%;
     }
 
     .title {
