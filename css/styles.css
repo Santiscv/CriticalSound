@@ -19,9 +19,6 @@ h3, h2 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-size: 22px;
-  /* position: relative;
-  left: 20px;
-  top: 10px; */
 }
 .dark h2{
   color: rgb(172, 70, 240);
@@ -128,84 +125,11 @@ header {
   grid-template-columns:  auto;
   grid-template-rows: 1fr auto;  
   grid-template-areas: 
-  "aside watchlist"
-  "aside watchlist";
+  "aside billboard"
+  "aside billboard";
   margin-top: 30px;
   grid-area: main;
 
-}
-
-.main-billboard-container {
-  grid-area: watchlist;
-  margin-top: 20px;
-  margin-right: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-  background: linear-gradient(135deg, #5e1fff, #380ba7);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  animation: fadeIn 1s ease-in-out;
-}
-
-.dark .main-billboard-container{
-  background: #212E36;
-}
-
-.main-billboard-container:hover {
-  transform: translateY(-10px);
-}
-
-.billboard-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.watchlist-container,
-.ratings-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 50px;
-  background-color: #fff;
-  border-radius: 10px;
-  gap: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 1s ease-in-out;
-}
-
-.dark .watchlist-container{
-  background: #171920;
-}
-.dark .ratings-container{
-  background: #171920;
-}
-
-.billboard-liked {
-  width: 700px;
-  display: flex;
-  flex-direction: row;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-  }
-
-.billboard-image {
-  width: 120px;
-  height: auto;
-  padding: 10px 25px;
-  margin: 5px;
-  transition: transform 0.3s ease;
-}
-
-.billboard-image:hover {
-  cursor: pointer;
-  background: linear-gradient(#d4d0ff, #5e1fff);
-  transform: scale(1.1);
-  border-radius: 10px;
 }
 
 .button-watchlist,
@@ -280,22 +204,10 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-  .main-billboard-container{
-    width: 60%;
-    margin: 20px 40px;
-  }
-  .watchlist-container,
-  .ratings-container {
-    width: 50%;
-    padding: 40px;
-    }
-  .billboard-liked {
-    width: 120px;
-    }
   
 }
 
-@media (min-width:481px) and (max-width: 600px){
+@media (min-width:320px) and (max-width: 600px){
   /* Container */
   .information-profile-container{
     margin: 20px 40px;
@@ -306,18 +218,6 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-  .main-billboard-container{
-    width: 60%;
-    margin: 20px 40px;
-  }
-  .watchlist-container,
-  .ratings-container {
-    width: 50%;
-    padding: 70px;
-    }
-  .billboard-liked {
-    width: 200px;
-    }
 }
 
 @media (min-width : 601px) and (max-width: 768px) {
@@ -328,16 +228,9 @@ footer {
     flex-direction: column;
   }
   .information-profile-container{
-    margin: 20px 40px;
-    width: 80%;
+    margin-right: 20px; 
+    width: 70%;
   }
-  .main-billboard-container{
-    margin: 20px 40px;
-    width: 80%;
-  }
-  .billboard-liked {
-    width: 300px;
-    }
 }
 
 @media (min-width: 769px) and (max-width: 1050px) { 
@@ -345,18 +238,10 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
   }
   .information-profile-container{
-    margin: 20px 40px;
+    margin-right: 90px ;
     width: 70%;
   }
-  .main-billboard-container{
-    margin: 20px 40px;
-    width: 70%;
-  }
-   .billboard-liked {
-     width: 400px; 
-   }
      
 }
