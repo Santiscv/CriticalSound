@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+body.dark{
+    background-color: #121212;
+}
+
 h1 {
     width: 300px;
     grid-area: title;
@@ -21,6 +25,10 @@ h2 {
     text-align: center;
     margin-top: 0;
     color: white;
+}
+
+.dark h2{
+    color: rgb(172, 70, 240);
 }
 
 /*---Container -Main ---*/
@@ -48,6 +56,11 @@ h2 {
     background-image: linear-gradient(#65569c, #5c3cad, #59458b, #372c58, black);
 }
 
+.dark .genre{
+    background-color: #212E36;
+    background-image: none;
+}
+
 .genre ul {
     list-style: none;
 }
@@ -66,6 +79,11 @@ h2 {
     color: rgba(0, 0, 0, 0.865);
 }
 
+.dark .button-genre{
+    background-color: #121212;
+    color: rgb(172, 70, 240);
+}
+
 .button-genre:hover {
     box-shadow: 0 0 10px 3.5px;
     transform: scale(1.00);
@@ -81,6 +99,11 @@ h2 {
     box-sizing: border-box;
 }
 
+.dark .billboard{
+    background-color: #212E36;
+    background-image: none;
+}
+
 .billboard-image {
     width: 200px;
     height: auto;
@@ -92,6 +115,11 @@ h2 {
     background: linear-gradient(#cac4dd, #9198e5, #8289db);
     box-shadow: 0 0 10px 3.5px;
     transform: scale(1.05);
+}
+
+.dark .billboard-image:hover{
+    background-color: #121212;
+    background-image: none;
 }
 
 .article-liked,
