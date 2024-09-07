@@ -10,6 +10,11 @@ body {
     min-height: 100vh;
 }
 
+body.dark{
+    background-color: #121212;
+}
+
+
 /* ------Main----- */
 main {
     width: 45%;
@@ -34,6 +39,12 @@ h1 {
     padding: 10px;
     box-shadow: 0 3px 7px black;
     width: 500px;
+}
+
+.dark .news-feed{
+    /* background: #171920; */
+    background: #212E36;
+    color: white;
 }
 
 h2 {
@@ -80,10 +91,18 @@ h2 {
 .post h3 {
     margin: 10px 10px 10px -5px;   
 }
+.dark h3{
+    color: rgb(172, 70, 240);
+}
+
+.dark h4{
+    color: rgb(172, 70, 240);
+}
 
 .post p {
     margin-top: 6px;
 }
+
 
 .post-imagen img {
     width: 100%;
@@ -111,6 +130,11 @@ h2 {
 
 .post-interactions div img:active{
     border: 1px solid violet;
+    transform: scale(1.15);
+}
+
+.dark .post-interactions div img:hover{
+    box-shadow: 0 0 10px 3.5px rgb(172, 70, 240);
     transform: scale(1.15);
 }
 
@@ -170,6 +194,10 @@ h2 {
     }
     h1 {
         margin-top: 15px;
+    }
+
+    .news-feed {
+        margin-bottom: 20px;
     }
 }
 
