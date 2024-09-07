@@ -231,6 +231,9 @@ h2 {
   .logotype {
     margin: 0 ;
   }
+  .img-container{
+    margin-left: 10px;
+  }
 } 
 
 @media (min-width: 601px) and (max-width: 768px) {
