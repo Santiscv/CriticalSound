@@ -244,3 +244,10 @@ footer{
         min-width: 91px;
     }
 }
+
+@media (min-width: 1050px) and (max-width: 1200px){
+    .billboard {
+        width: 800px;
+        margin: 0 auto;
+    }
+}
