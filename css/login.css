@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
 }
-
+body.dark{
+  background-color: #121212  ;
+}
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -11,6 +13,10 @@ main {
   transition: background-color 0.5s ease;
   margin-left: 30px;
 }
+
+/*main.dark{
+  background-color: #121212;
+}*/
 .container {
   grid-area: register;
   display: flex;
@@ -19,14 +25,16 @@ main {
   align-items: center;
   margin-bottom: 80px;
 }
+
 aside{
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 /* ----------Contenedor de registro---------- */
 .register-container {
   grid-area: aside;
   width: 300px;
-  height: 550px;
+  height: 570px;
+  margin-top: 70px;
   background-color: #ffff;
   border: 1px solid #ffff;
   border-radius: 10px;
@@ -39,12 +47,21 @@ aside{
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
+.dark .register-container{
+  background: #212E36;
+  color: white;
+}
 input {
   width: 200px;
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 10px;
   transition: box-shadow 0.3s ease;
+}
+
+.dark input{
+  background: #212E36;
+  color: white;
 }
 
 
@@ -130,18 +147,24 @@ input {
   box-shadow: 0 0 8px rgba(56, 11, 167, 0.5);
 }
 
+/*------> IMAGES CONTAINER <------*/
+.img-container{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 60px;
+}
 .logotype {
-  position: relative;
-  bottom: 80px;
   height: 200px;
-  padding-left: 30px;
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
+  margin-left: 25px;
 }
-.logotype {
-    margin-left: 25px;
+.imgs{
+  width: 30px;
+  margin-top: 2px;
 }
-  
+
 
 @keyframes fadeIn {
   to {
@@ -206,10 +229,10 @@ h2 {
     margin-left: 10px;
   }
   .logotype {
-    padding-left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0 ;
+  }
+  .img-container{
+    margin-left: 10px;
   }
 } 
 
