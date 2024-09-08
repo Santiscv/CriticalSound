@@ -84,3 +84,91 @@ function getmusicRatingsSongs(){
         id: 10
     }];
 } 
+
+function getLikedSongs(){
+    return[{
+        imageURL: "images/songs-min.jpg",
+        description:"reference image of the music most liked",
+        id: 1
+    },{
+        imageURL: "images/songs-min.jpg",
+        description:"reference image of the music most liked",
+        id: 2
+    },{
+        imageURL: "images/songs-min.jpg",
+        description:"reference image of the music most liked",
+        id: 3
+    },{
+        imageURL: "images/songs-min.jpg",
+        description:"reference image of the music most liked",
+        id: 4
+    },{
+        imageURL: "images/songs-min.jpg",
+        description:"reference image of the music most liked",
+        id: 5
+    },{
+        imageURL: "images/songs-min.jpg",
+        description:"reference image of the music most liked",
+        id: 6
+    },{
+        imageURL: "images/songs-min.jpg",
+        description:"reference image of the music most liked",
+        id: 7
+    },{
+        imageURL: "images/songs-min.jpg",
+        description:"reference image of the music most liked",
+        id: 8
+    },{
+        imageURL: "images/songs-min.jpg",
+        description:"reference image of the music most liked",
+        id: 9
+    },{
+        imageURL: "images/songs-min.jpg",
+        description:"reference image of the music most liked",
+        id: 10
+    }];
+}
+
+function getCriticizedSongs(){
+    return[{
+        imageURL: "images/songs-min.jpg",
+        description:"reference image of the music most criticized",
+        id: 1
+    },{
+        imageURL: "images/songs-min.jpg",
+        description:"reference image of the music most criticized",
+        id: 2
+    },{
+        imageURL: "images/songs-min.jpg",
+        description:"reference image of the music most criticized",
+        id: 3
+    },{
+        imageURL: "images/songs-min.jpg",
+        description:"reference image of the music most criticized",
+        id: 4
+    },{
+        imageURL: "images/songs-min.jpg",
+        description:"reference image of the music most criticized",
+        id: 5
+    },{
+        imageURL: "images/songs-min.jpg",
+        description:"reference image of the music most criticized",
+        id: 6
+    },{
+        imageURL: "images/songs-min.jpg",
+        description:"reference image of the music most criticized",
+        id: 7
+    },{
+        imageURL: "images/songs-min.jpg",
+        description:"reference image of the music most criticized",
+        id: 8
+    },{
+        imageURL: "images/songs-min.jpg",
+        description:"reference image of the music most criticized",
+        id: 9
+    },{
+        imageURL: "images/songs-min.jpg",
+        description:"reference image of the music most criticized",
+        id: 10
+    }];
+}
