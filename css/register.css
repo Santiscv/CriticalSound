@@ -101,7 +101,7 @@ main {
 }
 
 .dark .input-group label {
-    color: white;
+    color: rgb(172, 70, 240);
 }
 
 .input-field {
@@ -111,10 +111,15 @@ main {
     border-radius: 4px;
     transition: border-color 0.3s ease;
 }
+.dark .input-field {
+    background: #212E36;
+    color: #908e8e;
+}
 
 .input-field:focus {
     border-color: #380ba7;
     outline: none;
+
 }
 
 .tittle-form{

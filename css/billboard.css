@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: "Bebas Neue", sans-serif; 
 }
 
 body.dark{
@@ -10,24 +11,22 @@ body.dark{
 h1 {
     width: 300px;
     grid-area: title;
-    font-family: "Bebas Neue", sans-serif;
     font-size: 12px;
     display: flex;
     color: #c2bbbb;
     margin-left: 30px;
-    margin-bottom: 5px;
+    margin-top: 10px;
 }
 
-h2 {
+h3, h2 {
+    color: #380ba7;
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-size: 22px;
-    text-align: center;
-    margin-top: 0;
-    color: white;
 }
 
-.dark h2{
+.dark h2,
+.dark h3{
     color: rgb(172, 70, 240);
 }
 
@@ -37,9 +36,8 @@ h2 {
     grid-template-columns: 0.8fr 1fr;
     grid-template-areas: 
     "title title"
-    "genre article-liked"
-    "genre article-criticized"
-    "genre article-new-releases";
+    "genre billboard"
+    "genre billboard";;
 }
 
 /*---Genre - aside---*/
@@ -47,13 +45,13 @@ h2 {
     grid-area: genre;
     width:60%;
     height: 600px;
+    margin-top: 16px;
     margin-left: 15px;
     padding: 10px;
     border: 2px;
     border-radius: 10px;
     box-shadow: 0 2px 6px;
-    box-sizing: border-box;
-    background-image: linear-gradient(#65569c, #5c3cad, #59458b, #372c58, black);
+    background-image: linear-gradient(135deg, #5e1fff, #380ba7);
 }
 
 .dark .genre{
@@ -89,55 +87,8 @@ h2 {
     transform: scale(1.00);
 }
 
-.billboard{
-    width: 940px;
-    border: 4px #380ba7;
-    padding: 5px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px black;
-    background-image: linear-gradient(#65569c, #5c3cad, #59458b, #372c58, black);
-    box-sizing: border-box;
-}
-
-.dark .billboard{
-    background-color: #212E36;
-    background-image: none;
-}
-
-.billboard-image {
-    width: 200px;
-    height: auto;
-    padding: 10px 25px;
-}
-
-.billboard-image:hover {
-    cursor: pointer;
-    background: linear-gradient(#cac4dd, #9198e5, #8289db);
-    box-shadow: 0 0 10px 3.5px;
-    transform: scale(1.05);
-}
-
-.dark .billboard-image:hover{
-    background-color: #121212;
-    background-image: none;
-}
-
-.article-liked,
-.article-criticized,
-.article-new-releases{
-    grid-area: article-liked;
-    grid-area: article-criticized;
-    grid-area: article-new-releases;
-    width: 98%;
-    height: auto;
-    margin: 10px;
-    overflow-y: hidden;
-}
-
-.article-liked figure,
-.article-criticized figure,
-.article-new-releases figure{
-    display: flex;
+.billboar-liked{
+    grid-area: billboard
 }
 
 footer{
@@ -147,107 +98,63 @@ footer{
 /* ---Media query--- */
 @media (max-width:480px) {
     .container{
-        display: grid;
-        grid-template-columns: 0.8fr;
-        grid-template-areas: 
-        "title"
-        "genre" 
-        "article-liked"
-        "article-criticized"
-        "article-new-releases";
-        gap: 10px;
-    }    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }   
     .genre{
-        width: 10%;
+        width: 75%;
         height: auto;
-        margin-left: 30px;
     }
     .category{
         display: grid;
-        grid-template-columns: repeat(2, 0.4fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 3px;
-        margin-left: 30px;
-    }
-    .billboard{
-        margin-left: 30px;
-        width: 10%;
     }
 }
-
 @media (min-width:481px) and (max-width: 600px){
     .container{
-        display: grid;
-        grid-template-columns: 0.8fr;
-        grid-template-areas: 
-        "title"
-        "genre" 
-        "article-liked"
-        "article-criticized"
-        "article-new-releases";
-        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }    
     .genre{
-        width: 16%;
+        width: 73%;
         height: auto;
-        margin-left: 30px;
     }
     .category{
         display: grid;
-        grid-template-columns: repeat(2, 0.4fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 3px;
-        margin-left: 30px;
-    }
-    .billboard{
-        margin-left: 30px;
-        width: 16%;
     }
 }
-
 @media (min-width : 601px) and (max-width: 768px) {
     .container{
-        display: grid;
-        grid-template-columns: 0.8fr;
-        grid-template-areas: 
-        "title"
-        "genre" 
-        "article-liked"
-        "article-criticized"
-        "article-new-releases";
-        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .genre{
-        width: 22%;
+        width: 73%;
         height: auto;
-        margin-left: 30px;
+        margin-left: 1px;
     }
     .category{
         display: grid;
-        grid-template-columns: repeat(4, 0.4fr);
-        grid-template-rows: repeat(4, auto);
+        grid-template-columns: repeat(4, 1fr);
         gap: 3px;
-        margin-left: 30px;
-    }
-    .billboard{
-        margin-left: 30px;
-        width: 22%;
     }
 }
-
 @media (min-width: 769px) and (max-width: 1050px) { 
-    .billboard{
-        width: 600px;
-    }
     .genre{
         min-width: 75%;
+        height: 93%;
+        margin-top: 19px
     }
     .button-genre{
         min-width: 91px;
     }
-}
-
-@media (min-width: 1050px) and (max-width: 1200px){
-    .billboard {
-        width: 800px;
-        margin: 0 auto;
+    .main-billboard-container{
+        width: 95%;
     }
 }
