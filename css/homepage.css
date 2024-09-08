@@ -140,10 +140,13 @@ h2 {
     transform: scale(1.15);
 }
 
-.dark .post-interactions div img:hover{
-    box-shadow: 0 0 10px 3.5px rgb(172, 70, 240);
+.post-interactions div img:hover{
     transform: scale(1.15);
     cursor: pointer;
+}
+
+.dark .post-interactions div img:hover{
+    box-shadow: 0 0 10px 3.5px rgb(172, 70, 240);
 }
 
 .comments {
