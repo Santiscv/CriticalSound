@@ -61,14 +61,13 @@
         <section class="news-feed">
             <h2>Latest reviews</h2>
             <article class="feed">
-                <article class="post" id="user_post"> <!--Ex: id="posts_container"-->
-                    <!-- <article class="user-profile">
-                        <img src="images/profile(icono)-min.png" alt="user-profile-image" title="User-Profile">
-                        <h3>Username</h3>
-                    </article> -->
+                <article class="post">
+                    <article class="user-profile" id="user_post_container">
+                        <!--<img src="images/profile(icono)-min.png" alt="user-profile-image" title="User-Profile">
+                        <h3>Username</h3>-->
+                    </article>
                     <article class="post-imagen" id="img_post">
-                        <!--
-                        <img src="images/user-post-min.jpg" alt="friend image">
+                        <!-- <img src="images/user-post-min.jpg" alt="friend image">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Sunt optio veritatis autem obcaecati non fugit quas odio quasi ipsam. Totam corporis deserunt vitae, 
                         aut distinctio aspernatur. Dicta quo placeat pariatur.</p> -->
@@ -78,15 +77,18 @@
                         <div class="comment-logo"><img src="images/comentario(icono)-min.png" alt="add-comment" title="Add-Comment"></div>
                         <div class="share-logo"><img src="images/cuota(icono)-min.png" alt="share" title="Share"></div>
                     </article>
-                    <h3>Comments:</h3>
-                    <article class="comments" id="user_comment">
-                        <!-- <div class="comment">
-                            <img src="images/profile(icono)-min.png" alt="profile-image">
+                    
+                    <article class="comments">
+                        <h3>Comments:</h3>
+                        <div class="comment" id="user_comment">
+                            <!-- <img src="images/profile(icono)-min.png" alt="profile-image">
                             <h4>Username :  </h4>
-                            <p>This is a comment xd..</p>
-                        </div> -->
-                        <div class="MakeComment" id="user_for_comming">
-                            <!-- <img src="images/profile(icono)-min.png" alt="profile-image"> -->
+                            <p>This is a comment xd..</p> -->
+                        </div>
+                        <div class="MakeComment">
+                            <div class="imgMakeComment" id="user_for_comming" >
+                                <!-- <img src="images/profile(icono)-min.png" alt="profile-image"> -->
+                            </div>
                             <textarea placeholder="Enter your text here"></textarea>
                             <button  type="submit">share</button>
                         </div> 

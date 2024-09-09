@@ -7,14 +7,12 @@ class UserProfile {
 
     getTemplate = () => {
         return `
-            <article class="user-profile">
                 <img 
                 src="${this.userImageUrl}" 
                 alt="user-profile-image" 
                 title="User-Profile"
                 >
                 <h3>${this.username}</h3>
-            </article>
             `;
     }  
 }
@@ -28,7 +26,6 @@ class Post {
 
     getTemplate = () => {
         return `
-            <article class="post-imagen">
                 <img
                 src="${this.postImageUrl}" 
                 alt="friend image"
@@ -36,7 +33,6 @@ class Post {
                 <p>
                     ${this.postDescription}
                 </p>
-            </article>
             `;
     }
 }

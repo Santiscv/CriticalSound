@@ -9,10 +9,11 @@ function getUserProfile() {
 function getPosts() {
     return [{
         postImageUrl: "images/user-post-min.jpg",
-        postDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        postDescription: "This is a test description.",
         id: 1
     }];
 }
+
 function getComment() {
     return [{
         imgUserComment: "images/profile(icono)-min.png",
@@ -22,6 +23,7 @@ function getComment() {
         commentId: 1
     }];
 }
+
 function getUserMakeComment() {
     return [{
         imgUserForCommenting: "images/profile(icono)-min.png",
