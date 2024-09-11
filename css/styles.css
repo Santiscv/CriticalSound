@@ -4,10 +4,9 @@
   margin: 0;
 }
 
-body.dark{
+body.dark {
   background-color: #121212;
 }
-
 
 /* -----------Tittles---------- */
 h1 {
@@ -17,23 +16,23 @@ h1 {
   width: auto;
   margin-left: 30px;
 }
-h3, h2 {
+h3,
+h2 {
   color: #380ba7;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-size: 22px;
 }
-h2{
+h2 {
   color: #d0d2e7;
 }
 .dark h2,
-.dark h3{
+.dark h3 {
   color: rgb(172, 70, 240);
 }
 
 /*-------- Aside -----------*/
 .information-profile-container {
-  /* margin-bottom: 175px; */
   margin-top: 20px;
   margin-left: 20px;
   padding: 20px;
@@ -49,8 +48,8 @@ h2{
   animation: fadeIn 1s ease-in-out;
   grid-area: aside;
 }
-.dark .information-profile-container{
-  background: #212E36;
+.dark .information-profile-container {
+  background: #212e36;
 }
 .information-profile-container:hover {
   transform: translateY(-10px);
@@ -67,12 +66,12 @@ h2{
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   animation: fadeIn 1s ease-in-out;
 }
-.profile-container{
+.profile-container {
   overflow-x: hidden;
 }
 .dark .profile-container,
 .dark .friends-container,
-.dark .communities-container{
+.dark .communities-container {
   background: #171920;
 }
 
@@ -102,17 +101,15 @@ h2{
 
 /* ----------Main container------ */
 
-.main-container{
+.main-container {
   display: grid;
-  grid-template-columns:  auto;
-  grid-template-rows: 1fr auto;  
-  grid-template-areas: 
-  "aside billboard"
-  "aside billboard";
+  grid-template-columns: auto;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "aside billboard"
+    "aside billboard";
   margin-top: 30px;
   margin-bottom: 30px;
-  /* grid-area: main; */
-
 }
 .button-watchlist,
 .rating-button {
@@ -128,7 +125,8 @@ h2{
   overflow: hidden;
 }
 
-.button-watchlist::before, .rating-button::before {
+.button-watchlist::before,
+.rating-button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -139,7 +137,8 @@ h2{
   transition: all 0.4s;
 }
 
-.button-watchlist:hover::before, .rating-button:hover::before {
+.button-watchlist:hover::before,
+.rating-button:hover::before {
   left: 100%;
 }
 
@@ -148,38 +147,32 @@ h2{
   background-color: #380ba7;
   transform: scale(1.05);
 }
-
-/* ------Footer----- */
-footer {
-  grid-area: footer;
-}
-
 /* Animaciones */
 @keyframes fadeIn {
   from {
-      opacity: 0;
-      transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes slideIn {
   from {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
   to {
-      transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
 /* -------------media queries------------ */
 
-@media (min-width:320px) and (max-width: 600px){
+@media (min-width: 320px) and (max-width: 600px) {
   /* Container */
-  .information-profile-container{
+  .information-profile-container {
     margin: 20px 40px;
     justify-content: center;
     width: 60%;
@@ -192,42 +185,42 @@ footer {
   }
 }
 
-@media (min-width : 601px) and (max-width: 768px) {
+@media (min-width: 601px) and (max-width: 768px) {
   .main-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
-  .information-profile-container{
-    margin-right: 20px; 
+  .information-profile-container {
+    margin-right: 20px;
     width: 70%;
   }
 }
 
-@media (min-width: 769px) and (max-width: 1050px) { 
+@media (min-width: 769px) and (max-width: 1050px) {
   .main-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .information-profile-container{
+  .information-profile-container {
     justify-content: center;
-    margin-right: 90px ;
+    margin-right: 90px;
     width: 70%;
   }
 }
-@media (min-width: 1050px) and (max-width: 1200px) { 
+@media (min-width: 1050px) and (max-width: 1200px) {
   .main-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .information-profile-container{
+  .information-profile-container {
     justify-content: center;
-    margin-right: 50px ;
+    margin-right: 50px;
     width: 70%;
   }
 }
