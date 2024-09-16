@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }else{
         const mostLikedList = getmostLikedSongs();
         const mostCriticizedList = getmostCriticizedSongs();
-        const likedContainer = document.getElementById("liked-container");
-        const criticizedContainer = document.getElementById("criticized-container");
+        const likedContainer = document.getElementById("liked_container");
+        const criticizedContainer = document.getElementById("criticized_container");
         if (likedContainer && criticizedContainer) {
             likedContainer.innerHTML = "";
             criticizedContainer.innerHTML = "";
