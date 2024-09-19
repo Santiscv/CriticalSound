@@ -2,9 +2,9 @@ class Post {
     constructor(posts) {
         this.criticalSoundImageUrl = posts.criticalSoundImageUrl;
         this.adminName = posts.adminName;
-        // this.adminId = posts.adminId
-        // this.genre = posts.genre
-        // this.title = posts.title
+        this.adminId = posts.adminId
+        this.genre = posts.genre
+        this.title = posts.title
         this.postImageUrl = posts.postImageUrl;
         this.postDescription = posts.postDescription;
         this.id = posts.id;
@@ -20,11 +20,13 @@ class Post {
     getTemplate = () => {
         return `
                 <article class="post">
+                    <span class="post-genre">${this.genre}</span>
                     <article class="user-profile" id="user_post_container">
                         <img src="${this.criticalSoundImageUrl}" >
-                        <h3>${this.adminName}</h3>
+                        <h2>${this.adminName}</h2>
                     </article>
                     <article class="post-imagen" id="img_post">
+                        <h3 class="post-title">${this.title}</h3>
                         <img src="${this.postImageUrl}">
                         <p>${this.postDescription}</p>
                     </article> 
@@ -34,10 +36,10 @@ class Post {
                         <div class="share-logo"><img src="images/cuota(icono)-min.png" alt="share" title="Share"></div>
                     </article>
                     <article class="comments">
-                        <h3>Comments:</h3>
+                        <h4>Comments:</h4>
                         <div class="comment" id="user_comment">
                             <img src="${this.imgUserComment}">
-                            <h4>${this.usernameComment}  </h4>
+                            <h5>${this.usernameComment}  </h5>
                             <p>${this.userComment}</p>
                         </div>
                         <form class="MakeComment" id="commentForm">
@@ -45,7 +47,7 @@ class Post {
                                 <img src="${this.imgUserForCommenting}">
                             </div>
                             <textarea name="comment" id="comment" placeholder="Enter your text here"></textarea>
-                            <button  type="submit">share</button>
+                            <button  type="submit" class="share-comment">share</button>
                         </form> 
                     </article>
                 </article>

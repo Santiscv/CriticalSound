@@ -48,8 +48,8 @@ h1 {
     color: white;
 }
 
-h2 {
-    font-size: 12px;
+.post-genre {
+    font-size: 13px;
     display: flex;
     color: #787676;
     justify-content: center;
@@ -92,14 +92,25 @@ h2 {
     margin-top: 10px;
 }
 
-.post h3 {
+ .post h2 { /*cambiar x h2 */
     margin: 10px 10px 10px -5px;   
 }
-.dark h3{
+.dark h2{
     color: rgb(172, 70, 240);
 }
 
-.dark h4{
+.post-title {
+    font-size: 13px;
+    justify-content: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.dark .post-title {
+    color: rgb(172, 70, 240);
+}
+
+.dark h4, .dark h5{
     color: rgb(172, 70, 240);
 }
 
@@ -155,19 +166,21 @@ h2 {
     padding: 3px;
 }
 
-.comments h3 {
+.comments h4 { /*cambiar x h4 */
     margin: 5px 5px;
     font-size: 17px;
 }
 
-.comments h4 {
-    margin: 5px 5px;
+.comments h5 { /*cambiar x h5 */
+    margin: 7px 5px;
+    font-size: 14px;
 }
 
 .comment {
     display: flex;
     justify-content: left;
     align-items: left;
+    overflow-y: scroll;
 }
 .user-comment{
     position: relative;
@@ -199,11 +212,14 @@ h2 {
     font-family: "Kanit", sans-serif;
     font-size: 16px;
     box-shadow: 0 3px 7px black;
-    border-radius: 10px;
+    border: 2px solid #380ba7;
+    border-radius: 5px;
     margin-top: 10px;
     background-color: #fff;
+    font-weight: 400;
     color: black;
     box-sizing: border-box;
+    overflow-y: scroll;
     
 }
 
@@ -211,6 +227,39 @@ h2 {
     background: #212E36;
     color: white;
     /* box-shadow: 0 3px 7px #380ba7; */
+}
+
+.share-comment {
+    font-family: "Kanit", sans-serif;
+    text-align: center;
+    box-shadow: 0 0 5px 1.5px #5b1df9;
+    color: white;
+    border-radius: 10px;
+    width: 50px;
+    height: 40px;
+    background-color: #380ba7;
+    position: relative;
+    overflow: hidden;
+}
+
+.share-comment::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.4s;
+}
+
+.share-comment:hover::before {
+    left: 100%;
+}
+
+.share-comment:hover {
+    background-color: #380ba7;
+    transform: scale(1.05);
 }
 
 .MakeComment img {

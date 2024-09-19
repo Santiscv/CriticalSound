@@ -1,9 +1,9 @@
 function getPosts() {
-    return [{
+return [{
         criticalSoundImageUrl: "images/profile(icono)-min.png",
         adminName: "CriticalSound",
-//          genre: "genreType",
-//          title: "title",
+        genre: "genreType1",
+        title: "title1adasdasdasdasdasdasdasdasdasasdasdasdasdas",
 //         id: 1
         postImageUrl: "images/user-post-min.jpg",
         postDescription: "This is a test description.",
@@ -15,11 +15,11 @@ function getPosts() {
         commentId: 1,
         imgUserForCommenting: "images/profile(icono)-min.png",
 //         id: 1
-    }, {
+        }, {
         criticalSoundImageUrl: "images/profile(icono)-min.png",
         adminName: "CriticalSound",
-//          genre: "genreType",
-//          title: "title",
+        genre: "genreType2",
+        title: "title2",
 //         id: 1
         postImageUrl: "images/user-post-min.jpg",
         postDescription: "This is a test description.",
@@ -31,11 +31,11 @@ function getPosts() {
         commentId: 1,
         imgUserForCommenting: "images/profile(icono)-min.png",
 //         id: 1
-    }, {
+        }, {
         criticalSoundImageUrl: "images/profile(icono)-min.png",
         adminName: "CriticalSound",
-//          genre: "genreType",
-//          title: "title",
+        genre: "genreType3",
+        title: "title3",
 //         id: 1
         postImageUrl: "images/user-post-min.jpg",
         postDescription: "This is a test description.",
@@ -47,5 +47,5 @@ function getPosts() {
         commentId: 1,
         imgUserForCommenting: "images/profile(icono)-min.png",
 //         id: 1
-    }];
+        }];
 }
