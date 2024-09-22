@@ -160,6 +160,16 @@ h1 {
     box-shadow: 0 0 10px 3.5px rgb(172, 70, 240);
 }
 
+
+.like-counter {
+    color: #0e0e11;
+    justify-content: center;
+    align-items: center;
+    margin-left: -50px;
+    margin-bottom: -20px;
+
+}
+
 .comments {
     margin-top: 15px;
     border-radius: 10px;

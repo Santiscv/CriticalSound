@@ -32,6 +32,7 @@ class Post {
                     </article> 
                     <article class="post-interactions">
                         <div class="like-logo"><img src="images/like-1(icono)-min.png" alt="like" title="Like"></div>
+                        <div class="like-counter" id="counter"></div>
                         <div class="comment-logo"><img src="images/comentario(icono)-min.png" alt="add-comment" title="Add-Comment"></div>
                         <div class="share-logo"><img src="images/cuota(icono)-min.png" alt="share" title="Share"></div>
                     </article>
