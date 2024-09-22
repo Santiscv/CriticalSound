@@ -23,7 +23,7 @@ return [{
 //         id: 1
         postImageUrl: "images/user-post-min.jpg",
         postDescription: "This is a test description.",
-        id: 1,
+        id: 2,
         imgUserComment: "images/profile(icono)-min.png",
         usernameComment: "Mauri :  ",
         userId: 1 ,
@@ -39,7 +39,7 @@ return [{
 //         id: 1
         postImageUrl: "images/user-post-min.jpg",
         postDescription: "This is a test description.",
-        id: 1,
+        id: 3,
         imgUserComment: "images/profile(icono)-min.png",
         usernameComment: "Santi :  ",
         userId: 1 ,

@@ -4,6 +4,12 @@
     font-family: "Bebas Neue", sans-serif; 
 }
 
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
 body.dark{
     background-color: #121212;
 }
