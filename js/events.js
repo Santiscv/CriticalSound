@@ -1,3 +1,9 @@
+// ----------------Menu responsive--------------------
+document.getElementById("menu-icon").onclick = function() {
+    var navItems = document.querySelector(".text-links");
+    navItems.classList.toggle("active");
+}
+// ---------------------formulario registro-------------------
 const formularioDatosUsuario = document.getElementById("frm_user_data");
 
 document.addEventListener("submit", (e) => {
@@ -21,5 +27,3 @@ iconLike.addEventListener('click', () => {
     likeCounter++;
     showLikes.textContent = likeCounter;
 });
-
-
