@@ -23,10 +23,9 @@ class Post {
                     <span class="post-genre">${this.genre}</span>
                     <article class="user-profile" id="user_post_container">
                         <img src="${this.criticalSoundImageUrl}" >
-                        <h2>${this.adminName}</h2>
+                        <h2 class="post-title">${this.title}</h2>
                     </article>
                     <article class="post-imagen" id="img_post">
-                        <h3 class="post-title">${this.title}</h3>
                         <img src="${this.postImageUrl}">
                         <p>${this.postDescription}</p>
                     </article> 

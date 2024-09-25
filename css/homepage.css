@@ -67,6 +67,7 @@ h1 {
 }
 
 .post {
+    box-sizing: border-box;
     margin-bottom: 5px;
     padding: 5px;
     border-bottom: solid 1px rgb(194, 188, 188);
@@ -92,18 +93,16 @@ h1 {
     margin-top: 10px;
 }
 
- .post h2 { /*cambiar x h2 */
-    margin: 10px 10px 10px -5px;   
-}
-.dark h2{
-    color: rgb(172, 70, 240);
-}
 
 .post-title {
-    font-size: 13px;
-    justify-content: left;
+    margin: 10px 10px 10px -5px;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    width: 100%;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
 }
 
 .dark .post-title {

@@ -1,9 +1,8 @@
 function getPosts() {
 return [{
         criticalSoundImageUrl: "images/profile(icono)-min.png",
-        adminName: "CriticalSound",
         genre: "genreType1",
-        title: "title1adasdasdasdasdasdasdasdasdasasdasdasdasdas",
+        title: "title1",
 //         id: 1
         postImageUrl: "images/user-post-min.jpg",
         postDescription: "This is a test description.",
@@ -17,7 +16,6 @@ return [{
 //         id: 1
         }, {
         criticalSoundImageUrl: "images/profile(icono)-min.png",
-        adminName: "CriticalSound",
         genre: "genreType2",
         title: "title2",
 //         id: 1
@@ -33,7 +31,6 @@ return [{
 //         id: 1
         }, {
         criticalSoundImageUrl: "images/profile(icono)-min.png",
-        adminName: "CriticalSound",
         genre: "genreType3",
         title: "title3",
 //         id: 1
