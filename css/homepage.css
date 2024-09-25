@@ -175,12 +175,12 @@ h1 {
     padding: 3px;
 }
 
-.comments h4 { /*cambiar x h4 */
+.comments h4 {
     margin: 5px 5px;
     font-size: 17px;
 }
 
-.comments h5 { /*cambiar x h5 */
+.comments h5 {
     margin: 7px 5px;
     font-size: 14px;
 }
@@ -191,6 +191,15 @@ h1 {
     align-items: left;
     overflow-y: scroll;
 }
+
+.comment-date {
+    font-size: 13px;
+    color: #787676;
+    display: block;
+    margin-top: 10px;
+    margin-left: 95px;
+}
+
 .user-comment{
     position: relative;
     top: 4px;

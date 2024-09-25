@@ -1,10 +1,10 @@
 class Post {
     constructor(posts) {
         this.criticalSoundImageUrl = posts.criticalSoundImageUrl;
-        this.adminName = posts.adminName;
-        this.adminId = posts.adminId
-        this.genre = posts.genre
-        this.title = posts.title
+        // this.adminName = posts.adminName;
+        this.adminId = posts.adminId;
+        this.genre = posts.genre;
+        this.title = posts.title;
         this.postImageUrl = posts.postImageUrl;
         this.postDescription = posts.postDescription;
         this.id = posts.id;
@@ -12,9 +12,10 @@ class Post {
         this.usernameComment = posts.usernameComment;
         this.userId = posts.userId;
         this.userComment = posts.userComment;
+        this.commentDate = posts.commentDate;
         this.commentId = posts.commentId;
         this.imgUserForCommenting = posts.imgUserForCommenting;
-        this.id = posts.id
+        this.id = posts.id;
     }
 
     getTemplate = () => {
@@ -41,6 +42,7 @@ class Post {
                             <img src="${this.imgUserComment}">
                             <h5>${this.usernameComment}  </h5>
                             <p>${this.userComment}</p>
+                            <span class="comment-date">${this.commentDate}</span>
                         </div>
                         <form class="MakeComment" id="commentForm">
                             <div class="imgMakeComment" id="user_for_comming" >
