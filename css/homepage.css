@@ -195,7 +195,7 @@ h1 {
 .comment-date {
     font-size: 13px;
     color: #787676;
-    display: block;
+    display: flex;
     margin-top: 10px;
     margin-left: 95px;
 }
@@ -319,6 +319,11 @@ h1 {
 
     .news-feed {
         margin-bottom: 20px;
+    }
+
+    .comment-date {
+        font-size: 7px;
+        margin-left: 65px;
     }
 }
 
