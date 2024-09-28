@@ -42,7 +42,7 @@
       </aside>
       <div class="container">
         <section class="register-container">
-          <form id="frm_user_data">
+          <form id="frm_user_data" action="" method="post">
           <div class="img-container">  
             <img
               class="logotype"
@@ -59,6 +59,7 @@
 
               <input id="txt_password" class="password" type="password" placeholder="Password" />
               <button class="button-pass" type="submit">Login</button>
+              <span id="error_label" style="display: none;"></span>
             </div>
               <div class="no-account">
                 <label>Don´t you have an account?</label>
@@ -68,13 +69,12 @@
         </section>
       </div>
     </main>
-    
-    <script src="js/Songs.js"></script>
-    <script src="js/songsRepository.js"></script>
-    <script src="js/showSong.js"></script>
-    <script src="js/events.js"></script>
-    <script src="js/posts.js"></script>
     <script src="js/darkmode.js"></script>
-
+    <script src="/js/loginRepository.js"></script>
+    <script src="/js/login.js"></script>
+    <script src="/js/Songs.js"></script>
+    <script src="/js/songsRepository.js"></script>
+    <script src="/js/showSong.js"></script>
+    <!-- <script src="/js/events.js"></script> -->
   </body>
 </html>
