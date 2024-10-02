@@ -8,5 +8,5 @@ function getLogin(pedido, success) {
     })
         .then((response) => response.json())
         .then((json) => success(json))
-        .catch((error) => console.log(error));
+        .catch((e) => console.log(e));
 }
