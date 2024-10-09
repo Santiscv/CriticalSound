@@ -53,7 +53,8 @@ h1 {
     display: flex;
     color: #787676;
     justify-content: center;
-    
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
 }
 
 .news-feed-posts{
@@ -185,6 +186,10 @@ h1 {
     font-size: 14px;
 }
 
+.comments h5:hover {
+    cursor: pointer;
+}
+
 .comment {
     display: flex;
     justify-content: left;
@@ -224,14 +229,14 @@ h1 {
 
 .MakeComment textarea{
     resize: none;
-    max-width: 230px;
+    max-width: 380px;
     width: 100%;
     height: 60px;
     font-family: "Kanit", sans-serif;
     font-size: 16px;
     box-shadow: 0 3px 7px black;
     border: 2px solid #380ba7;
-    border-radius: 5px;
+    border-radius: 8px;
     margin-top: 10px;
     background-color: #fff;
     font-weight: 400;
