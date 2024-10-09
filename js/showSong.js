@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             Swal.fire({
                 html: postInstance.getTemplate(),//obtengo template del post en el modal 
                 showCloseButton: true,
-                width: '600px',
+                width: '690px',
                 padding: '3em',
                 showConfirmButton: false,
                 didClose: () => {
