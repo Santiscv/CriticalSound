@@ -1,5 +1,5 @@
 function getLogin(pedido, success) {
-    fetch('http://localhost:5088/login', {
+    fetch('http://localhost:5088/Login', {
         method: 'POST',
         body: JSON.stringify(pedido),
         headers: {

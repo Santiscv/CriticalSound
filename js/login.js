@@ -7,7 +7,7 @@ formLogin.addEventListener('submit', (event) => {
     let txtPassword = document.getElementById("txt_password");
 
     let pedido = {
-        mail: txtName.value,
+        userName: txtName.value,
         password: txtPassword.value
     };
 
