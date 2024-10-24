@@ -1,12 +1,13 @@
 class Post {
     constructor(posts) {
-        this.criticalSoundImageUrl = posts.criticalSoundImageUrl;
+        // this.criticalSoundImageUrl = posts.criticalSoundImageUrl;
+        this.criticalSoundImageUrl = "images/logotipo-de-pagina-responsive-min.png";
         // this.adminName = posts.adminName;
         this.adminId = posts.adminId;
         this.genre = posts.genre;
         this.title = posts.title;
-        this.postImageUrl = posts.postImageUrl;
-        this.postDescription = posts.postDescription;
+        this.urlImage = posts.urlImage;
+        this.description = posts.description;
         this.id = posts.id;
         this.imgUserComment = posts.imgUserComment;
         this.usernameComment = posts.usernameComment;
@@ -27,8 +28,8 @@ class Post {
                         <h2 class="post-title">${this.title}</h2>
                     </article>
                     <article class="post-imagen" id="img_post">
-                        <img src="${this.postImageUrl}">
-                        <p>${this.postDescription}</p>
+                        <img src="${this.urlImage}">
+                        <p>${this.description}</p>
                     </article> 
                     <article class="post-interactions">
                         <div class="like-logo"><img src="images/like-1(icono)-min.png" alt="like" title="Like"></div>
